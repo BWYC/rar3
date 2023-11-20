@@ -1,9 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Home = (props) => {
   return (
@@ -68,7 +69,7 @@ const Home = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link LegacyBehavior href="/">
                   <a className="home-link02">
                     <img
                       alt="logo"
@@ -97,7 +98,7 @@ const Home = (props) => {
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link href="/">
+                        <Link LegacyBehavior href="/">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -108,7 +109,7 @@ const Home = (props) => {
                         <div className="home-container10">
                           <span className="home-text01">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link LegacyBehavior href="/dex">
                           <a className="home-link04">
                             <div className="home-container11">
                               <div className="home-container12">
@@ -134,7 +135,7 @@ const Home = (props) => {
                             <span className="home-text03">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link LegacyBehavior href="/portfolio">
                           <a className="home-link05">
                             <div className="home-container15">
                               <div className="home-container16">
@@ -149,7 +150,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link LegacyBehavior href="/sats">
                           <a className="home-link06">
                             <div className="home-container17">
                               <div className="home-container18">
@@ -169,7 +170,7 @@ const Home = (props) => {
                         <div className="home-container20">
                           <span className="home-text06">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link LegacyBehavior href="/dex">
                           <a className="home-link07">
                             <div className="home-container21">
                               <div className="home-container22">
@@ -184,7 +185,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/pools">
+                        <Link LegacyBehavior href="/pools">
                           <a className="home-link08">
                             <div className="home-container23">
                               <div className="home-container24">
@@ -199,7 +200,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/portfolio">
+                        <Link LegacyBehavior href="/portfolio">
                           <a className="home-link09">
                             <div className="home-container25">
                               <div className="home-container26">
@@ -214,7 +215,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link LegacyBehavior href="/sats">
                           <a className="home-link10">
                             <div className="home-container27">
                               <div className="home-container28">
@@ -229,7 +230,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link LegacyBehavior href="/sats">
                           <a className="home-link11">
                             <div className="home-container29">
                               <div className="home-container30">
@@ -263,7 +264,7 @@ const Home = (props) => {
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
-                  <Link href="/">
+                  <Link LegacyBehavior href="/">
                     <a className="home-link12">
                       <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
                     </a>
@@ -394,7 +395,7 @@ const Home = (props) => {
                 <span className="home-text29">
                   discover, track, collect, OWN
                 </span>
-                <Link href="/dex">
+                <Link LegacyBehavior href="/dex">
                   <a className="home-link13">GET STARTED</a>
                 </Link>
               </div>
@@ -438,7 +439,7 @@ const Home = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -485,7 +486,7 @@ const Home = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -521,7 +522,7 @@ const Home = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -557,7 +558,7 @@ const Home = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -704,7 +705,7 @@ const Home = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -748,7 +749,7 @@ const Home = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -789,7 +790,7 @@ const Home = (props) => {
           .home-text01 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .home-link04 {
             display: contents;
@@ -836,7 +837,7 @@ const Home = (props) => {
           .home-text02 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-container13 {
@@ -881,7 +882,7 @@ const Home = (props) => {
           .home-text03 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link05 {
@@ -929,7 +930,7 @@ const Home = (props) => {
           .home-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link06 {
@@ -977,7 +978,7 @@ const Home = (props) => {
           .home-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-container19 {
@@ -1001,7 +1002,7 @@ const Home = (props) => {
           .home-text06 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .home-link07 {
             display: contents;
@@ -1048,7 +1049,7 @@ const Home = (props) => {
           .home-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link08 {
@@ -1096,7 +1097,7 @@ const Home = (props) => {
           .home-text08 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link09 {
@@ -1144,7 +1145,7 @@ const Home = (props) => {
           .home-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link10 {
@@ -1192,7 +1193,7 @@ const Home = (props) => {
           .home-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-link11 {
@@ -1240,7 +1241,7 @@ const Home = (props) => {
           .home-text11 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .home-container31 {
@@ -1333,7 +1334,7 @@ const Home = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               180deg,
@@ -1407,7 +1408,7 @@ const Home = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url('/rare-1200w.png');
+            background-image: url("/rare-1200w.png");
             background-position: center;
           }
           .home-container41:hover {
@@ -1503,7 +1504,7 @@ const Home = (props) => {
             font-size: 20px;
             align-self: center;
             margin-top: 0px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             padding-top: var(--dl-space-space-unit);
             padding-left: 1px;
             padding-right: var(--dl-space-space-unit);
@@ -1544,7 +1545,7 @@ const Home = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url('/1080x360-1200w.jpeg');
+            background-image: url("/1080x360-1200w.jpeg");
             background-position: center;
           }
           .home-container48:hover {
@@ -1640,7 +1641,7 @@ const Home = (props) => {
             font-size: 20px;
             align-self: center;
             margin-top: 0px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             padding-top: var(--dl-space-space-unit);
             padding-left: 1px;
             padding-right: var(--dl-space-space-unit);
@@ -1681,7 +1682,7 @@ const Home = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url('/adhsilzs%3Bl-1200w.png');
+            background-image: url("/adhsilzs%3Bl-1200w.png");
             background-position: center;
           }
           .home-container55:hover {
@@ -1777,7 +1778,7 @@ const Home = (props) => {
             font-size: 20px;
             align-self: center;
             margin-top: 0px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             padding-top: var(--dl-space-space-unit);
             padding-left: 1px;
             padding-right: var(--dl-space-space-unit);
@@ -1818,7 +1819,7 @@ const Home = (props) => {
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url('/ehksds-1200w.png');
+            background-image: url("/ehksds-1200w.png");
             background-position: center;
           }
           .home-container62:hover {
@@ -1914,7 +1915,7 @@ const Home = (props) => {
             font-size: 20px;
             align-self: center;
             margin-top: 0px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             padding-top: var(--dl-space-space-unit);
             padding-left: 1px;
             padding-right: var(--dl-space-space-unit);
@@ -2170,7 +2171,7 @@ const Home = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
