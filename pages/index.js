@@ -408,7 +408,7 @@ const Home = (props) => {
             display: flex;
             overflow: auto;
             min-height: 100vh;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
             justify-content: center;
           }
@@ -1928,7 +1928,8 @@ const Home = (props) => {
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: auto;
+            width: 90%;
+            font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
