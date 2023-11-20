@@ -1,11 +1,11 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Script from 'dangerous-html/react'
+import Script from "dangerous-html/react";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Mints = (props) => {
   return (
@@ -52,7 +52,7 @@ const Mints = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="mints-link">
                     <img
                       alt="logo"
@@ -81,7 +81,7 @@ const Mints = (props) => {
                           src="/fav-200h.ico"
                           className="mints-image1"
                         />
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                           <a className="mints-link01">
                             <h1 className="mints-heading">RAR3BAY</h1>
                           </a>
@@ -92,7 +92,7 @@ const Mints = (props) => {
                         <div className="mints-container10">
                           <span className="mints-text03">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="mints-link02">
                             <div className="mints-container11">
                               <div className="mints-container12">
@@ -118,7 +118,7 @@ const Mints = (props) => {
                             <span className="mints-text05">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="mints-link03">
                             <div className="mints-container15">
                               <div className="mints-container16">
@@ -133,7 +133,7 @@ const Mints = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="mints-link04">
                             <div className="mints-container17">
                               <div className="mints-container18">
@@ -153,7 +153,7 @@ const Mints = (props) => {
                         <div className="mints-container20">
                           <span className="mints-text08">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="mints-link05">
                             <div className="mints-container21">
                               <div className="mints-container22">
@@ -176,12 +176,12 @@ const Mints = (props) => {
                             >
                               <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
                             </svg>
-                            <Link href="/pools">
+                            <Link legacyBehavior href="/pools">
                               <a className="mints-link06">POOLS</a>
                             </Link>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="mints-link07">
                             <div className="mints-container25">
                               <div className="mints-container26">
@@ -196,7 +196,7 @@ const Mints = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="mints-link08">
                             <div className="mints-container27">
                               <div className="mints-container28">
@@ -211,7 +211,7 @@ const Mints = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/mints">
+                        <Link legacyBehavior href="/mints">
                           <a className="mints-link09">
                             <div className="mints-container29">
                               <div className="mints-container30">
@@ -245,7 +245,7 @@ const Mints = (props) => {
             <div className="mints-container35">
               <div className="mints-container36">
                 <div className="mints-container37">
-                  <Link href="/mints">
+                  <Link legacyBehavior href="/mints">
                     <a className="mints-link10">
                       <h1 className="mints-heading1">MINT AND STAKE AIO </h1>
                     </a>
@@ -265,9 +265,9 @@ const Mints = (props) => {
                         width="100%"
                         height="100%"
                         style={{
-                          border: '2px solid gray',
-                          borderRadius: '16px',
-                          backgroundColor: 'gray',
+                          border: "2px solid gray",
+                          borderRadius: "16px",
+                          backgroundColor: "gray",
                         }}
                       />
                     </React.Fragment>
@@ -286,9 +286,9 @@ const Mints = (props) => {
                         width="100%"
                         height="100%"
                         style={{
-                          border: '2px solid gray',
-                          borderRadius: '16px',
-                          backgroundColor: 'gray',
+                          border: "2px solid gray",
+                          borderRadius: "16px",
+                          backgroundColor: "gray",
                         }}
                       />
                     </React.Fragment>
@@ -307,9 +307,9 @@ const Mints = (props) => {
                         width="100%"
                         height="100%"
                         style={{
-                          border: '2px solid gray',
-                          borderRadius: '16px',
-                          backgroundColor: 'gray',
+                          border: "2px solid gray",
+                          borderRadius: "16px",
+                          backgroundColor: "gray",
                         }}
                       />
                     </React.Fragment>
@@ -350,7 +350,7 @@ const Mints = (props) => {
             height: var(--dl-size-size-xlarge);
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -396,7 +396,7 @@ const Mints = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -431,7 +431,7 @@ const Mints = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -466,7 +466,7 @@ const Mints = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -612,7 +612,7 @@ const Mints = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -656,7 +656,7 @@ const Mints = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -697,7 +697,7 @@ const Mints = (props) => {
           .mints-text03 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .mints-link02 {
             display: contents;
@@ -744,7 +744,7 @@ const Mints = (props) => {
           .mints-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-container13 {
@@ -789,7 +789,7 @@ const Mints = (props) => {
           .mints-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-link03 {
@@ -837,7 +837,7 @@ const Mints = (props) => {
           .mints-text06 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-link04 {
@@ -885,7 +885,7 @@ const Mints = (props) => {
           .mints-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-container19 {
@@ -909,7 +909,7 @@ const Mints = (props) => {
           .mints-text08 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .mints-link05 {
             display: contents;
@@ -956,7 +956,7 @@ const Mints = (props) => {
           .mints-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-container23 {
@@ -1001,7 +1001,7 @@ const Mints = (props) => {
           .mints-link06 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -1050,7 +1050,7 @@ const Mints = (props) => {
           .mints-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-link08 {
@@ -1098,7 +1098,7 @@ const Mints = (props) => {
           .mints-text11 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-link09 {
@@ -1146,7 +1146,7 @@ const Mints = (props) => {
           .mints-text12 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .mints-container31 {
@@ -1242,7 +1242,7 @@ const Mints = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -1270,7 +1270,7 @@ const Mints = (props) => {
             position: relative;
             align-self: center;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             padding-top: var(--dl-space-space-oneandhalfunits);
             border-color: #2f2f2f;
             border-width: 1px;
@@ -1560,7 +1560,7 @@ const Mints = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Mints
+export default Mints;
