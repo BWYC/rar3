@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Pools = (props) => {
   return (
@@ -50,7 +50,7 @@ const Pools = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="pools-link">
                     <img
                       alt="logo"
@@ -79,7 +79,7 @@ const Pools = (props) => {
                           src="/fav-200h.ico"
                           className="pools-image1"
                         />
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                           <a className="pools-link01">
                             <h1 className="pools-heading">RAR3BAY</h1>
                           </a>
@@ -90,7 +90,7 @@ const Pools = (props) => {
                         <div className="pools-container10">
                           <span className="pools-text03">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="pools-link02">
                             <div className="pools-container11">
                               <div className="pools-container12">
@@ -116,7 +116,7 @@ const Pools = (props) => {
                             <span className="pools-text05">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="pools-link03">
                             <div className="pools-container15">
                               <div className="pools-container16">
@@ -131,7 +131,7 @@ const Pools = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="pools-link04">
                             <div className="pools-container17">
                               <div className="pools-container18">
@@ -146,7 +146,7 @@ const Pools = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/pools">
+                        <Link legacyBehavior href="/pools">
                           <a className="pools-link05">
                             <div className="pools-container19">
                               <div className="pools-container20">
@@ -166,7 +166,7 @@ const Pools = (props) => {
                         <div className="pools-container22">
                           <span className="pools-text09">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="pools-link06">
                             <div className="pools-container23">
                               <div className="pools-container24">
@@ -192,7 +192,7 @@ const Pools = (props) => {
                             <span className="pools-text11">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="pools-link07">
                             <div className="pools-container27">
                               <div className="pools-container28">
@@ -207,7 +207,7 @@ const Pools = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="pools-link08">
                             <div className="pools-container29">
                               <div className="pools-container30">
@@ -242,7 +242,7 @@ const Pools = (props) => {
               <div className="pools-container36">
                 <div className="pools-container37">
                   <div className="pools-container38">
-                    <Link href="/sats">
+                    <Link legacyBehavior href="/sats">
                       <a className="pools-link09">
                         <h1 className="pools-heading1">COMING SOON</h1>
                       </a>
@@ -291,7 +291,7 @@ const Pools = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -337,7 +337,7 @@ const Pools = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -372,7 +372,7 @@ const Pools = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -407,7 +407,7 @@ const Pools = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -549,7 +549,7 @@ const Pools = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -593,7 +593,7 @@ const Pools = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -634,7 +634,7 @@ const Pools = (props) => {
           .pools-text03 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .pools-link02 {
             display: contents;
@@ -681,7 +681,7 @@ const Pools = (props) => {
           .pools-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-container13 {
@@ -726,7 +726,7 @@ const Pools = (props) => {
           .pools-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-link03 {
@@ -774,7 +774,7 @@ const Pools = (props) => {
           .pools-text06 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-link04 {
@@ -822,7 +822,7 @@ const Pools = (props) => {
           .pools-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-link05 {
@@ -870,7 +870,7 @@ const Pools = (props) => {
           .pools-text08 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-container21 {
@@ -894,7 +894,7 @@ const Pools = (props) => {
           .pools-text09 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .pools-link06 {
             display: contents;
@@ -941,7 +941,7 @@ const Pools = (props) => {
           .pools-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-container25 {
@@ -986,7 +986,7 @@ const Pools = (props) => {
           .pools-text11 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-link07 {
@@ -1034,7 +1034,7 @@ const Pools = (props) => {
           .pools-text12 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-link08 {
@@ -1082,7 +1082,7 @@ const Pools = (props) => {
           .pools-text13 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .pools-container31 {
@@ -1191,7 +1191,7 @@ const Pools = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               180deg,
@@ -1354,7 +1354,7 @@ const Pools = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Pools
+export default Pools;

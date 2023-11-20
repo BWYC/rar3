@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Portfolio = (props) => {
   return (
@@ -77,7 +77,7 @@ const Portfolio = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="portfolio-link03">
                     <img
                       alt="logo"
@@ -112,7 +112,7 @@ const Portfolio = (props) => {
                           src="/fav-200h.ico"
                           className="portfolio-image1"
                         />
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                           <a className="portfolio-link04">
                             <h1 className="portfolio-heading">RAR3BAY</h1>
                           </a>
@@ -123,7 +123,7 @@ const Portfolio = (props) => {
                         <div className="portfolio-container10">
                           <span className="portfolio-text">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="portfolio-link05">
                             <div className="portfolio-container11">
                               <div className="portfolio-container12">
@@ -149,7 +149,7 @@ const Portfolio = (props) => {
                             <span className="portfolio-text02">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="portfolio-link06">
                             <div className="portfolio-container15">
                               <div className="portfolio-container16">
@@ -166,7 +166,7 @@ const Portfolio = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="portfolio-link07">
                             <div className="portfolio-container17">
                               <div className="portfolio-container18">
@@ -186,7 +186,7 @@ const Portfolio = (props) => {
                         <div className="portfolio-container20">
                           <span className="portfolio-text05">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="portfolio-link08">
                             <div className="portfolio-container21">
                               <div className="portfolio-container22">
@@ -201,7 +201,7 @@ const Portfolio = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/pools">
+                        <Link legacyBehavior href="/pools">
                           <a className="portfolio-link09">
                             <div className="portfolio-container23">
                               <div className="portfolio-container24">
@@ -216,7 +216,7 @@ const Portfolio = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="portfolio-link10">
                             <div className="portfolio-container25">
                               <div className="portfolio-container26">
@@ -233,7 +233,7 @@ const Portfolio = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="portfolio-link11">
                             <div className="portfolio-container27">
                               <div className="portfolio-container28">
@@ -248,7 +248,7 @@ const Portfolio = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/mints">
+                        <Link legacyBehavior href="/mints">
                           <a className="portfolio-link12">
                             <div className="portfolio-container29">
                               <div className="portfolio-container30">
@@ -286,7 +286,7 @@ const Portfolio = (props) => {
               <div className="portfolio-container36">
                 <div className="portfolio-container37">
                   <div className="portfolio-container38">
-                    <Link href="/portfolio">
+                    <Link legacyBehavior href="/portfolio">
                       <a className="portfolio-link13">
                         <h1 className="portfolio-text11">YOUR PORTFOLIO</h1>
                       </a>
@@ -325,7 +325,7 @@ const Portfolio = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -371,7 +371,7 @@ const Portfolio = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -407,7 +407,7 @@ const Portfolio = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -443,7 +443,7 @@ const Portfolio = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -586,7 +586,7 @@ const Portfolio = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -630,7 +630,7 @@ const Portfolio = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -671,7 +671,7 @@ const Portfolio = (props) => {
           .portfolio-text {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .portfolio-link05 {
             display: contents;
@@ -718,7 +718,7 @@ const Portfolio = (props) => {
           .portfolio-text01 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-container13 {
@@ -763,7 +763,7 @@ const Portfolio = (props) => {
           .portfolio-text02 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link06 {
@@ -811,7 +811,7 @@ const Portfolio = (props) => {
           .portfolio-text03 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link07 {
@@ -859,7 +859,7 @@ const Portfolio = (props) => {
           .portfolio-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-container19 {
@@ -883,7 +883,7 @@ const Portfolio = (props) => {
           .portfolio-text05 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .portfolio-link08 {
             display: contents;
@@ -930,7 +930,7 @@ const Portfolio = (props) => {
           .portfolio-text06 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link09 {
@@ -978,7 +978,7 @@ const Portfolio = (props) => {
           .portfolio-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link10 {
@@ -1026,7 +1026,7 @@ const Portfolio = (props) => {
           .portfolio-text08 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link11 {
@@ -1074,7 +1074,7 @@ const Portfolio = (props) => {
           .portfolio-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-link12 {
@@ -1122,7 +1122,7 @@ const Portfolio = (props) => {
           .portfolio-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .portfolio-container31 {
@@ -1235,7 +1235,7 @@ const Portfolio = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(0, 0, 0) 0%,
@@ -1376,7 +1376,7 @@ const Portfolio = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

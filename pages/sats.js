@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Sats = (props) => {
   return (
@@ -47,7 +47,7 @@ const Sats = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="sats-link">
                     <img
                       alt="logo"
@@ -76,7 +76,7 @@ const Sats = (props) => {
                           src="/fav-200h.ico"
                           className="sats-image1"
                         />
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                           <a className="sats-link01">
                             <h1 className="sats-heading">RAR3BAY</h1>
                           </a>
@@ -87,7 +87,7 @@ const Sats = (props) => {
                         <div className="sats-container10">
                           <span className="sats-text03">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="sats-link02">
                             <div className="sats-container11">
                               <div className="sats-container12">
@@ -113,7 +113,7 @@ const Sats = (props) => {
                             <span className="sats-text05">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="sats-link03">
                             <div className="sats-container15">
                               <div className="sats-container16">
@@ -128,7 +128,7 @@ const Sats = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="sats-link04">
                             <div className="sats-container17">
                               <div className="sats-container18">
@@ -148,7 +148,7 @@ const Sats = (props) => {
                         <div className="sats-container20">
                           <span className="sats-text08">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="sats-link05">
                             <div className="sats-container21">
                               <div className="sats-container22">
@@ -174,7 +174,7 @@ const Sats = (props) => {
                             <span className="sats-text10">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="sats-link06">
                             <div className="sats-container25">
                               <div className="sats-container26">
@@ -189,7 +189,7 @@ const Sats = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="sats-link07">
                             <div className="sats-container27">
                               <div className="sats-container28">
@@ -204,7 +204,7 @@ const Sats = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/mints">
+                        <Link legacyBehavior href="/mints">
                           <a className="sats-link08">
                             <div className="sats-container29">
                               <div className="sats-container30">
@@ -239,7 +239,7 @@ const Sats = (props) => {
               <div className="sats-container36">
                 <div className="sats-container37">
                   <div className="sats-container38">
-                    <Link href="/sats">
+                    <Link legacyBehavior href="/sats">
                       <a className="sats-link09">
                         <h1 className="sats-heading1">COMING SOON</h1>
                       </a>
@@ -288,7 +288,7 @@ const Sats = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -334,7 +334,7 @@ const Sats = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -369,7 +369,7 @@ const Sats = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -404,7 +404,7 @@ const Sats = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -546,7 +546,7 @@ const Sats = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -590,7 +590,7 @@ const Sats = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -631,7 +631,7 @@ const Sats = (props) => {
           .sats-text03 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .sats-link02 {
             display: contents;
@@ -678,7 +678,7 @@ const Sats = (props) => {
           .sats-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-container13 {
@@ -723,7 +723,7 @@ const Sats = (props) => {
           .sats-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-link03 {
@@ -771,7 +771,7 @@ const Sats = (props) => {
           .sats-text06 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-link04 {
@@ -819,7 +819,7 @@ const Sats = (props) => {
           .sats-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-container19 {
@@ -843,7 +843,7 @@ const Sats = (props) => {
           .sats-text08 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .sats-link05 {
             display: contents;
@@ -890,7 +890,7 @@ const Sats = (props) => {
           .sats-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-container23 {
@@ -935,7 +935,7 @@ const Sats = (props) => {
           .sats-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-link06 {
@@ -983,7 +983,7 @@ const Sats = (props) => {
           .sats-text11 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-link07 {
@@ -1031,7 +1031,7 @@ const Sats = (props) => {
           .sats-text12 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-link08 {
@@ -1079,7 +1079,7 @@ const Sats = (props) => {
           .sats-text13 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .sats-container31 {
@@ -1188,7 +1188,7 @@ const Sats = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               180deg,
@@ -1351,7 +1351,7 @@ const Sats = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Sats
+export default Sats;

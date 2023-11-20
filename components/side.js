@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Side = (props) => {
   return (
@@ -13,7 +13,7 @@ const Side = (props) => {
             src={props.image_src}
             className="side-image"
           />
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a className="side-link">{props.text1}</a>
           </Link>
         </div>
@@ -87,7 +87,7 @@ const Side = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -123,7 +123,7 @@ const Side = (props) => {
             position: absolute;
             font-size: 12;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
           }
           .side-link:hover {
@@ -158,7 +158,7 @@ const Side = (props) => {
           .side-text {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .side-container05 {
             width: 171px;
@@ -206,7 +206,7 @@ const Side = (props) => {
           .side-text1 {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -254,7 +254,7 @@ const Side = (props) => {
           .side-text2 {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -306,7 +306,7 @@ const Side = (props) => {
           .side-text3 {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -351,7 +351,7 @@ const Side = (props) => {
           .side-text4 {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -396,7 +396,7 @@ const Side = (props) => {
           .side-text5 {
             color: #ffffff;
             font-size: 10px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
             text-decoration: none;
           }
@@ -416,22 +416,22 @@ const Side = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Side.defaultProps = {
-  text11: 'EXPLORE RAR3',
-  text1: 'RAREBAY.XYZ',
-  text11111: 'PORTFOLIO',
-  text111: 'DEX',
-  text1111: 'POOLS',
-  text11113: 'SATS',
-  rootClassName: '',
-  image_alt: 'image',
-  image_src: '/fav-200h.ico',
-  rootClassName3: '',
-  text11112: 'MINT',
-}
+  text11: "EXPLORE RAR3",
+  text1: "RAREBAY.XYZ",
+  text11111: "PORTFOLIO",
+  text111: "DEX",
+  text1111: "POOLS",
+  text11113: "SATS",
+  rootClassName: "",
+  image_alt: "image",
+  image_src: "/fav-200h.ico",
+  rootClassName3: "",
+  text11112: "MINT",
+};
 
 Side.propTypes = {
   text11: PropTypes.string,
@@ -445,6 +445,6 @@ Side.propTypes = {
   image_src: PropTypes.string,
   rootClassName3: PropTypes.string,
   text11112: PropTypes.string,
-}
+};
 
-export default Side
+export default Side;

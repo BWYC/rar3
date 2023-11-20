@@ -68,7 +68,7 @@ const Home = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link LegacyBehavior href="/">
+                <Link legacyBehavior href="/">
                   <a className="home-link02">
                     <img
                       alt="logo"
@@ -97,7 +97,7 @@ const Home = (props) => {
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link LegacyBehavior href="/">
+                        <Link legacyBehavior href="/">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -108,7 +108,7 @@ const Home = (props) => {
                         <div className="home-container10">
                           <span className="home-text01">EXPLORE RAR3</span>
                         </div>
-                        <Link LegacyBehavior href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="home-link04">
                             <div className="home-container11">
                               <div className="home-container12">
@@ -134,7 +134,7 @@ const Home = (props) => {
                             <span className="home-text03">POOLS</span>
                           </div>
                         </div>
-                        <Link LegacyBehavior href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="home-link05">
                             <div className="home-container15">
                               <div className="home-container16">
@@ -149,7 +149,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link LegacyBehavior href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="home-link06">
                             <div className="home-container17">
                               <div className="home-container18">
@@ -169,7 +169,7 @@ const Home = (props) => {
                         <div className="home-container20">
                           <span className="home-text06">EXPLORE RAR3</span>
                         </div>
-                        <Link LegacyBehavior href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="home-link07">
                             <div className="home-container21">
                               <div className="home-container22">
@@ -184,7 +184,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link LegacyBehavior href="/pools">
+                        <Link legacyBehavior href="/pools">
                           <a className="home-link08">
                             <div className="home-container23">
                               <div className="home-container24">
@@ -199,7 +199,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link LegacyBehavior href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="home-link09">
                             <div className="home-container25">
                               <div className="home-container26">
@@ -214,7 +214,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link LegacyBehavior href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="home-link10">
                             <div className="home-container27">
                               <div className="home-container28">
@@ -229,7 +229,7 @@ const Home = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link LegacyBehavior href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="home-link11">
                             <div className="home-container29">
                               <div className="home-container30">
@@ -263,7 +263,7 @@ const Home = (props) => {
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
-                  <Link LegacyBehavior href="/">
+                  <Link legacyBehavior href="/">
                     <a className="home-link12">
                       <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
                     </a>
@@ -394,7 +394,7 @@ const Home = (props) => {
                 <span className="home-text29">
                   discover, track, collect, OWN
                 </span>
-                <Link LegacyBehavior href="/dex">
+                <Link legacyBehavior href="/dex">
                   <a className="home-link13">GET STARTED</a>
                 </Link>
               </div>

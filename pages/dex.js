@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import Search from '../components/search'
-import Footer from '../components/footer'
+import Search from "../components/search";
+import Footer from "../components/footer";
 
 const Dex = (props) => {
   return (
@@ -68,7 +68,7 @@ const Dex = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a className="dex-link03">
                     <img alt="logo" src="/fav-200h.ico" className="dex-image" />
                   </a>
@@ -90,7 +90,7 @@ const Dex = (props) => {
                           src="/fav-200h.ico"
                           className="dex-image1"
                         />
-                        <Link href="/">
+                        <Link legacyBehavior href="/">
                           <a className="dex-link04">
                             <h1 className="dex-heading">RAR3BAY</h1>
                           </a>
@@ -101,7 +101,7 @@ const Dex = (props) => {
                         <div className="dex-container10">
                           <span className="dex-text">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="dex-link05">
                             <div className="dex-container11">
                               <div className="dex-container12">
@@ -124,7 +124,7 @@ const Dex = (props) => {
                             <span className="dex-text02">POOLS</span>
                           </div>
                         </div>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="dex-link06">
                             <div className="dex-container15">
                               <div className="dex-container16">
@@ -139,7 +139,7 @@ const Dex = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="dex-link07">
                             <div className="dex-container17">
                               <div className="dex-container18">
@@ -154,7 +154,7 @@ const Dex = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/sats">
+                        <Link legacyBehavior href="/sats">
                           <a className="dex-link08">
                             <div className="dex-container19">
                               <div className="dex-container20">
@@ -174,7 +174,7 @@ const Dex = (props) => {
                         <div className="dex-container22">
                           <span className="dex-text06">EXPLORE RAR3</span>
                         </div>
-                        <Link href="/dex">
+                        <Link legacyBehavior href="/dex">
                           <a className="dex-link09">
                             <div className="dex-container23">
                               <div className="dex-container24">
@@ -189,7 +189,7 @@ const Dex = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/pools">
+                        <Link legacyBehavior href="/pools">
                           <a className="dex-link10">
                             <div className="dex-container25">
                               <div className="dex-container26">
@@ -204,7 +204,7 @@ const Dex = (props) => {
                             </div>
                           </a>
                         </Link>
-                        <Link href="/portfolio">
+                        <Link legacyBehavior href="/portfolio">
                           <a className="dex-link11">
                             <div className="dex-container27">
                               <div className="dex-container28">
@@ -245,7 +245,7 @@ const Dex = (props) => {
             <div className="dex-container33">
               <div className="dex-col">
                 <div className="dex-container34">
-                  <Link href="/dex">
+                  <Link legacyBehavior href="/dex">
                     <a className="dex-link13">
                       <h1 className="dex-text10">NFT DEX</h1>
                     </a>
@@ -286,7 +286,7 @@ const Dex = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: 'pixel NES';
+            font-family: "pixel NES";
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -332,7 +332,7 @@ const Dex = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -368,7 +368,7 @@ const Dex = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -404,7 +404,7 @@ const Dex = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -547,7 +547,7 @@ const Dex = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: 'pixel Nex';
+            font-family: "pixel Nex";
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -591,7 +591,7 @@ const Dex = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -632,7 +632,7 @@ const Dex = (props) => {
           .dex-text {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .dex-link05 {
             display: contents;
@@ -679,7 +679,7 @@ const Dex = (props) => {
           .dex-text01 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-container13 {
@@ -724,7 +724,7 @@ const Dex = (props) => {
           .dex-text02 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-link06 {
@@ -772,7 +772,7 @@ const Dex = (props) => {
           .dex-text03 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-link07 {
@@ -820,7 +820,7 @@ const Dex = (props) => {
           .dex-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-link08 {
@@ -868,7 +868,7 @@ const Dex = (props) => {
           .dex-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-container21 {
@@ -892,7 +892,7 @@ const Dex = (props) => {
           .dex-text06 {
             color: #ffffff;
             font-size: 13px;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
           }
           .dex-link09 {
             display: contents;
@@ -939,7 +939,7 @@ const Dex = (props) => {
           .dex-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-link10 {
@@ -987,7 +987,7 @@ const Dex = (props) => {
           .dex-text08 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-link11 {
@@ -1035,7 +1035,7 @@ const Dex = (props) => {
           .dex-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             margin-left: var(--dl-space-space-unit);
           }
           .dex-container29 {
@@ -1143,7 +1143,7 @@ const Dex = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: 'Pixel NES';
+            font-family: "Pixel NES";
             text-decoration: none;
             background-image: linear-gradient(
               180deg,
@@ -1297,7 +1297,7 @@ const Dex = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Dex
+export default Dex;
