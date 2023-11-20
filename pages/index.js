@@ -272,7 +272,7 @@ const Home = (props) => {
               </div>
               <div className="home-container38">
                 <video
-                  src="https://bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm.ipfs.nftstorage.link/ipfs/bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm/hold.mp4"
+                  src="/hold.mp4"
                   loop
                   muted
                   autoPlay
@@ -366,7 +366,7 @@ const Home = (props) => {
                             src="/whls%20(1)-200h.jpg"
                             className="home-image5"
                           />
-                          <span className="home-text24">WHALECARDS II</span>
+                          <span className="home-text24">WHALECARDS</span>
                         </div>
                         <div className="home-container66">
                           <div className="home-container67">
@@ -385,32 +385,21 @@ const Home = (props) => {
                 </div>
               </div>
             </div>
-            <div className="home-container69">
-              <div className="home-feature-card">
-                <svg viewBox="0 0 1024 1024" className="home-icon32">
-                  <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
-                </svg>
-                <h2 className="home-text28">HOME OF RARE</h2>
-                <span className="home-text29">
-                  discover, track, collect, OWN
-                </span>
-                <Link legacyBehavior href="/dex">
-                  <a className="home-link13">GET STARTED</a>
-                </Link>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className="home-container69">
+          <div className="home-feature-card">
+            <svg viewBox="0 0 1024 1024" className="home-icon32">
+              <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
+            </svg>
+            <h2 className="home-text28">HOME OF RARE</h2>
+            <span className="home-text29">discover, track, collect, OWN</span>
+            <Link legacyBehavior href="/dex">
+              <a className="home-link13">GET STARTED</a>
+            </Link>
           </div>
         </div>
         <Footer rootClassName="footer-root-class-name"></Footer>
-        <video
-          src="https://bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm.ipfs.nftstorage.link/ipfs/bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm/hold.mp4"
-          loop
-          muted
-          preload="none"
-          autoPlay
-          playsInline
-          className="home-video1"
-        ></video>
       </div>
       <style jsx>
         {`
@@ -1388,7 +1377,7 @@ const Home = (props) => {
             justify-content: center;
           }
           .home-container40:hover {
-            width: 80%;
+            width: 90%;
           }
           .home-container41 {
             width: 250px;
@@ -1939,10 +1928,10 @@ const Home = (props) => {
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 998px;
+            width: auto;
             height: 375px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
           }
           .home-feature-card {
