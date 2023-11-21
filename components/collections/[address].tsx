@@ -4,24 +4,21 @@ import styles from "../../styles/Home.module.css";
 
 import {Link, Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./data";
-import truncateEthAddress from "truncate-eth-address";
-import { Blockie } from "web3uikit"
-import NFTGrid from "../../components/NFT/NFTGrid";
-import Sell from "../sell"
-import Container from "../../components/Container/Container";
-
 
 import RR from "../../public/favicon.ico";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import CollectionPurchaseSection from "../../components/collectionPurchaseSection"
+import R from "../../public/whale.png"
+import B from "../../public/3.png"
+import { useContract, useContractEvents, useContractRead, useAddress } from "@thirdweb-dev/react";
+import randomColor from "../../util/randomColor";
+import NFTGrid from "../../components/NFT/NFTGrid";  
 import {
   useOwnedNFTs,
   useValidDirectListings,
   useValidEnglishAuctions,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
-import R from "../../public/whale.png"
-import B from "../../public/3.png"
-import { useContract, useContractEvents, useContractRead, useAddress } from "@thirdweb-dev/react";
-import randomColor from "../../util/randomColor";
 import React, { useState } from "react";
 import {
   MARKETPLACE_ADDRESS,
@@ -30,7 +27,6 @@ import {
 import Skeleton from "../../components/Skeleton/Skeleton";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
 
-  
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
   randomColor(),
@@ -39,8 +35,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 ];
 
 
-
-export default function Profile() {
+export default function CollectionHeroSection() {
   const address = useAddress()
 
   const router = useRouter();
@@ -55,23 +50,21 @@ export default function Profile() {
 
   const { data: ownedNfts, isLoading: isLoading } = useOwnedNFTs(
     nftCollection,
-    address,
+    router.query.address as string,
   );
 
   const { data: directListings, isLoading: loadingDirects } =
     useValidDirectListings(marketplace, {
-      seller: address,
+      seller: router.query.address as string,
     });
 
   const { data: auctionListings, isLoading: loadingAuctions } =
     useValidEnglishAuctions(marketplace, {
-      seller: address,
+      seller: router.query.address as string,
     });
 
- 
-
-  var pfpCover = ("")
-  var pfp = ("")
+  
+  var pfpCover = (R)
 
   if (!address) {
 return(
@@ -137,132 +130,107 @@ return(
    
          
       <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <div
+        <Image
           className={styles.coverImage}
+          src={pfpCover}
+          alt=""
+          width={1800}
+          height={600}
           style={{
-            backgroundPosition: "center",
-            backgroundSize: "100%",
-            backgroundRepeat: "no-repeat",
-            display: "flex",
-            backgroundImage:  `linear-gradient(${randomColor3}, ${randomColor4}, ${randomColor1})`
+            backgroundPosition: "cover",
+            backgroundSize: "",
+            display: "flex"
           }}
         />
            <Data />
-         <div
+         <Image
+         alt=""
+         width={300}
+         height={300}
+         src={B}
           className={styles.profilePicture}
           style={{
+            backgroundImage: "url(1.png)",
             backgroundPosition: "center",
             backgroundSize: "100%",
             zIndex: "1"
             
           }}
-       >
-        <Blockie scale={16.5} seed={address} />
-       </div>
-  <h1 className={styles.profileName}>
-          {truncateEthAddress(address)}       <Checkmark style={{background: "darkgreen", borderRadius: "100%", borderWidth: "1px", padding: "2px", border: "dashed", borderColor: "initial", textShadow: "black 0px 10px 10px, white 20px 20px 20px, black 10px 15px 0px", color: "initial"}} /> 
+       / >
+  
+        <h1 className={styles.profileName}>
+
+ BOREDSEASON WHALES II <Checkmark style={{background: "darkgreen", borderRadius: "100%", borderWidth: "1px", padding: "2px", border: "dashed", borderColor: "initial", textShadow: "black 0px 10px 10px, white 20px 20px 20px, black 10px 15px 0px", color: "initial"}} />
         </h1>
       </div>
-   
-    <div className={styles.tabs}>
-        <h3
-          className={`${styles.tab} 
-        ${tab === "nfts" ? styles.activeTab : ""}`}
-          onClick={() => setTab("nfts")}
-        >
-          NFTs
-        </h3>
-        <h3
-          className={`${styles.tab} 
-        ${tab === "listings" ? styles.activeTab : ""}`}
-          onClick={() => setTab("listings")}
-        >
-          Listings
-        </h3>
-        <h3
-          className={`${styles.tab}
-        ${tab === "auctions" ? styles.activeTab : ""}`}
-          onClick={() => setTab("auctions")}
-        >
-          Auctions
-        </h3>
-        <h3
-          className={`${styles.tab}
-        ${tab === "sell" ? styles.activeTab : ""}`}
-          onClick={() => setTab("sell")}
-        >
-         Sell
-        </h3>
-      </div>
-
-      <div
-        className={`${
-          tab === "nfts" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-        <Container maxWidth="lg">
-        <NFTGrid
-          data={ownedNfts}
-          isLoading={isLoading}
-          emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
-        />
-        </Container>
+    <section className={styles.CollectionHeroSection}>
      
-      </div>
-
-      <div
-        className={`${
-          tab === "listings" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-        {loadingDirects ? (
-          <p>Loading...</p>
-        ) : directListings && directListings.length === 0 ? (
-          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
-        ) : (
-          directListings?.map((listing) => (
-            <ListingWrapper listing={listing} key={listing.id} />
-          ))
-        )}
-      </div>
-
-      <div
-        className={`${
-          tab === "auctions" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-        {loadingAuctions ? (
-          <p>Loading...</p>
-        ) : auctionListings && auctionListings.length === 0 ? (
-          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
-        ) : (
-          auctionListings?.map((listing) => (
-            <ListingWrapper listing={listing} key={listing.id} />
-          ))
-        )}
-      </div>
-
-      <div
-        className={`${
-          tab === "nfts" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-        <NFTGrid
+      <section>
+        <Image
+          src={RR}
+          alt=""
+          className={styles.collectionProfile}
+        />
+        <section className={styles.collection_marketplace_title_icons}>
+          <section>
+         
+          </section>
+        </section>
+      </section>
+      <section>
+        <table className={styles.collection_header_dataTable}>
+          <thead>
+            <tr className={styles.collection_header_dataTable_head_row}>
+              <th>COLLECTION</th>
+              <th>FLOOR PRICE</th>
+              <th>1D CHANGE</th>
+              <th>7D CHANGE</th>
+              <th>1D VOLUME</th>
+              <th>7D VOLUME</th>
+              <th>OWNERS</th>
+              <th>SUPPLY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className={styles.collection_header_dataTable_body_row}>
+              <td style={{color: "gray"}}>By RareLabs</td>
+              <td>
+                0.00
+                ⚡
+              </td>
+              <td className={styles.collection_header_dataTable_body_td_red}>
+              0.00
+                ⚡
+              </td>
+              <td className={styles.collection_header_dataTable_body_td_red}>
+              0.00
+                ⚡
+              </td>
+              <td>
+              0.00
+                ⚡
+              </td>
+              <td>
+              0.00
+                ⚡
+              </td>
+              <td>0%</td>
+              <td>3100</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+    <CollectionPurchaseSection />
+       
+    <NFTGrid
           data={ownedNfts}
           isLoading={isLoading}
           emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
         />
-      </div>
-      <div
-        className={`${
-          tab === "sell" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-       <Sell />
-      </div>
-    </section>
     </section>
       </section>
+    </section>
     </>
   );
         }

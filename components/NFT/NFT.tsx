@@ -41,7 +41,7 @@ import {
   
     return (
       <>
-        <ThirdwebNftMedia metadata={nft.metadata} style={{width: "60%", height: "auto", borderRadius: "16px"}} />
+        <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "auto", borderRadius: "16px"}} />
   
         <p className={styles.nftName}>
           {nft.metadata.id}: {truncateEthAddress(owner)}

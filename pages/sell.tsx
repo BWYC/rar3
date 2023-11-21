@@ -25,7 +25,7 @@ import {
         <div
           style={{ marginTop: "20%", marginLeft: "10%", fontFamily: "monospace" }}
         >
-          LOADING WHALECARDS....
+          LOADING NFTs..
         </div>
       );
     }
@@ -44,7 +44,7 @@ import {
                 setSelectedNft(nft);
               }}
               emptyText={
-                "Looks like you don't own any Whalecards in your Wallet. Head to the buy page to buy some!"
+                "Looks like you don't own any NFT in your Wallet. Head to the buy page to buy some!"
               }
             />
           </>

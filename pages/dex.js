@@ -116,7 +116,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   
                   </div>
                 </div>
-                <div data-thq="thq-burger-menu" className="home-burger-menu">
+                
+                <div  data-thq="thq-burger-menu" className="home-burger-menu">
                   <svg viewBox="0 0 1024 1024" className="home-icon06">
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
@@ -614,6 +615,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             background: gray;
             border-radius: 16px;
             cursor: pointer;
+
           }
           .home-icon06 {
             fill: #606060;
@@ -1278,7 +1280,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 1%;
+            margin-top: 2%;
           }
           .home-container36 {
             width: 100%;

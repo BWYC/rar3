@@ -379,14 +379,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               </header>
             </div>
             
-            <div className="home-container35">
+          
             <div className="home-container37">
-                  <Link className="home-link12" href="/#">
-                      <h1 className="home-heading1">Portfolio</h1>
-                  </Link>
+                
                 </div>
                 <Profile /> 
-            </div>
+       
           
           </div>
         </div>
@@ -1301,7 +1299,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-self: center;
             margin-top: 100px;
             align-items: center;
-            margin-bottom: var(--dl-space-space-unit);
             flex-direction: column;
             justify-content: flex-start;
           }

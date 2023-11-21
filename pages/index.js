@@ -15,6 +15,7 @@ import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 
+
 const light = { background: "white" };
 const dark = { background: "black" };
 
@@ -418,7 +419,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           </div>
                           <div className="home-container47">
                             <span className="home-text14">FLOOR: 0.0</span>
-                            <span className="home-text15">VIEW ITEMS</span>
+                            <a href="" className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
                       </div>
@@ -734,6 +735,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             margin-left: var(--dl-space-space-unit);
             justify-content: center;
+            cursor: pointer;
           }
           .home-burger-menu:hover{
             background: gray;
