@@ -1273,12 +1273,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             margin-top: 5px;
           }
           .home-container35 {
-            width: 100%;
+            width: 80%;
             height: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 3%;
+            margin-top: 1%;
           }
           .home-container36 {
             width: 100%;

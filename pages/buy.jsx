@@ -22,7 +22,8 @@ export default function Buy() {
           width: "100%",
           diplay: "flex",
           alignItems: "center",
-          textAlign: "center"
+          textAlign: "center",
+          marginBottom: "10%"
         }}
       >
         <h3>LOADING ITEMS...</h3>
