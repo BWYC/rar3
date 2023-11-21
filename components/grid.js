@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react'
+import Link from 'next/link'
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-import Search from "./search";
+import Search from './search'
 
 const Grid = (props) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   return (
     <>
       <div className={`grid-container ${props.rootClassName} `}>
@@ -40,10 +40,10 @@ const Grid = (props) => {
                   <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                 </svg>
               </div>
-              <Link legacyBehavior href="/">
-                <a className="grid-link">
+              <Link className="grid-link" href="/">
+              
                   <img alt="logo" src="/fav-200h.ico" className="grid-image" />
-                </a>
+           
               </Link>
               <Search rootClassName="search-root-class-name9"></Search>
               <div data-thq="thq-mobile-menu" className="grid-mobile-menu">
@@ -62,10 +62,10 @@ const Grid = (props) => {
                         src={props.image_src4}
                         className="grid-image1"
                       />
-                      <Link legacyBehavior href="/">
-                        <a className="grid-link1">
+                      <Link href="/" className="grid-link1">
+                     
                           <h1 className="grid-heading">{props.Heading2}</h1>
-                        </a>
+                   
                       </Link>
                     </div>
                     <div className="grid-container07"></div>
@@ -73,8 +73,8 @@ const Grid = (props) => {
                       <div className="grid-container09">
                         <span className="grid-text03">{props.text15}</span>
                       </div>
-                      <Link legacyBehavior href="/dex">
-                        <a className="grid-link2">
+                      <Link className="grid-link2" href="/dex">
+                      
                           <div className="grid-container10">
                             <div className="grid-container11">
                               <svg
@@ -88,7 +88,7 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                     
                       </Link>
                       <div className="grid-container12">
                         <div className="grid-container13">
@@ -98,8 +98,8 @@ const Grid = (props) => {
                           <span className="grid-text05">{props.text18}</span>
                         </div>
                       </div>
-                      <Link legacyBehavior href="/portfolio">
-                        <a className="grid-link3">
+                      <Link  className="grid-link3"href="/portfolio">
+                      
                           <div className="grid-container14">
                             <div className="grid-container15">
                               <svg
@@ -113,10 +113,10 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                      
                       </Link>
-                      <Link legacyBehavior href="/sats">
-                        <a className="grid-link4">
+                      <Link className="grid-link4" href="/sats">
+                      
                           <div className="grid-container16">
                             <div className="grid-container17">
                               <svg
@@ -130,15 +130,15 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                     
                       </Link>
                     </div>
                     <div className="grid-container18">
                       <div className="grid-container19">
                         <span className="grid-text08">{props.text16}</span>
                       </div>
-                      <Link legacyBehavior href="/dex">
-                        <a className="grid-link5">
+                      <Link className="grid-link5" href="/dex">
+                       
                           <div className="grid-container20">
                             <div className="grid-container21">
                               <svg
@@ -152,7 +152,7 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                      
                       </Link>
                       <div className="grid-container22">
                         <div className="grid-container23">
@@ -162,8 +162,8 @@ const Grid = (props) => {
                           <span className="grid-text10">{props.text24}</span>
                         </div>
                       </div>
-                      <Link legacyBehavior href="/portfolio">
-                        <a className="grid-link6">
+                      <Link className="grid-link6" href="/portfolio">
+                       
                           <div className="grid-container24">
                             <div className="grid-container25">
                               <svg
@@ -177,10 +177,10 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                    
                       </Link>
-                      <Link legacyBehavior href="/sats">
-                        <a className="grid-link7">
+                      <Link className="grid-link7" href="/sats">
+                        
                           <div className="grid-container26">
                             <div className="grid-container27">
                               <svg
@@ -194,7 +194,7 @@ const Grid = (props) => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                 
                       </Link>
                     </div>
                     <div className="grid-container28"></div>
@@ -208,16 +208,8 @@ const Grid = (props) => {
                   <path d="M1024 928c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
                   <path d="M1024 512v-384h-768c0-35.346-28.654-64-64-64h-192v64h128l48.074 412.054c-29.294 23.458-48.074 59.5-48.074 99.946 0 70.696 57.308 128 128 128h768v-64h-768c-35.346 0-64-28.654-64-64 0-0.218 0.014-0.436 0.016-0.656l831.984-127.344z"></path>
                 </svg>
-                <div id="connecting" className="grid-container31"></div>
               </div>
             </header>
-          </div>
-          <div className="grid-container32">
-            <div className="grid-container33">
-              <div className="grid-container34">
-                <h1 className="grid-text13">{props.heading1}</h1>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -226,7 +218,7 @@ const Grid = (props) => {
           .grid-container {
             flex: 0 0 auto;
             width: 100%;
-            height: var(--dl-size-size-maxwidth);
+            height: 100%;
             display: flex;
             position: relative;
             align-items: flex-start;
@@ -238,7 +230,7 @@ const Grid = (props) => {
             height: 100%;
             display: flex;
             align-items: center;
-            font-family: "pixel NES";
+            font-family: 'pixel NES';
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -284,7 +276,7 @@ const Grid = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -319,7 +311,7 @@ const Grid = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -354,7 +346,7 @@ const Grid = (props) => {
             color: #bababa;
             font-size: 10px;
             transition: 0.3s;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: 1px;
             padding-top: 2px;
             border-color: #626262;
@@ -496,7 +488,7 @@ const Grid = (props) => {
             position: relative;
             transition: 0.3s;
             align-items: center;
-            font-family: "pixel Nex";
+            font-family: 'pixel Nex';
             border-color: #252525;
             border-width: 0.5px;
             flex-direction: column;
@@ -540,7 +532,7 @@ const Grid = (props) => {
             margin-top: 0px;
             text-align: center;
             transition: 0.3s;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             text-decoration: none;
             background-image: linear-gradient(
               rgb(255, 255, 255) 0%,
@@ -581,7 +573,7 @@ const Grid = (props) => {
           .grid-text03 {
             color: #ffffff;
             font-size: 13px;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
           }
           .grid-link2 {
             display: contents;
@@ -628,7 +620,7 @@ const Grid = (props) => {
           .grid-text04 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-container12 {
@@ -673,7 +665,7 @@ const Grid = (props) => {
           .grid-text05 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-link3 {
@@ -721,7 +713,7 @@ const Grid = (props) => {
           .grid-text06 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-link4 {
@@ -769,7 +761,7 @@ const Grid = (props) => {
           .grid-text07 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-container18 {
@@ -793,7 +785,7 @@ const Grid = (props) => {
           .grid-text08 {
             color: #ffffff;
             font-size: 13px;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
           }
           .grid-link5 {
             display: contents;
@@ -840,7 +832,7 @@ const Grid = (props) => {
           .grid-text09 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-container22 {
@@ -885,7 +877,7 @@ const Grid = (props) => {
           .grid-text10 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-link6 {
@@ -933,7 +925,7 @@ const Grid = (props) => {
           .grid-text11 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-link7 {
@@ -981,7 +973,7 @@ const Grid = (props) => {
           .grid-text12 {
             font-size: 1em;
             align-self: center;
-            font-family: "Pixel NES";
+            font-family: 'Pixel NES';
             margin-left: var(--dl-space-space-unit);
           }
           .grid-container28 {
@@ -1027,58 +1019,6 @@ const Grid = (props) => {
             border-style: solid;
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
-          }
-          .grid-container32 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            margin-top: 118px;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .grid-container33 {
-            width: 100%;
-            height: auto;
-            display: flex;
-            z-index: auto;
-            position: inherit;
-            align-self: center;
-            margin-top: 0px;
-            align-items: center;
-            padding-top: 0px;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .grid-container34 {
-            width: 100%;
-            height: auto;
-            display: flex;
-            position: relative;
-            align-self: center;
-            margin-top: var(--dl-space-space-unit);
-            align-items: center;
-            margin-bottom: var(--dl-space-space-unit);
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-          .grid-text13 {
-            color: rgb(140, 140, 140);
-            height: 100%;
-            align-self: center;
-            background: -webkit-linear-gradient(
-              rgb(1, 12, 241),
-              rgb(250, 100, 100)
-            );
-            margin-top: 0px;
-            text-align: center;
-            font-family: "Pixel NES";
-            background-image: -webkit-linear-gradient(
-              top,
-              rgb(1, 12, 241),
-              rgb(250, 100, 100)
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
           }
 
           @media (max-width: 1600px) {
@@ -1179,112 +1119,95 @@ const Grid = (props) => {
             .grid-container31 {
               height: var(--dl-size-size-small);
             }
-            .grid-container32 {
-              height: 839px;
-              margin-top: 0px;
-            }
-            .grid-container33 {
-              height: auto;
-              margin-top: 0px;
-            }
-            .grid-container34 {
-              width: 355px;
-              height: 114px;
-            }
-            .grid-text13 {
-              width: 100%;
-              height: 134px;
-              text-align: center;
-            }
           }
         `}
       </style>
     </>
-  );
-};
+  )
+}
 
 Grid.defaultProps = {
-  heading1: "WELCOME TO RAR3BAY",
-  text1: "RAREBAY.XYZ",
-  text112: "VOLUME: 0 CORE 🗲",
-  rootClassName21: "",
-  image_src11: "c7fe840e-7367-4dba-aaa2-d74881872630",
-  Heading: "RAR3BAY",
-  text12: "SELL",
-  image_alt3: "image",
-  text121: "VIEW ITEMS",
-  image_src1: "b8d39b41-22b0-42d6-8389-dbb780965fb3",
-  text2: "RAR310NES",
-  text20: "SATS",
-  rootClassName1221: "",
-  text11111: "PORTFOLIO",
-  image_alt1: "image",
-  rootClassName1231: "",
-  text8: "FLOOR: 0 CORE 🗲",
-  text24: "POOLS",
-  text25: "portfolio",
-  image_alt11: "image",
-  text10: "VIEW ITEMS",
-  text131: "ITEMS: 10000",
-  image_src: "22e33a1b-f6d8-4daf-b476-e403779c8096",
-  text11113: "SATS",
-  rootClassName6: "",
-  text11112: "MINT",
-  image_alt4: "image",
-  text7: "ITEMS: 10000",
-  text111: "DEX",
-  text16: "EXPLORE RAR3",
-  text: "OWNED",
-  image_src4: "/fav-200h.ico",
-  text11: "EXPLORE RAR3",
-  rootClassName7: "",
-  text3: "BWYC I",
-  text13111: "VOMUME: 10 CORE",
-  rootClassName12: "",
-  rootClassName1241: "",
-  rootClassName1: "",
-  text14: "VIEW ITEMS",
-  text1111: "POOLS",
-  rootClassName125: "",
-  text9: "VOLUME: 0 CORE 🗲",
-  image_alt: "image",
-  Heading2: "RAR3BAY",
-  rootClassName121: "",
-  image_alt2: "image",
-  text6: "WHALECARDS",
-  rootClassName124: "",
-  rootClassName123: "",
-  image_src3: "22e33a1b-f6d8-4daf-b476-e403779c8096",
-  rootClassName3: "",
-  text26: "SATS",
-  text18: "POOLS",
-  text19: "portfolio",
-  text22: "DEX",
-  text13: "ITEMS: 10000",
-  text17: "DEX",
-  rootClassName1253: "",
-  rootClassName111: "",
-  rootClassName4: "",
-  rootClassName11: "",
-  text13113: "FLOOR: 0 CORE",
-  rootClassName1252: "",
-  text132: "VOLUME: 0 CORE 🗲",
-  rootClassName5: "",
+  heading1: 'WELCOME TO RAR3BAY',
+  text1: 'RAREBAY.XYZ',
+  text112: 'VOLUME: 0 CORE 🗲',
+  rootClassName21: '',
+  image_src11: 'c7fe840e-7367-4dba-aaa2-d74881872630',
+  Heading: 'RAR3BAY',
+  text12: 'SELL',
+  image_alt3: 'image',
+  text121: 'VIEW ITEMS',
+  image_src1: 'b8d39b41-22b0-42d6-8389-dbb780965fb3',
+  text2: 'RAR310NES',
+  text20: 'SATS',
+  rootClassName1221: '',
+  text11111: 'PORTFOLIO',
+  image_alt1: 'image',
+  rootClassName1231: '',
+  text8: 'FLOOR: 0 CORE 🗲',
+  text24: 'POOLS',
+  text25: 'portfolio',
+  image_alt11: 'image',
+  text10: 'VIEW ITEMS',
+  text131: 'ITEMS: 10000',
+  image_src: '22e33a1b-f6d8-4daf-b476-e403779c8096',
+  text11113: 'SATS',
+  rootClassName6: '',
+  text11112: 'MINT',
+  image_alt4: 'image',
+  text7: 'ITEMS: 10000',
+  text111: 'DEX',
+  text16: 'EXPLORE RAR3',
+  text: 'OWNED',
+  image_src4: '/fav-200h.ico',
+  text11: 'EXPLORE RAR3',
+  rootClassName7: '',
+  text3: 'BWYC I',
+  text13111: 'VOMUME: 10 CORE',
+  rootClassName12: '',
+  rootClassName1241: '',
+  rootClassName1: '',
+  text14: 'VIEW ITEMS',
+  text1111: 'POOLS',
+  rootClassName125: '',
+  text9: 'VOLUME: 0 CORE 🗲',
+  image_alt: 'image',
+  Heading2: 'RAR3BAY',
+  rootClassName121: '',
+  image_alt2: 'image',
+  text6: 'WHALECARDS',
+  rootClassName124: '',
+  rootClassName123: '',
+  image_src3: '22e33a1b-f6d8-4daf-b476-e403779c8096',
+  rootClassName3: '',
+  text26: 'SATS',
+  text18: 'POOLS',
+  text19: 'portfolio',
+  text22: 'DEX',
+  text13: 'ITEMS: 10000',
+  text17: 'DEX',
+  rootClassName1253: '',
+  rootClassName111: '',
+  rootClassName4: '',
+  rootClassName11: '',
+  text13113: 'FLOOR: 0 CORE',
+  rootClassName1252: '',
+  text132: 'VOLUME: 0 CORE 🗲',
+  rootClassName5: '',
   video_src:
-    "https://bafybeihgbct4yo3zx7jedm3s4w46jlfkbwehzjistubox2tva5ycmlrpgm.ipfs.nftstorage.link/ipfs/bafybeihgbct4yo3zx7jedm3s4w46jlfkbwehzjistubox2tva5ycmlrpgm/Untitled%20video%20-%20Made%20with%20Clipchamp.mp4",
-  text23: "CREATE",
-  text15: "EXPLORE RAR3",
-  rootClassName: "",
-  text5: "FLOOR: 0 CORE 🗲",
-  text4: "ITEMS: 10000",
-  rootClassName1251: "",
-  text21: "FLOOR: 0 CORE 🗲",
-  rootClassName2: "",
-  image_src2: "9b4a779a-9126-423b-9ebc-73864324acb1",
-  rootClassName122: "",
-  Heading1: "RAR3BAY",
-  heading: "EXPLORE RAR3",
-};
+    'https://bafybeihgbct4yo3zx7jedm3s4w46jlfkbwehzjistubox2tva5ycmlrpgm.ipfs.nftstorage.link/ipfs/bafybeihgbct4yo3zx7jedm3s4w46jlfkbwehzjistubox2tva5ycmlrpgm/Untitled%20video%20-%20Made%20with%20Clipchamp.mp4',
+  text23: 'CREATE',
+  text15: 'EXPLORE RAR3',
+  rootClassName: '',
+  text5: 'FLOOR: 0 CORE 🗲',
+  text4: 'ITEMS: 10000',
+  rootClassName1251: '',
+  text21: 'FLOOR: 0 CORE 🗲',
+  rootClassName2: '',
+  image_src2: '9b4a779a-9126-423b-9ebc-73864324acb1',
+  rootClassName122: '',
+  Heading1: 'RAR3BAY',
+  heading: 'EXPLORE RAR3',
+}
 
 Grid.propTypes = {
   heading1: PropTypes.string,
@@ -1366,6 +1289,6 @@ Grid.propTypes = {
   rootClassName122: PropTypes.string,
   Heading1: PropTypes.string,
   heading: PropTypes.string,
-};
+}
 
-export default Grid;
+export default Grid

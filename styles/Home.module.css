@@ -1,145 +1,779 @@
+@font-face {
+  font-family: Pixel_NES;
+  src: url("../public/fonts/pixel_nes.otf");
+}
+
 .container {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 1rem;
-  margin: 0 auto;
+  font-family: "Pixel_NES";
 }
 
-.gradientText0 {
-  background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradientText1 {
-  background: -webkit-linear-gradient(#a79af9, #7aa8d2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradientText2 {
-  background: -webkit-linear-gradient(#bfa3da, #743f93);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradientText3 {
-  background: -webkit-linear-gradient(#c35ab1, #e9a8d9);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-  text-decoration-color: #84309c;
-}
-
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: left;
-}
-
-.connect {
-  margin-bottom: 2rem;
-}
-
-.description {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #555;
-  border-radius: 5px;
-  padding: 0.5em;
-  font-size: 1.1rem;
-}
-
-.grid {
+.main {
   display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 110vh;
+background-size: cover;
+  font-family: "Pixel_NES";
+
 }
 
-.card {
-  background-color: #131313;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 440px;
-  overflow: none;
-  border: none;
-}
+.header {
+  display: flex;
+  align-items: center;;
 
-.cardText {
-  padding: 1rem;
-}
-
-.card img {
-  display: block;
+  display: flex;
+  flex: 1 1 100%;
+  font-size: 0.7rem;
+  height: 4.5rem;
+  position: fixed;
+  transition: all 0.5s ease 0s;
+  margin-bottom: 20px;
   width: 100%;
-  height: auto;
-  border-radius: 4px 4px 0 0;
-  margin-bottom: 12px;
-  border: none;
+  z-index: 100;
+  padding: 0 5rem;
+padding-top: 15px;
+padding-bottom: 10px;
+border-bottom: solid;
+border-width: 0.1px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  background-color: #272c34;
-  opacity: 80%;
-}
 
-.card h2 {
-  margin: 0 0 0.75rem 0;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.75;
+.collectionHeader {
+  display: flex;
+  align-items: center;
+  background-color: rgba(8, 4, 4, 0.6);
+  backdrop-filter: blur(10px);
+  color: #d3d3d3;
+  display: flex;
+  flex: 1 1 100%;
+  font-size: 0.7rem;
+  height: 4rem;
+  position: fixed;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 100;
+  padding: 0 2rem;
 }
 
 .logo {
-  height: 1em;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+
+.nav_items {
+  display: flex;
+  justify-content: space-evenly;
+  width: 17rem;
+  cursor: pointer;
+}
+
+.nav_items > p:hover {
+  text-shadow: rgb(235, 235, 235) 3px 2px 2px, rgb(0, 191, 255) 3px 3px 2px, rgb(171, 171, 171) 3px 3px 3px;
+}
+
+.link:hover {
+  text-shadow: rgb(235, 235, 235) 3px 2px 2px, rgb(0, 191, 255) 3px 3px 2px, rgb(171, 171, 171) 3px 3px 3px;
+}
+
+.searchSection {
+  display: flex;
+  color: lightgray;
+  font-size: 1rem;
+  width: 20rem;
+  height: 2.25rem;
+  align-items: center;
+  padding: 0.2rem;
+  margin-left: -10rem;
+  border: 1px solid rgb(114, 94, 94);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  backdrop-filter: blur(100px);
+}
+
+.searchSection > section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20rem;
+  height: 2.25rem;
+  color: initial;
+}
+
+.inputField {
+  display: flex;
+  width: 90%;
+  color: initial;
+  background: none;
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.connect_btn {
+  color: #00000078;
+  background-color: #00a6ff;
+  width: 10rem;
+  height: 2.5rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.loggedIn_section {
+  color: #00aeff;
+  font-size: 0.5rem;
+  text-shadow: currentcolor 0px 0px 16px;
+  display: flex;
+}
+
+.heroSection {
+  margin-top: 31rem;
+  position: absolute;
+  left: 0;
+  padding-left: 10rem;
+  margin-left: 20px;
+  height: max-content;
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bayc_data {
+  display: flex;
+  justify-content: space-between;
+ align-self: center;
+  flex-direction: column;
+  width: 28rem;
+  font-size: 13px;
+  font-weight: bold;
+  align-items: start;
+  margin-top: 3rem;
+  padding: 1.1rem;
+  background-color: #5a5a5a28;
+  border: solid initial;
+  border-width: 0.5px;
+  border-radius: 10px;
+  height: 100%;
+  gap: 10px;
+  backdrop-filter: blur(50px);
+}
+
+.bayc_data__title {
+  color: lightgrey;
+}
+
+.collection_oneDayTradingVolume {
+  display: flex;
+  align-items: center;
+}
+
+.viewCollection_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.747);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.2rem;
+  padding: 0.7rem 1.5rem;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  font-family: Pixel_NES;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.viewCollection_btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.arrow {
+  margin-left: 0.2rem;
+}
+
+.carousel {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 10%;
+}
+
+.carousel_section {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  width: 300px;
+  height: 170px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 450ms ease 0s;
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 30px;
+  position: static;
+}
+
+.carousel_section:hover {
+  margin-top: -0.5rem;
+  transform: scale(1.3);
+  position: -webkit-sticky; 
+}
+
+.carousel_img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out 0s;
+  border: solid initial 1px;
+  padding: 2%;
+  border-radius: 16px;
+}
+.carousel_img:hover{
+  filter: blur(0.5px);
+  background: initial;
+  filter: blur(1px);
+}
+.carousel_txt{
+  text-align: center;
+}
+.carousel_profile {
+  display: flex;
+  position: static;
+  top: 0;
+  margin-top: 0.5rem;
   margin-left: 0.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 32px;
+  outline: solid 1px initial; 
+  margin-left: 40%;
 }
 
-@media (max-width: 768px) {
-  .header {
-    margin-left: 0;
-  }
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .title {
-    font-size: 3rem;
-    line-height: 1.15;
+.carousel_section > p {
+  font-size: 0.8rem;
+  margin-top: -2.2rem;
+  margin-left: 0.8rem;
+  text-shadow: rgb(0, 0, 0) 0 0 10px;
+}
+
+.airdropPopUp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.838)
+  );
+  font-size: 0.8rem;
+  width: 90%;
+  height: 3.5rem;
+  padding: 0 9rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.1rem;
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+}
+
+.airdropPopUp_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  width: 8rem;
+  height: 2.4rem;
+  color: #0088ff;
+  background-color: #303030;
+  border: solid 1px #00c8ff;
+  border-radius: 0.3rem;
+  letter-spacing: 0.02rem;
+  outline: none;
+}
+
+.trendingSection_container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.trendingSection_header {
+  display: flex;
+  justify-content: space-between;
+  color: initial;
+  width: 10rem;
+}
+
+.trendingSection_header > h3:hover {
+  cursor: pointer;
+}
+
+.trendingSection_header > h3:first-child {
+  color: initial;
+  text-shadow: initial 0px 0px 1px, rgba(0, 50, 249, 0.6) 0px 0px 5px,
+    rgba(0, 108, 249, 0.712) 0px 5px 4px;
+  font-weight: lighter;
+}
+
+.trendingSection_header > h3:last-child {
+  font-weight: lighter;
+}
+
+.trendingSection_header > h3:last-child:hover {
+  color: initial;
+}
+
+.trendingTable {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.tableHead_row {
+  color: initial;
+  font-size: 0.8rem;
+  height: 3rem;
+  border-bottom: 1px solid #303030;
+}
+
+.firstChild {
+  width: 25rem;
+  text-align: left;
+}
+
+.tableBody_row {
+  color: initial;
+  line-height: 1.7rem;
+}
+
+.tableBody_row :first-child {
+  text-align: left;
+}
+
+.green {
+  color: initial;
+}
+
+.red {
+  color: initial;
+}
+
+.viewCollection_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.CollectionHeroSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #30303000;
+  border-bottom: 1px solid #303030;
+}
+
+.CollectionHeroSection > section {
+  display: flex;
+}
+
+.collectionProfile {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.8rem;
+  margin-right: 1rem;
+}
+
+.collection_marketplace_title_icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: initial;
+  font-size: 1.2rem;
+}
+
+.collection_marketplace_title_icons > section {
+  display: flex;
+  width: 100%;
+}
+
+.collection_icons {
+  margin-right: 0.5rem;
+  box-shadow: rgba(171, 171, 171, 0.349) 0px 1px 5px;
+  border-radius: 1rem;
+}
+
+.collection_header_dataTable {
+  width: 75rem;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.collection_header_dataTable_head_row {
+  color: initial;
+  line-height: 1.3rem;
+}
+
+.collection_header_dataTable_body_row {
+  color: initial;
+  line-height: 1.3rem;
+}
+
+.collection_header_dataTable_body_td_red {
+  color: initial;
+  text-shadow: currentcolor 0px 0px 16px;
+}
+
+.collection_header_dataTable_body_td_green {
+  color: #ade25d;
+  text-shadow: currentcolor 0px 0px 16px;
+}
+
+.collectionPurchaseSection {
+  width: 80%;
+  height: 70vh;
+  padding: 1rem;
+  border: 1px solid #303030;
+  border-style: hidden solid solid;
+  overflow: auto;
+}
+
+.collectionPurchaseSection_titles {
+  display: flex;
+  color: initial;
+  margin-bottom: 1.5rem;
+  line-height: 2.5rem;
+  border-bottom: 1px solid #303030;
+}
+
+.collectionPurchaseSection_titles :first-child {
+  color: initial;
+  text-shadow: currentcolor 0px 0px 16px;
+  border-bottom: 2px solid #aaaaaa;
+  margin-right: 1.5rem;
+}
+
+.collectionPurchaseSection_table {
+  width: 100%;
+  text-align: right;
+}
+
+.collectionPurchaseSection_thead {
+  color: initial;
+}
+
+.collectionPurchaseSection_thead_row {
+  height: 3rem;
+}
+
+.collectionPurchaseSection_thead_row :first-child {
+  text-align: center;
+}
+
+.collectionPurchaseSection_thead_row :nth-child(2) {
+  width: 20rem;
+  text-align: left;
+}
+.collectionPurchaseSection_tbody {
+  color: initial;
+  height: 4rem;
+}
+
+.collectionPurchaseSection_tbody_row {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.collectionPurchaseSection_tbody_row :first-child {
+  text-align: center;
+}
+
+.collectionPurchaseSection_tbody_row :nth-child(2) {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  color: initial;
+  text-align: left;
+}
+
+.mmCollectionPurchaseSection_tbody_row {
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.mmCollectionPurchaseSection_tbody_row :nth-child(2) {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  color: initial;
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.collection_thumbnail {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+}
+
+.rarity {
+  color: #929292;
+}
+
+.portfolio_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.portfolioComponent_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+}
+
+.portfolioComponent_section > section {
+  display: flex;
+}
+
+.portfolioData_section {
+  margin-top: 3rem;
+}
+
+.dataContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 67rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 27rem;
+  margin: 1rem;
+}
+
+.cardContainer img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.sellSection {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.inputField_amount {
+  display: flex;
+  width: 20%;
+  color: rgb(217, 217, 217);
+  background: none;
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+  border: 0.3px solid rgb(249, 82, 0);
+  border-radius: 0.3rem;
+  outline: none;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.sell_btn {
+  width: 10rem;
+  height: 3rem;
+  color: #c2c2c2;
+  background-color: #ffffff;
+  text-shadow: currentcolor 0px 0px 25px;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
+}
+
+.purchase_btn {
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+.main{
+    background-color: lightblue;
   }
 }
 
-.card,
-.footer {
-  border-color: #222;
+.ctext{
+  font-size: 12px;
+  position: absolute;
+  color: rgba(224, 224, 224, 0.984);
+  height: max-content;
+  margin-top: -60px;
+  margin-left: 45px;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border: solid 1px gray;
+  text-align: center;
+  display: flex;
+  border-radius: 8px;
+  text-shadow: rgb(0, 0, 0) 3px 3px 3px, rgba(0, 0, 0, 0.909)2px -3px 3px,
+    rgba(0, 0, 0, 0.901) 0px 3px 3px;
 }
-.logo img {
-  filter: invert(1);
+.icon p::after {
+ content: "/whsl.ico";
+}
+
+.profileHeader {
+  align-items: center;
+  margin: 10px;
+}
+
+.coverImage {
+  width: 1400px;
+
+  height: 550px;
+  border-radius: 16px;
+  border: solid 4px gray;
+}
+
+.profilePicture {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  vertical-align: inherit;
+  border: 5px solid;
+  border-color: rgba(0, 0, 0, 0.76);
+  margin-top: -72px;
+  margin-left: 5%;
+  color: initial;
+}
+
+.profileName {
+  margin-left: 2.5%;
+  color: ïnitial;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+
+
+.profileName {
+  margin-left: 2.5%;
+  color: ïnitial;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.tab {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: initial;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+}
+
+.tab:hover {
+  color: rgba(94, 94, 94, 0.8);
+}
+
+.activeTab {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #0062a8;
+  color: #005897;
+}
+
+.tabContent {
+  display: none;
+  opacity: 0;
+  transition: all 0.1s linear;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.searchSection {
+  display: flex;
+  color: lightgray;
+  font-size: 1rem;
+  width: 15rem;
+  height: 2.25rem;
+  align-items: center;
+  padding: 0.2rem;
+  border: 1px solid rgb(114, 94, 94);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  backdrop-filter: blur(100px);
+}
+
+.searchSection > section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20rem;
+  height: 2.25rem;
+  color: initial;
+}
+
+.inputField {
+  display: flex;
+  width: 90%;
+  color: initial;
+  background: none;
+  font-size: 0.8rem;
+  padding-left: 0.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "Pixel_NES", Helvetica, Arial, sans-serif;
 }

@@ -4,13 +4,62 @@ import Head from "next/head";
 
 import Search from "../components/search";
 import Footer from "../components/footer";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import ReactThemeToggleButton from "../components/toggle"
+import {useTheme} from "next-themes";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useAddress } from "@thirdweb-dev/react";
+import { useAccount, useConnect } from "wagmi";
+import { Blockie } from "web3uikit";
+import styles from "../styles/Home.module.css";
+
+const light = { background: "white" };
+const dark = { background: "black" };
+
+const GlobalStyle = createGlobalStyle`
+body{
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0, 0.9),
+    rgba(0, 50, 150, 0.506)
+  );
+  transition: background 0.4s;
+}
+`;
 
 const Home = (props) => {
+
+  const address = useAddress()
+  const { connect, connectors } = useConnect();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+ 
+
+  useEffect(() => {
+    if (!address) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [address]);
+
+
+
+const { themes, setTheme } = useTheme()
+const [ isDark, setDark ] = useState(false)
+
+const theme = isDark ? dark : light;
+const themez = isDark ? setTheme("dark") : setTheme("light");
+
   return (
     <>
+    <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX1</title>
+          <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX1" />
         </Head>
         <div className="home-container01">
@@ -60,7 +109,10 @@ const Home = (props) => {
                     <Search rootClassName="search-root-class-name15"></Search>
                   </div>
                   <div className="home-buttons">
-                    <button className="button">CONNECT</button>
+                  <div style={{display: "flex", gap: "20px", padding: "10px", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px" }}>
+</div>  
+
+                  
                   </div>
                 </div>
                 <div data-thq="thq-burger-menu" className="home-burger-menu">
@@ -68,7 +120,7 @@ const Home = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link legacyBehavior href="/">
+                <Link legacyBehavior href="#">
                   <a className="home-link02">
                     <img
                       alt="logo"
@@ -97,7 +149,7 @@ const Home = (props) => {
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link legacyBehavior href="/">
+                        <Link legacyBehavior href="#">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -246,27 +298,92 @@ const Home = (props) => {
                         </Link>
                       </div>
                       <div className="home-container31"></div>
-                      <div id="connecting" className="home-container32"></div>
+                      <div id="connecting" className="home-container32">
+                      <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+                      </div>
                     </div>
                   </div>
                 </div>
+                
                 <div id="connect" className="home-container33">
-                  <svg viewBox="0 0 1024 1024" className="home-icon28">
-                    <path d="M384 928c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
-                    <path d="M1024 928c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
-                    <path d="M1024 512v-384h-768c0-35.346-28.654-64-64-64h-192v64h128l48.074 412.054c-29.294 23.458-48.074 59.5-48.074 99.946 0 70.696 57.308 128 128 128h768v-64h-768c-35.346 0-64-28.654-64-64 0-0.218 0.014-0.436 0.016-0.656l831.984-127.344z"></path>
-                  </svg>
-                  <div id="connecting" className="home-container34"></div>
+                <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+                  <div id="connecting" className="home-container34">
+
+                  </div>
+                  {isLoggedIn ? (
+          <section>
+            {connectors.map((connector) => (
+              <>
+ <ConnectWallet
+
+ style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+ modalSize={"compact"}
+ theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "initial",
+     accentText: "white",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white"
+   },
+ })}
+ btnTitle={"CONNECT"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   img: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
+</>
+            ))}
+          </section>
+        ) : (
+          <section className={styles.loggedIn_section}>
+<ConnectWallet 
+   theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "black",
+     accentText: "initial",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white",
+     background: "black",
+     backdropFilter: "blur(10px)"
+   },
+  })}
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} /></div>
+          </section>
+        )}
                 </div>
               </header>
             </div>
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
-                  <Link legacyBehavior href="/">
-                    <a className="home-link12">
+                  <Link className="home-link12" href="#">
+                    
                       <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
-                    </a>
+                  
                   </Link>
                 </div>
               </div>
@@ -618,6 +735,11 @@ const Home = (props) => {
             margin-left: var(--dl-space-space-unit);
             justify-content: center;
           }
+          .home-burger-menu:hover{
+            background: gray;
+            border-radius: 16px;
+            cursor: pointer;
+          }
           .home-icon06 {
             fill: #606060;
             width: 36px;
@@ -682,9 +804,10 @@ const Home = (props) => {
           }
           .home-icon08 {
             fill: #d9d9d9;
-            width: 32px;
-            height: 25px;
+            width: 36px;
+            height: 28px;
             margin-top: var(--dl-space-space-unit);
+            cursor: pointer;
           }
           .home-container06 {
             width: 209px;
@@ -1244,20 +1367,19 @@ const Home = (props) => {
             width: var(--dl-size-size-xlarge);
             height: var(--dl-size-size-small);
             display: flex;
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: var(--dl-radius-radius-radius8);
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            padding: 1%;
           }
           .home-container33 {
             gap: var(--dl-space-space-unit);
             flex: 0 0 auto;
             width: 1017px;
-            height: 100%;
+            height: 20px;
             display: flex;
             align-items: center;
-            margin-right: 0px;
+            margin-top: 4px;
             padding-right: var(--dl-space-space-unit);
             justify-content: flex-end;
           }
@@ -1271,10 +1393,9 @@ const Home = (props) => {
             height: var(--dl-size-size-small);
             display: flex;
             align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: var(--dl-radius-radius-radius8);
+            justify-items: center;
+            align-items: center;
+            margin-top: 5px;
           }
           .home-container35 {
             width: 100%;
@@ -1934,6 +2055,7 @@ const Home = (props) => {
             display: flex;
             align-items: center;
             flex-direction: column;
+            color: initial;
           }
           .home-feature-card {
             width: 100%;
@@ -2159,6 +2281,7 @@ const Home = (props) => {
           }
         `}
       </style>
+      </ThemeProvider>
     </>
   );
 };
