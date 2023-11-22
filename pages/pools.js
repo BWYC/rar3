@@ -311,7 +311,6 @@ const Pools = (props) => {
             width: 100%;
             height: 54px;
             display: flex;
-            outline: solid dark 0.5px;
             z-index: 1;
             position: fixed;
             transition: 0.3s;
