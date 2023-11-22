@@ -11,13 +11,25 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@thirdweb-dev/react": "^4",
     "@thirdweb-dev/sdk": "^4",
+    "chakra-ui": "^0.3.9",
     "dangerous-html": "^0.1.13",
     "ethers": "^5",
+    "framer-motion": "^10.16.5",
+    "moralis-v1": "^1.13.0",
     "next": "^13",
+    "next-themes": "^0.2.1",
+    "nextjs-progressbar": "^0.0.16",
     "react": "^18.2",
-    "react-dom": "^18.2"
+    "react-dom": "^18.2",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "styled-components": "^6.1.1",
+    "truncate-eth-address": "^1.0.2",
+    "wagmi": "^1.4.7",
+    "web3uikit": "^1.0.4"
   },
   "devDependencies": {
     "@types/node": "^18.11.11",

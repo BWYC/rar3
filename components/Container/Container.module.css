@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 10%;
+    height: max-content;
+    padding: 20px;
+    border: solid gainsboro 1px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.169);
+    backdrop-filter: blur(5px);
+  }
+  
+  .xs {
+    max-width: 600px;
+  }
+  
+  .sm {
+    max-width: 900px;
+  }
+  
+  .md {
+    max-width: 1200px;
+  }
+  
+  .lg {
+    max-width: 1200px;
+  }
+  
+  .xl {
+    max-width: 1536px;
+  }

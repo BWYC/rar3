@@ -63,6 +63,13 @@
 .button:hover {
   opacity: 0.5;
 }
+body{
+  background-color: black;
+  font-family: Pixel NES;
+  color: initial;
+  height: 100%;
+  
+}
 .input {
   color: var(--dl-color-gray-black);
   cursor: auto;
@@ -159,7 +166,7 @@
 }
 
 .font {
-  font-family: pixel BEX;
+  font-family: Pixel NES;
 }
 .Heading {
   font-size: 32px;

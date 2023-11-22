@@ -4,13 +4,63 @@ import Head from "next/head";
 
 import Search from "../components/search";
 import Footer from "../components/footer";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import ReactThemeToggleButton from "../components/toggle"
+import {useTheme} from "next-themes";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useAddress } from "@thirdweb-dev/react";
+import { useAccount, useConnect } from "wagmi";
+import { Blockie } from "web3uikit";
+import styles from "../styles/Home.module.css";
+
+
+const light = { background: "white" };
+const dark = { background: "black" };
+
+const GlobalStyle = createGlobalStyle`
+body{
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0, 0.9),
+    rgba(0, 50, 150, 0.506)
+  );
+  transition: background 0.4s;
+}
+`;
 
 const Home = (props) => {
+
+  const address = useAddress()
+  const { connect, connectors } = useConnect();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+ 
+
+  useEffect(() => {
+    if (!address) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [address]);
+
+
+
+const { themes, setTheme } = useTheme()
+const [ isDark, setDark ] = useState(false)
+
+const theme = isDark ? dark : light;
+const themez = isDark ? setTheme("dark") : setTheme("light");
+
   return (
     <>
+    <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX1</title>
+          <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX1" />
         </Head>
         <div className="home-container01">
@@ -20,39 +70,48 @@ const Home = (props) => {
                 <svg viewBox="0 0 1024 1024" className="home-icon">
                   <path d="M725.333 896v-85.333c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464h-298.667c-58.88 0-112.299 23.936-150.869 62.464s-62.464 91.989-62.464 150.869v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-85.333c0-35.371 14.293-67.285 37.504-90.496s55.125-37.504 90.496-37.504h298.667c35.371 0 67.285 14.293 90.496 37.504s37.504 55.125 37.504 90.496v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667zM576 298.667c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464-112.299 23.936-150.869 62.464-62.464 91.989-62.464 150.869 23.936 112.299 62.464 150.869 91.989 62.464 150.869 62.464 112.299-23.936 150.869-62.464 62.464-91.989 62.464-150.869zM490.667 298.667c0 35.371-14.293 67.285-37.504 90.496s-55.125 37.504-90.496 37.504-67.285-14.293-90.496-37.504-37.504-55.125-37.504-90.496 14.293-67.285 37.504-90.496 55.125-37.504 90.496-37.504 67.285 14.293 90.496 37.504 37.504 55.125 37.504 90.496zM695.168 499.499l85.333 85.333c16.683 16.683 43.691 16.683 60.331 0l170.667-170.667c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-140.501 140.501-55.168-55.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
                 </svg>
-                <a
-                  href="https://#"
+                <Link
+                  href="/portfolio"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-text"
                 >
+                   <div  className="home-link01">
                   OWNED
-                </a>
+                  </div>
+                </Link>
                 <svg
                   viewBox="0 0 950.8571428571428 1024"
                   className="home-icon02"
                 >
                   <path d="M920.571 475.429c0 19.429-8 38.286-21.143 51.429l-372 372.571c-13.714 13.143-32.571 21.143-52 21.143s-38.286-8-51.429-21.143l-372-372.571c-13.714-13.143-21.714-32-21.714-51.429s8-38.286 21.714-52l42.286-42.857c13.714-13.143 32.571-21.143 52-21.143s38.286 8 51.429 21.143l168 168v-402.286c0-40 33.143-73.143 73.143-73.143h73.143c40 0 73.143 33.143 73.143 73.143v402.286l168-168c13.143-13.143 32-21.143 51.429-21.143s38.286 8 52 21.143l42.857 42.857c13.143 13.714 21.143 32.571 21.143 52z"></path>
                 </svg>
-                <a
-                  href="https://#"
+                <Link
+                  href="/sell"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link"
                 >
-                  SELL
-                </a>
+                   <div  className="home-link01">
+                   SELL
+                  </div>
+              
+                </Link>
                 <svg viewBox="0 0 1024 1024" className="home-icon04">
                   <path d="M1024 576v-384h-192v-64c0-35.2-28.8-64-64-64h-704c-35.2 0-64 28.8-64 64v192c0 35.2 28.8 64 64 64h704c35.2 0 64-28.8 64-64v-64h128v256h-576v128h-32c-17.674 0-32 14.326-32 32v320c0 17.674 14.326 32 32 32h128c17.674 0 32-14.326 32-32v-320c0-17.674-14.326-32-32-32h-32v-64h576zM768 192h-704v-64h704v64z"></path>
                 </svg>
-                <a
-                  href="https://#"
+                <Link
+                  href="/create"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="home-link01"
+                 
                 >
+
+                  <div  className="home-link01">
                   CREATE
-                </a>
+                  </div>
+                
+                </Link>
               </div>
               <header data-thq="thq-navbar" className="home-navbar-interactive">
                 <div data-thq="thq-navbar-nav" className="home-desktop-menu">
@@ -60,7 +119,10 @@ const Home = (props) => {
                     <Search rootClassName="search-root-class-name15"></Search>
                   </div>
                   <div className="home-buttons">
-                    <button className="button">CONNECT</button>
+                  <div style={{display: "flex", gap: "20px", padding: "10px", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px" }}>
+</div>  
+
+                  
                   </div>
                 </div>
                 <div data-thq="thq-burger-menu" className="home-burger-menu">
@@ -68,7 +130,7 @@ const Home = (props) => {
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
                 </div>
-                <Link legacyBehavior href="/">
+                <Link legacyBehavior href="#">
                   <a className="home-link02">
                     <img
                       alt="logo"
@@ -97,7 +159,7 @@ const Home = (props) => {
                           src="/fav-200h.ico"
                           className="home-image1"
                         />
-                        <Link legacyBehavior href="/">
+                        <Link legacyBehavior href="#">
                           <a className="home-link03">
                             <h1 className="home-heading">RAR3BAY</h1>
                           </a>
@@ -246,27 +308,92 @@ const Home = (props) => {
                         </Link>
                       </div>
                       <div className="home-container31"></div>
-                      <div id="connecting" className="home-container32"></div>
+                      <div id="connecting" className="home-container32">
+                      <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+                      </div>
                     </div>
                   </div>
                 </div>
+                
                 <div id="connect" className="home-container33">
-                  <svg viewBox="0 0 1024 1024" className="home-icon28">
-                    <path d="M384 928c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
-                    <path d="M1024 928c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
-                    <path d="M1024 512v-384h-768c0-35.346-28.654-64-64-64h-192v64h128l48.074 412.054c-29.294 23.458-48.074 59.5-48.074 99.946 0 70.696 57.308 128 128 128h768v-64h-768c-35.346 0-64-28.654-64-64 0-0.218 0.014-0.436 0.016-0.656l831.984-127.344z"></path>
-                  </svg>
-                  <div id="connecting" className="home-container34"></div>
+                <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+                  <div id="connecting" className="home-container34">
+
+                  </div>
+                  {isLoggedIn ? (
+          <section>
+            {connectors.map((connector) => (
+              <>
+ <ConnectWallet
+
+ style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+ modalSize={"compact"}
+ theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "initial",
+     accentText: "white",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white"
+   },
+ })}
+ btnTitle={"CONNECT"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   img: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
+</>
+            ))}
+          </section>
+        ) : (
+          <section className={styles.loggedIn_section}>
+<ConnectWallet 
+   theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "black",
+     accentText: "initial",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white",
+     background: "black",
+     backdropFilter: "blur(10px)"
+   },
+  })}
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} /></div>
+          </section>
+        )}
                 </div>
               </header>
             </div>
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
-                  <Link legacyBehavior href="/">
-                    <a className="home-link12">
+                  <Link className="home-link12" href="#">
+                    
                       <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
-                    </a>
+                  
                   </Link>
                 </div>
               </div>
@@ -301,7 +428,7 @@ const Home = (props) => {
                           </div>
                           <div className="home-container47">
                             <span className="home-text14">FLOOR: 0.0</span>
-                            <span className="home-text15">VIEW ITEMS</span>
+                            <a href={`/collections/${"0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"}`} className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
                       </div>
@@ -617,6 +744,12 @@ const Home = (props) => {
             align-items: center;
             margin-left: var(--dl-space-space-unit);
             justify-content: center;
+            cursor: pointer;
+          }
+          .home-burger-menu:hover{
+            background: gray;
+            border-radius: 16px;
+            cursor: pointer;
           }
           .home-icon06 {
             fill: #606060;
@@ -682,9 +815,10 @@ const Home = (props) => {
           }
           .home-icon08 {
             fill: #d9d9d9;
-            width: 32px;
-            height: 25px;
+            width: 36px;
+            height: 28px;
             margin-top: var(--dl-space-space-unit);
+            cursor: pointer;
           }
           .home-container06 {
             width: 209px;
@@ -1244,20 +1378,19 @@ const Home = (props) => {
             width: var(--dl-size-size-xlarge);
             height: var(--dl-size-size-small);
             display: flex;
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: var(--dl-radius-radius-radius8);
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            padding: 1%;
           }
           .home-container33 {
             gap: var(--dl-space-space-unit);
             flex: 0 0 auto;
             width: 1017px;
-            height: 100%;
+            height: 20px;
             display: flex;
             align-items: center;
-            margin-right: 0px;
+            margin-top: 4px;
             padding-right: var(--dl-space-space-unit);
             justify-content: flex-end;
           }
@@ -1271,10 +1404,9 @@ const Home = (props) => {
             height: var(--dl-size-size-small);
             display: flex;
             align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: var(--dl-radius-radius-radius8);
+            justify-items: center;
+            align-items: center;
+            margin-top: 5px;
           }
           .home-container35 {
             width: 100%;
@@ -1934,6 +2066,7 @@ const Home = (props) => {
             display: flex;
             align-items: center;
             flex-direction: column;
+            color: initial;
           }
           .home-feature-card {
             width: 100%;
@@ -2159,6 +2292,7 @@ const Home = (props) => {
           }
         `}
       </style>
+      </ThemeProvider>
     </>
   );
 };

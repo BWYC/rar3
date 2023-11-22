@@ -17,7 +17,7 @@ const Footer = (props) => {
             height: 56px;
             display: flex;
             z-index: 1;
-            position: fixed;
+            position: static;
             align-items: center;
             font-family: 'pixel NES';
             border-color: var(--dl-color-gray-black);
