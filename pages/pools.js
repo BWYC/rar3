@@ -253,7 +253,7 @@ const Pools = (props) => {
             </div>
           </div>
         </div>
-        <Footer rootClassName="footer-root-class-name10"></Footer>
+   
         <video
           src="https://bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm.ipfs.nftstorage.link/ipfs/bafybeifgabyizcobjwu6qs47yyt66oq3lgevgj6tsnbkldmc5epnzmr2hm/hold.mp4"
           loop
@@ -316,7 +316,7 @@ const Pools = (props) => {
             position: fixed;
             transition: 0.3s;
             align-items: center;
-            border-color: #3f3f3f;
+            border-color: transparent;
             border-width: 1px;
             justify-content: center;
             background-color: #010101;
@@ -340,7 +340,7 @@ const Pools = (props) => {
             font-family: "Pixel NES";
             margin-left: 1px;
             padding-top: 2px;
-            border-color: #626262;
+            border-color: transparent;
             border-width: 1px;
             margin-right: var(--dl-space-space-halfunit);
             padding-left: var(--dl-space-space-unit);

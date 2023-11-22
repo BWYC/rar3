@@ -16,6 +16,7 @@ import { WagmiConfig, createConfig, configureChains, mainnet } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
 import Grid from "../components/grid"
 import { ChakraProvider } from '@chakra-ui/react'
+import Footer from "../components/footer";
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
@@ -51,8 +52,8 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         showOnShallow={true}
       />
       <ChakraProvider>
-    <Grid />
       <Component {...pageProps} />
+      <Footer />
       </ChakraProvider>
       </NextThemesProvider>
   </ThirdwebProvider>

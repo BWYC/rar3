@@ -526,7 +526,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             </Link>
           </div>
         </div>
-        <Footer rootClassName="footer-root-class-name"></Footer>
+      
       </div>
       <style jsx>
         {`
@@ -538,6 +538,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            background: linear-gradient(
+              90deg,
+              rgb(0, 0, 0, 0.5),
+              rgba(0, 50, 150, 0.206),
+              rgba(0, 0, 0, 0.506)
+            );
           }
           .home-container01 {
             flex: 0 0 auto;
@@ -1479,7 +1485,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             justify-content: center;
           }
           .home-video {
-            width: 100%;
+            width: 70%;
             filter: opacity(1);
             height: auto;
             margin-left: var(--dl-space-space-oneandhalfunits);
