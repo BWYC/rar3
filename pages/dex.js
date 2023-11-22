@@ -125,6 +125,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
                 
                 <div  data-thq="thq-burger-menu" className="home-burger-menu">
+                  <Link href="#"></Link>
                   <svg viewBox="0 0 1024 1024" className="home-icon06">
                     <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                   </svg>
@@ -400,11 +401,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           </div>
         </div>
       <div style={{height: "400px"}}></div>
-        <Footer rootClassName="footer-root-class-name"></Footer>
+  
       </div>
       <style jsx>
         {`
           .home-container {
+            font-family: Pixel NES;
             width: 100%;
             display: flex;
             overflow: auto;
@@ -412,6 +414,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            background: linear-gradient(
+              90deg,
+              rgb(0, 0, 0, 0.5),
+              rgba(0, 50, 150, 0.206),
+              rgba(0, 0, 0, 0.506)
+            );
           }
           .home-container01 {
             flex: 0 0 auto;
