@@ -6,6 +6,7 @@ import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
 import ProfilePage from "./profile/[address]";
 import styles from "../styles/Profile.module.css";
 import Link from "next/link";
+import { Spinner } from "@chakra-ui/react"
 
 export default function Buy() {
   // Load all of the NFTs from the NFT Collection
@@ -13,6 +14,10 @@ export default function Buy() {
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
     start: 0,
     count: 50,
+  });
+  const { data: data2, isLoading: isLoading2 } = useNFTs(contract, {
+    start: 50,
+    count: 100,
   });
 
   if (isLoading) {
@@ -26,7 +31,7 @@ export default function Buy() {
           marginBottom: "50%"
         }}
       >
-        <h3>LOADING ITEMS...</h3>
+        <h3> <Spinner size='lg' /></h3>
       </div>
     );
   }
@@ -44,6 +49,17 @@ export default function Buy() {
         isLoading={isLoading}
         emptyText={"Looks like There are no NFTs here."}
       />
+      {onclick ? (
+         <NFTGrid
+         data={data}
+         isLoading={isLoading}
+         emptyText={"Looks like There are no NFTs here."}
+       />
+      ): (
+        <>
+        NEXT
+        </>
+      )}
       <div style={{ height: "50px" }}></div>
 
       <hr></hr>

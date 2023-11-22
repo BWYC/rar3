@@ -96,7 +96,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   <path d="M1024 576v-384h-192v-64c0-35.2-28.8-64-64-64h-704c-35.2 0-64 28.8-64 64v192c0 35.2 28.8 64 64 64h704c35.2 0 64-28.8 64-64v-64h128v256h-576v128h-32c-17.674 0-32 14.326-32 32v320c0 17.674 14.326 32 32 32h128c17.674 0 32-14.326 32-32v-320c0-17.674-14.326-32-32-32h-32v-64h576zM768 192h-704v-64h704v64z"></path>
                 </svg>
                 <a
-                  href="https://#"
+                  href="https:/create"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link01"
@@ -379,12 +379,17 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               </header>
             </div>
             
-          
-            <div className="home-container37">
+            <div className="home-container35">
+          <div style={{marginTop: "10%"}}>
+          <Link className="home-link12" href="/#">
+                      <h1 className="home-heading1">Portfolio</h1>
+                  </Link>
+                  <Profile /> 
+          </div>
+                  
                 
-                </div>
-                <Profile /> 
-       
+              
+            </div>
           
           </div>
         </div>
@@ -1276,8 +1281,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-top: 2%;
-            margin-bottom: -3%;
+            margin-top: 1%;
+            margin-bottom: 0px;
           }
           .home-container36 {
             width: 100%;
@@ -2096,7 +2101,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             }
             .home-container35 {
               height: 100%;
-              margin-top: 150px;
             }
             .home-container36 {
               height: auto;
@@ -2126,7 +2130,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               width: 100%;
             }
             .home-container39 {
-              margin-top: var(--dl-space-space-fourunits);
+              margin-top: var(--dl-space-space-twounits);
             }
             .home-container40 {
               height: 1287px;

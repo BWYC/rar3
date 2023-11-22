@@ -24,6 +24,7 @@ const Search = (props) => {
           .search-container {
             display: flex;
             position: relative;
+            color: gray;
           }
           .search-textinput {
             width: 163px;

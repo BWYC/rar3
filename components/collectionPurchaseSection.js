@@ -23,7 +23,7 @@ export default function CollectionPurchaseSection() {
             <th>
               <input type="checkbox" />
             </th>
-            <th>1,102 LISTED</th>
+            <th>LISTED</th>
             <th>RARITY</th>
             <th>BUY NOW</th>
             <th>LAST SALE</th>

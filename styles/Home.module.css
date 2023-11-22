@@ -762,13 +762,13 @@ border-width: 0.1px;
   align-items: center;
   width: 20rem;
   height: 2.25rem;
-  color: initial;
+  color: grey;
 }
 
 .inputField {
   display: flex;
   width: 90%;
-  color: initial;
+  color: grey;
   background: none;
   font-size: 0.8rem;
   padding-left: 0.2rem;

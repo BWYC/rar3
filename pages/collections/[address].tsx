@@ -7,12 +7,12 @@ import Data from "./data";
 
 import RR from "../../public/gfdgfhyu1-200h.png";   
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import CollectionPurchaseSection from "../collectionPurchaseSection"
+import CollectionPurchaseSection from "../../components/collectionPurchaseSection"
 import R from "../../public/gfdgfhyu.png"
 import B from "../../public/gfdgfhyu.png"
 import { useContract, useContractEvents, useContractRead, useAddress } from "@thirdweb-dev/react";
 import randomColor from "../../util/randomColor";
-import NFTGrid from "../NFT/NFTGrid";  
+import NFTGrid from "../../components/NFT/NFTGrid";  
 import {
   useOwnedNFTs,
   useValidDirectListings,
@@ -24,8 +24,8 @@ import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
 } from "../../const/contractAddresses";
-import Skeleton from "../Skeleton/Skeleton";
-import ListingWrapper from "../ListingWrapper/ListingWrapper";
+import Skeleton from "../../components/Skeleton/Skeleton";
+import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),

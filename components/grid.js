@@ -70,15 +70,42 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               <svg viewBox="0 0 1024 1024" className="grid-icon">
                 <path d="M725.333 896v-85.333c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464h-298.667c-58.88 0-112.299 23.936-150.869 62.464s-62.464 91.989-62.464 150.869v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-85.333c0-35.371 14.293-67.285 37.504-90.496s55.125-37.504 90.496-37.504h298.667c35.371 0 67.285 14.293 90.496 37.504s37.504 55.125 37.504 90.496v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667zM576 298.667c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464-112.299 23.936-150.869 62.464-62.464 91.989-62.464 150.869 23.936 112.299 62.464 150.869 91.989 62.464 150.869 62.464 112.299-23.936 150.869-62.464 62.464-91.989 62.464-150.869zM490.667 298.667c0 35.371-14.293 67.285-37.504 90.496s-55.125 37.504-90.496 37.504-67.285-14.293-90.496-37.504-37.504-55.125-37.504-90.496 14.293-67.285 37.504-90.496 55.125-37.504 90.496-37.504 67.285 14.293 90.496 37.504 37.504 55.125 37.504 90.496zM695.168 499.499l85.333 85.333c16.683 16.683 43.691 16.683 60.331 0l170.667-170.667c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-140.501 140.501-55.168-55.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
               </svg>
-              <span className="grid-text">{props.text}</span>
+              <Link
+                  href="/portfolio"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-text"
+                >
+                   <div  className="home-link01">
+                  OWNED
+                  </div>
+                </Link>
               <svg viewBox="0 0 950.8571428571428 1024" className="grid-icon02">
                 <path d="M920.571 475.429c0 19.429-8 38.286-21.143 51.429l-372 372.571c-13.714 13.143-32.571 21.143-52 21.143s-38.286-8-51.429-21.143l-372-372.571c-13.714-13.143-21.714-32-21.714-51.429s8-38.286 21.714-52l42.286-42.857c13.714-13.143 32.571-21.143 52-21.143s38.286 8 51.429 21.143l168 168v-402.286c0-40 33.143-73.143 73.143-73.143h73.143c40 0 73.143 33.143 73.143 73.143v402.286l168-168c13.143-13.143 32-21.143 51.429-21.143s38.286 8 52 21.143l42.857 42.857c13.143 13.714 21.143 32.571 21.143 52z"></path>
               </svg>
-              <span className="grid-text01">{props.text12}</span>
+              <Link
+                  href="/portfolio"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-text"
+                >
+                   <div  className="home-link01">
+                  SELL
+                  </div>
+                </Link>
               <svg viewBox="0 0 1024 1024" className="grid-icon04">
                 <path d="M1024 576v-384h-192v-64c0-35.2-28.8-64-64-64h-704c-35.2 0-64 28.8-64 64v192c0 35.2 28.8 64 64 64h704c35.2 0 64-28.8 64-64v-64h128v256h-576v128h-32c-17.674 0-32 14.326-32 32v320c0 17.674 14.326 32 32 32h128c17.674 0 32-14.326 32-32v-320c0-17.674-14.326-32-32-32h-32v-64h576zM768 192h-704v-64h704v64z"></path>
               </svg>
-              <span className="grid-text02">{props.text23}</span>
+              <Link
+                  href="/create"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="home-text"
+                >
+                   <div  className="home-link01">
+                  CREATE
+                  </div>
+                </Link>
             </div>
             <header data-thq="thq-navbar" className="grid-navbar-interactive">
               <div data-thq="thq-navbar-nav" className="grid-desktop-menu">
@@ -94,11 +121,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
                 </svg>
               </div>
-           <a className="grid-link" href="/">
+           <Link className="grid-link" href="/">
               
                   <img alt="logo" src="/fav-200h.ico" className="grid-image" />
            
-              </a>
+              </Link>
               <Search rootClassName="search-root-class-name9"></Search>
               <div data-thq="thq-mobile-menu" className="grid-mobile-menu">
                 <div className="grid-nav">
@@ -116,18 +143,18 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                         src={props.image_src4}
                         className="grid-image1"
                       />
-                   <a href="/" className="grid-link1">
+                   <Link href="/" className="grid-link1">
                      
                           <h1 className="grid-heading">{props.Heading2}</h1>
                    
-                      </a>
+                      </Link>
                     </div>
                     <div className="grid-container07"></div>
                     <div className="grid-container08">
                       <div className="grid-container09">
                         <span className="grid-text03">{props.text15}</span>
                       </div>
-                   <a className="grid-link2" href="/dex">
+                   <Link className="grid-link2" href="/dex">
                       
                           <div className="grid-container10">
                             <div className="grid-container11">
@@ -143,7 +170,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                      
-                      </a>
+                      </Link>
                       <div className="grid-container12">
                         <div className="grid-container13">
                           <svg viewBox="0 0 1024 1024" className="grid-icon12">
@@ -152,7 +179,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           <span className="grid-text05">{props.text18}</span>
                         </div>
                       </div>
-                   <a  className="grid-link3"href="/portfolio">
+                   <Link className="grid-link3"href="/portfolio">
                       
                           <div className="grid-container14">
                             <div className="grid-container15">
@@ -168,8 +195,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                       
-                      </a>
-                   <a className="grid-link4" href="/sats">
+                      </Link>
+                   <Link className="grid-link4" href="/sats">
                       
                           <div className="grid-container16">
                             <div className="grid-container17">
@@ -185,13 +212,13 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                      
-                      </a>
+                      </Link>
                     </div>
                     <div className="grid-container18">
                       <div className="grid-container19">
                         <span className="grid-text08">{props.text16}</span>
                       </div>
-                   <a className="grid-link5" href="/dex">
+                   <Link className="grid-link5" href="/dex">
                        
                           <div className="grid-container20">
                             <div className="grid-container21">
@@ -207,7 +234,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                       
-                      </a>
+                      </Link>
                       <div className="grid-container22">
                         <div className="grid-container23">
                           <svg viewBox="0 0 1024 1024" className="grid-icon20">
@@ -216,7 +243,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           <span className="grid-text10">{props.text24}</span>
                         </div>
                       </div>
-                   <a className="grid-link6" href="/portfolio">
+                   <Link className="grid-link6" href="/portfolio">
                        
                           <div className="grid-container24">
                             <div className="grid-container25">
@@ -232,8 +259,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                     
-                      </a>
-                   <a className="grid-link7" href="/sats">
+                      </Link>
+                   <Link className="grid-link7" href="/sats">
                         
                           <div className="grid-container26">
                             <div className="grid-container27">
@@ -249,10 +276,16 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </div>
                  
-                      </a>
+                      </Link>
                     </div>
                     <div className="grid-container28"></div>
-                    <div id="connecting" className="grid-container29"></div>
+                    <div id="connecting" className="grid-container29">
+                       <ReactThemeToggleButton
+        isDark={isDark}
+        invertedIconLogic
+        onChange={() => setDark((prev) => !prev)}
+        />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,14 +349,17 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               </div>
             </header>
           </div>
+   
         </div>
+       
       </div>
+
       <style jsx>
         {`
           .grid-container {
             flex: 0 0 auto;
             width: 100%;
-            height: 100%;
+            height: 50px;
             display: flex;
             position: relative;
             align-items: flex-start;
@@ -332,7 +368,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .grid-container01 {
             width: 100%;
-            height: 100%;
+            height: 50px;
             display: flex;
             align-items: center;
             font-family: 'pixel NES';
@@ -344,7 +380,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .grid-container02 {
             width: 100%;
-            height: auto;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1093,11 +1129,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             width: var(--dl-size-size-xlarge);
             height: var(--dl-size-size-small);
             display: flex;
-            align-items: flex-start;
-            border-color: rgba(120, 120, 120, 0.4);
-            border-style: solid;
-            border-width: 1px;
-            border-radius: var(--dl-radius-radius-radius8);
+            align-items: center;
           }
           .grid-container30 {
             gap: var(--dl-space-space-unit);

@@ -1,6 +1,6 @@
 import { useContract, useContractEvents, useContractRead, useTotalCirculatingSupply, useAddress } from "@thirdweb-dev/react";
 import {Link, Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
-import CollectionPurchaseSection from "../collectionPurchaseSection"
+import CollectionPurchaseSection from "../../components/collectionPurchaseSection"
 
 export default function Data() {
     const address = useAddress();

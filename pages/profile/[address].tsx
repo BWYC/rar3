@@ -29,6 +29,7 @@ import {
 } from "../../const/contractAddresses";
 import Skeleton from "../../components/Skeleton/Skeleton";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
+import { Spinner } from "@chakra-ui/react";
 
   
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
@@ -216,7 +217,7 @@ return(
         }`}
       >
         {loadingDirects ? (
-          <p>Loading...</p>
+          <p> <Spinner size='md' /></p>
         ) : directListings && directListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -232,7 +233,7 @@ return(
         }`}
       >
         {loadingAuctions ? (
-          <p>Loading...</p>
+          <p> <Spinner size='md' /></p>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
@@ -240,18 +241,6 @@ return(
             <ListingWrapper listing={listing} key={listing.id} />
           ))
         )}
-      </div>
-
-      <div
-        className={`${
-          tab === "nfts" ? styles.activeTabContent : styles.tabContent
-        }`}
-      >
-        <NFTGrid
-          data={ownedNfts}
-          isLoading={isLoading}
-          emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
-        />
       </div>
       <div
         className={`${
