@@ -638,7 +638,12 @@ border-width: 0.1px;
     background-color: lightblue;
   }
 }
-
+.coverImage {
+  width: 400px;
+  height: auto;
+  border-radius: 16px;
+  border: solid 4px gray;
+}
 .ctext{
   font-size: 12px;
   position: absolute;

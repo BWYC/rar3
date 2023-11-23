@@ -74,7 +74,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                   href="/portfolio"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="home-text"
+                  className="home-link01"
                 >
                    <div  className="home-link01">
                   OWNED
@@ -537,7 +537,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container04 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-items: space-between;
             flex-direction: column;
@@ -695,7 +695,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .grid-container08 {
             width: 100%;
-            height: auto;
+            height: 50px;
             display: flex;
             position: fixed;
             margin-top: 91px;
@@ -746,7 +746,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container11 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -791,7 +791,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container13 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -839,7 +839,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container15 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -887,7 +887,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container17 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -907,7 +907,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .grid-container18 {
             width: 100%;
-            height: auto;
+            height: 50px;
             display: flex;
             position: fixed;
             margin-top: 91px;
@@ -958,7 +958,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container21 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -1003,7 +1003,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container23 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -1051,7 +1051,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container25 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -1099,7 +1099,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           .grid-container27 {
             flex: 0 0 auto;
             width: auto;
-            height: auto;
+            height: 50px;
             display: flex;
             align-self: flex-start;
             align-items: flex-start;
@@ -1210,7 +1210,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               border-width: 0.5px;
             }
             .grid-nav {
-              height: auto;
+              height: 50px;
               border-width: 0px;
               justify-content: flex-start;
               background-color: transparent;

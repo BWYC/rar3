@@ -394,7 +394,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           </div>
         </div>
       
-        <Footer rootClassName="footer-root-class-name"></Footer>
+       
       </div>
       <style jsx>
         {`
