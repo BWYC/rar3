@@ -26,6 +26,7 @@ import {
 } from "../../const/contractAddresses";
 import Skeleton from "../../components/Skeleton/Skeleton";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
+import Grid from "../../components/grid"
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -69,6 +70,7 @@ export default function CollectionHeroSection() {
   if (!address) {
 return(
   <>
+  <Grid />
    <section className={styles.container}>
       <section>
         <section className={styles.viewCollection_main}> 
@@ -123,6 +125,7 @@ return(
   else {
   return (
     <>
+     <Grid />
    <section className={styles.container}>
       <section>
         <section className={styles.viewCollection_main}> 
