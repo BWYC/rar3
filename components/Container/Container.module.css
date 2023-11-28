@@ -7,10 +7,8 @@
     margin-bottom: 10%;
     height: max-content;
     padding: 20px;
-    border: solid gainsboro 1px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.169);
-    backdrop-filter: blur(5px);
+    background: transparent;
+    backdrop-filter: blur(20px);
   }
   
   .xs {

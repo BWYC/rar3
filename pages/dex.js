@@ -416,9 +416,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             justify-content: center;
             background: linear-gradient(
               90deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 50, 150, 0.206),
-              rgba(0, 0, 0, 0.506)
+              rgb(0, 0, 0, 0.9),
+              rgba(0, 50, 150, 0.406),
+              rgba(0, 0, 0, 0.906)
             );
           }
           .home-container01 {

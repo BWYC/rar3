@@ -198,10 +198,6 @@ import {
             <div className={styles.listingContainer}>
               {contractMetadata && (
                 <div className={styles.contractMetadataContainer}>
-                  <MediaRenderer
-                    src={contractMetadata.image}
-                    className={styles.collectionImage}
-                  />
                   <p className={styles.collectionName}>{contractMetadata.name}</p>
                 </div>
               )}
@@ -287,7 +283,7 @@ import {
                   <Web3Button
                     contractAddress={MARKETPLACE_ADDRESS}
                     action={async () => await buyListing()}
-                    className={styles.btn}
+                   style={{background: "black", color: "gray"}}
                     onSuccess={() => {
                       toast(`Purchase success!`, {
                         icon: "✅",
@@ -327,6 +323,7 @@ import {
                     contractAddress={MARKETPLACE_ADDRESS}
                     action={async () => await createBidOrOffer()}
                     className={styles.btn}
+                    style={{background: "black", color: "gray"}}
                     onSuccess={() => {
                       toast(`Bid success!`, {
                         icon: "✅",

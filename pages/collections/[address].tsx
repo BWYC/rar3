@@ -27,6 +27,8 @@ import {
 import Skeleton from "../../components/Skeleton/Skeleton";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
 import Grid from "../../components/grid"
+import Buy from "../buy"
+import Container from "../../components/Container/Container";
 
 const [randomColor1, randomColor2, randomColor3, randomColor4] = [
   randomColor(),
@@ -70,7 +72,6 @@ export default function CollectionHeroSection() {
   if (!address) {
 return(
   <>
-  <Grid />
    <section className={styles.container}>
       <section>
         <section className={styles.viewCollection_main}> 
@@ -78,7 +79,8 @@ return(
    
          
       <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-        <div
+
+      <div
           className={styles.coverImage}
           style={{
             backgroundPosition: "center",
@@ -98,11 +100,14 @@ return(
             
           }}
        / >
-  
-        <h1 className={styles.profileName}>
+           <h1 className={styles.profileName}>
          UNDEFINED
         </h1>
       </div>
+     
+        
+  
+     
     <section className={styles.CollectionHeroSection}>
      
       <section>
@@ -125,7 +130,6 @@ return(
   else {
   return (
     <>
-     <Grid />
    <section className={styles.container}>
       <section>
         <section className={styles.viewCollection_main}> 
@@ -163,7 +167,7 @@ return(
   
         <h1 className={styles.profileName}>
 
- RAR310NES<Checkmark style={{background: "darkgreen", borderRadius: "100%", borderWidth: "1px", padding: "2px", border: "dashed", borderColor: "initial", textShadow: "black 0px 10px 10px, white 20px 20px 20px, black 10px 15px 0px", color: "initial"}} />
+ RAR310NES
         </h1>
       </div>
     <section className={styles.CollectionHeroSection}>
@@ -225,6 +229,7 @@ return(
       </section>
     </section>
     <CollectionPurchaseSection />
+    
     </section>
       </section>
     </section>

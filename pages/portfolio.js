@@ -15,6 +15,7 @@ import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Profile from "./profile/[address]";
+import Container from "../components/Container/Container";
 
 const light = { background: "white" };
 const dark = { background: "black" };
@@ -57,6 +58,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 
   return (
     <>
+
     <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
@@ -408,8 +410,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             justify-content: center;
             background: linear-gradient(
               90deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 50, 150, 0.206),
+              rgb(0, 0, 0, 0.8),
+              rgba(0, 50, 150, 0.406),
               rgba(0, 0, 0, 0.906)
             );
           }
