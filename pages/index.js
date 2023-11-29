@@ -14,6 +14,7 @@ import { useAddress } from "@thirdweb-dev/react";
 import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
+import Banner from "../components/banner";
 
 
 const light = { background: "white" };
@@ -21,11 +22,7 @@ const dark = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
 body{
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0, 0.9),
-    rgba(0, 50, 150, 0.506)
-  );
+  background: black;
   transition: background 0.4s;
 }
 `;
@@ -386,6 +383,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         )}
                 </div>
               </header>
+              <Banner />
             </div>
             <div className="home-container35">
               <div className="home-container36">
@@ -398,14 +396,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
               </div>
               <div className="home-container38">
-                <video
-                  src="/hold.mp4"
-                  loop
-                  muted
-                  autoPlay
-                  playsInline
-                  className="home-video"
-                ></video>
               </div>
               <div className="home-container39">
                 <div className="home-container40">
@@ -453,7 +443,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           </div>
                           <div className="home-container54">
                             <span className="home-text18">FLOOR: 0.0</span>
-                            <span className="home-text19">VIEW ITEMS</span>
+                            <a className="home-text19" href={`/collections/${"0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2"}`} >VIEW ITEMS</a>
                           </div>
                         </div>
                       </div>
@@ -515,12 +505,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           </div>
         </div>
         <div className="home-container69">
-          <div className="home-feature-card">
-            <svg viewBox="0 0 1024 1024" className="home-icon32">
+        <svg viewBox="0 0 1024 1024" className="home-icon32">
               <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
             </svg>
+          <div className="home-feature-card">
             <h2 className="home-text28">HOME OF RARE</h2>
-            <span className="home-text29">discover, track, collect, OWN</span>
+            <span className="home-text28">discover, track, collect, OWN</span>
             <Link legacyBehavior href="/dex">
               <a className="home-link13">GET STARTED</a>
             </Link>
@@ -539,9 +529,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(
-              90deg,
+              130deg,
               rgb(0, 0, 0, 0.5),
-              rgba(0, 50, 150, 0.206),
+              rgba(0, 100, 200, 0.906),
               rgba(0, 0, 0, 0.506)
             );
           }

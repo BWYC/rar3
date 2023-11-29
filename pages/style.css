@@ -64,12 +64,7 @@
   opacity: 0.5;
 }
 body{
-  background: linear-gradient(
-    90deg,
-    rgb(0, 0, 0, 0.5),
-    rgba(0, 50, 150, 0.206),
-    rgba(0, 0, 0, 0.506)
-  );
+  background: initial;
   font-family: Pixel NES;
   color: initial;
   height: 100%;

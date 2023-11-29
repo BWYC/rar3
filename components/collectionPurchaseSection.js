@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Eth } from "@web3uikit/icons";
 import styles from "../styles/Home.module.css";
+import Buy from "../pages/buy"
 
 export default function CollectionPurchaseSection() {
   const [result, setResult] = useState([]);
@@ -77,6 +78,7 @@ export default function CollectionPurchaseSection() {
             })}
         </tbody>
       </table>
+      <Buy />
     </section>
   );
 }

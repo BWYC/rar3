@@ -8,10 +8,10 @@
   
   .container input + div {
     border-radius: 50%;
-    width: 27px;
-    height: 27px;
+    width: 30px;
+    height: 30px;
     position: relative;
-    box-shadow: inset 14px -14px 0 0 var(--color-toggle-dark, #9b9b9b);
+    box-shadow: inset 16px -14px 0 0 var(--color-toggle-dark, rgb(168, 168, 168));
     transform: scale(1) rotate(-2deg);
     transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
   }
@@ -36,26 +36,26 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    box-shadow: 0 -23px 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      0 23px 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      23px 0 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      -23px 0 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      15px 15px 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      -15px 15px 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      15px -15px 0 var(--color-toggle-light, rgb(95, 95, 95)),
-      -15px -15px 0 var(--color-toggle-light, rgb(95, 95, 95));
+    box-shadow: 0 -23px 0 var(--color-toggle-light, white),
+      0 23px 0 var(--color-toggle-light, white),
+      23px 0 0 var(--color-toggle-light, white),
+      -23px 0 0 var(--color-toggle-light, white),
+      15px 15px 0 var(--color-toggle-light, white),
+      -15px 15px 0 var(--color-toggle-light, white),
+      15px -15px 0 var(--color-toggle-light, white),
+      -15px -15px 0 var(--color-toggle-light, white);
     transform: scale(0);
     transition: all 0.3s ease;
   }
   
   .container input:checked + div {
-    box-shadow: inset 25px -25px 0 0 #ffffff;
+    box-shadow: inset 25px -25px 0 0 white;
     transform: scale(0.5) rotate(0deg);
     transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
   }
   
   .container input:checked + div::before {
-    background: var(--color-toggle-light, rgb(124, 124, 124));
+    background: var(--color-toggle-light, rgb(246, 246, 246));
     transition: background 0.3s ease 0.1s;
   }
   

@@ -17,6 +17,8 @@ import { publicProvider } from 'wagmi/providers/public'
 import Grid from "../components/grid"
 import { ChakraProvider } from '@chakra-ui/react'
 import Footer from "../components/footer";
+import Banner from "../components/banner"
+
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
@@ -43,19 +45,21 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
       localWallet(),
     ]}
   >
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+  
       <NextNProgress
-        color="yellow"
+        color="initial"
         startPosition={0.3}
         stopDelayMs={200}
-        height={4}
+        height={4.5}
         showOnShallow={true}
       />
-      <ChakraProvider>
+      <ChakraProvider theme={{}}>
+      <NextThemesProvider attribute="class" defaultTheme="dark">
       <Component {...pageProps} />
       <Footer />
-      </ChakraProvider>
       </NextThemesProvider>
+      </ChakraProvider>
+     
   </ThirdwebProvider>
   </WagmiConfig>
 

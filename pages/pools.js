@@ -17,6 +17,7 @@ import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
 
+
 const light = { background: "white" };
 const dark = { background: "black" };
 
@@ -394,7 +395,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                       <h1 className="home-heading1">POOLS</h1>
                   </Link>
                 </div>
-              
+           
             </div>
             <div style={{height: "50px"}}></div>
           

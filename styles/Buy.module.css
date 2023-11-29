@@ -3,13 +3,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
-    gap: 1%;
-    width: 100%;
+    gap: 2px;
     align-items: center;
+    width: 100%;
   }
   
   .nftContainer {
-    width: 12.8%;
+    width: 15%;
     margin: 8px;
     position: relative;
     overflow: hidden;
