@@ -16,6 +16,7 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
+import Buy1 from "./bwyc"
 
 const light = { background: "white" };
 const dark = { background: "black" };
@@ -62,7 +63,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
       <div className="home-container">
         <Head>
           <title>RareBay | DEX</title>
-          <meta property="og:title" content="RareBay | DEX1" />
+          <meta property="og:title" content="RareBay | DEX" />
         </Head>
         <div className="home-container01">
           <div className="home-container02">
@@ -398,6 +399,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             </div>
             <div style={{height: "50px"}}></div>
             <Buy/>
+            <Buy1/>
           </div>
         </div>
       <div style={{height: "400px"}}></div>

@@ -1,7 +1,7 @@
 import { useContract, useNFTs, useAddress, useOwnedNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
 import Container from "../components/Container/Container";
-import NFTGrid from "../components/NFT/NFTGrid";
-import { NFT_COLLECTION_ADDRESS } from "../const/contractAddresses";
+import NFTGrid from "../components/NFT/bwycg";
+import { NFT_COLLECTION_ADDRESS2 } from "../const/contractAddresses";
 import ProfilePage from "./profile/[address]";
 import styles from "../styles/Profile.module.css";
 import Link from "next/link";
@@ -11,15 +11,11 @@ import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import SaleInfo from "../components/SaleInfo/SaleInfo";
 import React, { useState } from "react";
 import TokenPage from "./token/[contractAddress]/[tokenId]";
-import { color } from "web3uikit";
-import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
-import Data from "./collections/data"
+import Data from "./collections/data1"
 
-
-export default function Buy() {
+export default function Buy1() {
   // Load all of the NFTs from the NFT Collection
-  const verfied = true
-  const { contract } = useContract(NFT_COLLECTION_ADDRESS);
+  const { contract } = useContract(NFT_COLLECTION_ADDRESS2);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
     start: 0,
     count: 20,
@@ -40,7 +36,7 @@ export default function Buy() {
           marginBottom: "50%"
         }}
       >
-       <Spinner size='lg'  />
+        <h3> <Spinner size='lg' /></h3>
       </div>
     );
   }
@@ -49,16 +45,7 @@ export default function Buy() {
     <Container maxWidth="lg">
       {!selectedNft ? (
         <>
-        <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
-        <Data />
-        <p className={styles.verify}  style={{color: "white", width: "100%",  padding: "2%", borderRadius: "8px", display: "flex"}}>
-        RAR31ONES
-       {verfied ? ( <>
-        <Checkmark fontSize={20} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
-       </>)
-          : (<></>)}</p>
-          <Link style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}} href=""><p>VIEW ITEMS</p></Link>
-        </div>
+          <h1 style={{color: "white", textAlign: "center", border: "solid 1px gray", width: "50%", padding: "10px", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px"}}>BWYC II</h1>
         <NFTGrid
               data={data}
               isLoading={isLoading}

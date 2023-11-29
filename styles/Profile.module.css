@@ -21,6 +21,10 @@
 .profileName {
   margin-left: 2.5%;
   width: 100%;
+  color: #aaaaaa;
+  font: 900;
+  font-size: 14px;
+  display: flex;
 }
 
 .tabs {
@@ -72,4 +76,9 @@
   display: flex;
   flex-direction: row;
   opacity: 1;
+}
+@media only screen and (max-width: 600px) {
+  .verify{
+display: none;
+  }
 }

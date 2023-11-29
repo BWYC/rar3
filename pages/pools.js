@@ -16,7 +16,7 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
-import Collection from "../pages/collections/[address]"
+
 
 const light = { background: "white" };
 const dark = { background: "black" };
@@ -395,7 +395,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                       <h1 className="home-heading1">POOLS</h1>
                   </Link>
                 </div>
-              <Collection />
+           
             </div>
             <div style={{height: "50px"}}></div>
           

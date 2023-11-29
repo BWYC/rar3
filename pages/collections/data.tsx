@@ -10,9 +10,9 @@ export default function Data() {
 
     return(
         <>
-        <div style={{display: "flex", marginLeft: "30%", marginBottom: "7%", position: "absolute", zIndex: "1", marginTop: "1%", outline: "solid 1px lightgray", padding: "1%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px", gap: "10px", color: "" }}>
-<ArrowDown fontSize='20px'/>  ITEMS: {NFTs?.toNumber()} ⚡<hr style={{margin: "5px"}} />
-<Dapps fontSize='20px'/>  TOTAL VOLUME: {} ⚡<hr style={{margin: "5px"}} /> 
+        <div style={{display: "flex", outline: "solid 0.5px gray", padding: "2%", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "12px", gap: "10px", color: "", width: "100%", height: "60px", justifyItems: "center" }}>
+<ArrowDown fontSize='20px'/>  ITEMS: {NFTs?.toNumber()}<hr style={{margin: "5px"}} />
+<Dapps fontSize='20px'/>  VOLUME: {}<hr style={{margin: "5px"}} /> 
   <UserTeam fontSize='20px'/> OWNERS: 0%
 </div>
 

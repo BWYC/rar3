@@ -13,9 +13,9 @@ import {
   import Skeleton from "../Skeleton/Skeleton";
   import styles from "./NFT.module.css";
   import truncateEthAddress from "truncate-eth-address";
-  import { Tooltip } from "web3uikit";
+  import { Tooltip } from "web3uikit"; 
 
-  
+
   type Props = {
     nft: NFT;
   };
@@ -43,7 +43,7 @@ import {
   
     return (
       <>
-<Tooltip content={"Price"} position="bottom">
+       <Tooltip content={"Price"} position="bottom">
         <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "100%", borderRadius: "16px", overflow: "hidden"}} />
   
         <p className={styles.nftName}>

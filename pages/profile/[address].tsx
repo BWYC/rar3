@@ -13,6 +13,7 @@ import Container from "../../components/Container/Container";
 
 import RR from "../../public/favicon.ico";
 import {
+  ConnectWallet,
   useOwnedNFTs,
   useValidDirectListings,
   useValidEnglishAuctions,
@@ -43,7 +44,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 
 export default function Profile() {
   const address = useAddress()
-
+  const verfied = false
   const router = useRouter();
   const [tab, setTab] = useState<"nfts" | "listings" | "auctions" | "sell">("nfts");
 
@@ -84,7 +85,7 @@ return(
    
          
       <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <div
           className={styles.coverImage}
           style={{
@@ -105,17 +106,17 @@ return(
             
           }}
        / >
+        <hr style={{margin: "3%"}} />
+        <ConnectWallet />
   </Container>
-        <h1 className={styles.profileName}>
-         UNDEFINED
-        </h1>
+
       </div>
     <section className={styles.CollectionHeroSection}>
      
       <section>
         <section className={styles.collection_marketplace_title_icons}>
           <section>
-         
+      
           </section>
         </section>
       </section>
@@ -139,7 +140,7 @@ return(
    
          
       <div style={{width: "100%", padding: "5%", height: "20px", marginBottom: "20px"}}></div>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
       <div
           className={styles.coverImage}
           style={{
@@ -149,7 +150,7 @@ return(
             backgroundImage:  `linear-gradient(${randomColor3}, ${randomColor4}, ${randomColor1})`
           }}
         />
-           <Data />
+       
          <div
           className={styles.profilePicture}
           style={{
@@ -161,15 +162,20 @@ return(
        >
        
         <Blockie scale={16.5} seed={address} />
-        
+        <h3 className={styles.profileName}>
+          {truncateEthAddress(address)}
+          {verfied ? ( <Checkmark fontSize={16} style={{background: "blue", padding: "0.2px", border: "dashed 1px", borderRadius: "100%"}} />)
+          : (<></>)}
+           
+        </h3>
+        <Data /> 
        </div>
        </Container>
-  <h1 className={styles.profileName}>
-          {truncateEthAddress(address)} 
-        </h1>
+
       </div>
-   
+      <hr style={{margin: "4%"}} />
     <div className={styles.tabs}>
+    
         <h3
           className={`${styles.tab} 
         ${tab === "nfts" ? styles.activeTab : ""}`}
@@ -198,6 +204,7 @@ return(
         >
          Sell
         </h3>
+     
       </div>
 
       <div
@@ -205,12 +212,19 @@ return(
           tab === "nfts" ? styles.activeTabContent : styles.tabContent
         }`}
       >
-        <Container maxWidth="xl">
-        <NFTGrid
-          data={ownedNfts}
-          isLoading={isLoading}
-          emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
-        />
+        <Container maxWidth="lg">
+          {isLoading ? (
+            <p> <Spinner size='md' /></p>
+          ) : (
+            <Container maxWidth="lg">
+            <NFTGrid
+            data={ownedNfts}
+            isLoading={isLoading}
+            emptyText="Looks like you don't have any NFTs from this collection. Head to the buy page to buy some!"
+          />
+             </Container>
+          )}
+       
         </Container>
      
       </div>
@@ -231,14 +245,14 @@ return(
         )}
       </div>
      
-      
+      <Container maxWidth="lg">
       <div
         className={`${
           tab === "auctions" ? styles.activeTabContent : styles.tabContent
         }`}
       >
       
-        {loadingAuctions ? (
+      {loadingAuctions ? (
           <p> <Spinner size='md' /></p>
         ) : auctionListings && auctionListings.length === 0 ? (
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
@@ -248,13 +262,16 @@ return(
           ))
         )}
 
+      
       </div>
+      </Container>
       <div
         className={`${
           tab === "sell" ? styles.activeTabContent : styles.tabContent
         }`}
       >
           <Container maxWidth="lg">
+
        <Sell />
        </Container>
       </div>
