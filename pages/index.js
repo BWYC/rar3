@@ -444,7 +444,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                           width={30}
                           height={30}
                             alt="image"
-                            src="/w.jpeg"
+                            src="/sdzhksgdasha-200w.png"
                             className="home-image3"
                           />
                           <span className="home-text16">BWYC II</span>
@@ -1681,7 +1681,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             flex-direction: column;
             background-size: cover;
             justify-content: center;
-            background-image: url("/1080x360-1200w.jpeg");
+            background-image: url("/w.jpeg");
             background-position: center;
           }
           .home-container48:hover {
