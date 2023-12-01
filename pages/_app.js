@@ -35,7 +35,7 @@ import React from "react";
 export default function MyApp({ Component: Component, pageProps: pageProps }) {
   return (
     <WagmiConfig  config={config}>
-
+ <ChakraProvider theme={{}}>
     <ThirdwebProvider
     clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
     activeChain={NETWORK}
@@ -47,20 +47,21 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
   >
   
       <NextNProgress
-        color="initial"
+        color="skyblue"
         startPosition={0.3}
         stopDelayMs={200}
         height={4.5}
         showOnShallow={true}
       />
-      <ChakraProvider theme={{}}>
+     
       <NextThemesProvider attribute="class" defaultTheme="dark">
       <Component {...pageProps} />
       <Footer />
       </NextThemesProvider>
-      </ChakraProvider>
+    
      
   </ThirdwebProvider>
+  </ChakraProvider>
   </WagmiConfig>
 
   

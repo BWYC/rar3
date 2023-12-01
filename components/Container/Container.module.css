@@ -9,6 +9,7 @@
     padding: 20px;
     background: transparent;
     backdrop-filter: blur(20px);
+    text-align: center;
   }
   
   .xs {

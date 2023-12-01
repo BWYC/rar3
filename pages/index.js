@@ -129,7 +129,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
                 <Link legacyBehavior href="#">
                   <a className="home-link02">
-                    <img
+                    <Image
+                    style={{borderRadius: "100%"}}
+                    width={30}
+                    height={30}
                       alt="logo"
                       src="/fav-200h.ico"
                       className="home-image"
@@ -151,7 +154,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     </div>
                     <div className="home-container06">
                       <div className="home-container07">
-                        <img
+                        <Image
+                        style={{borderRadius: "100%"}}
+                        width={30}
+                        height={30}
                           alt="image"
                           src="/fav-200h.ico"
                           className="home-image1"
@@ -348,7 +354,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
  switchToActiveChain={true}
  welcomeScreen={{
    title: "WELCOME TO THE HOME OF RAR3",
-   img: {
+   Image: {
      src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
      width: 150,
      height: 150,
@@ -383,8 +389,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         )}
                 </div>
               </header>
-              <Banner />
+            
             </div>
+            <Banner />
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
@@ -396,6 +403,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
               </div>
               <div className="home-container38">
+     <video loop autoPlay autoFocus src="RARE.mp4" style={{border: "solid 2px white", borderRadius: "16px", width: "80%"}}/>           
               </div>
               <div className="home-container39">
                 <div className="home-container40">
@@ -403,22 +411,25 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <div className="home-container42">
                       <div className="home-container43">
                         <div className="home-container44">
-                          <img
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={30}
+                          height={30}
                             alt="image"
                             src="/gfdgfhyu1-200h.png"
                             className="home-image2"
                           />
-                          <span className="home-text12">rar3oneS</span>
+                          <span className="home-text12">rar31oneS</span>
                         </div>
                         <div className="home-container45">
                           <div className="home-container46">
                             <span className="home-text13">
-                              Collection Description
+                             3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
                             </span>
                           </div>
                           <div className="home-container47">
                             <span className="home-text14">FLOOR: 0.0</span>
-                            <a href={`/collections/${"0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"}`} className="home-text15">VIEW ITEMS</a>
+                            <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
                       </div>
@@ -428,9 +439,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <div className="home-container49">
                       <div className="home-container50">
                         <div className="home-container51">
-                          <img
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={30}
+                          height={30}
                             alt="image"
-                            src="/sdzhksgdasha-200w.png"
+                            src="/w.jpeg"
                             className="home-image3"
                           />
                           <span className="home-text16">BWYC II</span>
@@ -438,12 +452,12 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                         <div className="home-container52">
                           <div className="home-container53">
                             <span className="home-text17">
-                              Collection Description
+                             BoredWhalesYachtClub Season 2
                             </span>
                           </div>
                           <div className="home-container54">
                             <span className="home-text18">FLOOR: 0.0</span>
-                            <a className="home-text19" href={`/collections/${"0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2"}`} >VIEW ITEMS</a>
+                            <a href={`/collection2`} className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
                       </div>
@@ -453,7 +467,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <div className="home-container56">
                       <div className="home-container57">
                         <div className="home-container58">
-                          <img
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={30}
+                          height={30}
                             alt="image"
                             src="/sf-200h.png"
                             className="home-image4"
@@ -463,7 +480,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                         <div className="home-container59">
                           <div className="home-container60">
                             <span className="home-text21">
-                              Collection Description
+                           BoredWhalesYachtClub
                             </span>
                           </div>
                           <div className="home-container61">
@@ -478,7 +495,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                     <div className="home-container63">
                       <div className="home-container64">
                         <div className="home-container65">
-                          <img
+                          <Image
+                          style={{borderRadius: "100%"}}
+                          width={30}
+                          height={30}
                             alt="image"
                             src="/whls%20(1)-200h.jpg"
                             className="home-image5"
@@ -505,11 +525,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           </div>
         </div>
         <div className="home-container69">
-        <svg viewBox="0 0 1024 1024" className="home-icon32">
-              <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
-            </svg>
           <div className="home-feature-card">
             <h2 className="home-text28">HOME OF RARE</h2>
+            <svg viewBox="0 0 1024 1024" className="home-icon32">
+              <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
+            </svg>
             <span className="home-text28">discover, track, collect, OWN</span>
             <Link legacyBehavior href="/dex">
               <a className="home-link13">GET STARTED</a>
@@ -1456,7 +1476,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               180deg,
               rgb(255, 255, 255) 0%,
               rgb(45, 45, 45) 49%,
-              rgb(255, 0, 0) 98%
+              rgb(0, 100, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -2056,13 +2076,13 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 90%;
+            width: 75%;
             font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: initial;
+            color: lightgray;
           }
           .home-feature-card {
             width: 100%;

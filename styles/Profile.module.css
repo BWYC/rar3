@@ -2,7 +2,7 @@
 }
 
 .coverImage {
-  width: auto;
+  width: 100%;
   background-color: #272a2d;
   height: 400px;
   border-radius: 16px;
@@ -79,6 +79,6 @@
 }
 @media only screen and (max-width: 600px) {
   .verify{
-display: none;
+display: none !important;
   }
 }

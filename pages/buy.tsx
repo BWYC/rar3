@@ -21,8 +21,8 @@ export default function Buy() {
   const verfied = true
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 0,
-    count: 20,
+    start: 3000,
+    count: 3050,
   });
 
    const address = useAddress();
@@ -32,16 +32,9 @@ export default function Buy() {
 
   if (isLoading) {
     return (
-      <div
-        style={{
-          width: "100%",
-          alignItems: "center",
-          textAlign: "center",
-          marginBottom: "50%"
-        }}
-      >
-       <Spinner size='lg'  />
-      </div>
+<Container maxWidth="xl">
+LOADING...<Spinner size="md" />
+</Container>
     );
   }
 
@@ -57,7 +50,7 @@ export default function Buy() {
         <Checkmark fontSize={20} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
        </>)
           : (<></>)}</p>
-          <Link style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}} href=""><p>VIEW ITEMS</p></Link>
+          <Link href={`/collections/${"0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f"}`} style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "40%", height: "60px"}}><p>VIEW ITEMS</p></Link>
         </div>
         <NFTGrid
               data={data}

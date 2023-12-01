@@ -1,6 +1,6 @@
 import { useContract, useNFTs, useAddress, useOwnedNFTs, ThirdwebNftMedia } from "@thirdweb-dev/react";
 import Container from "../components/Container/Container";
-import NFTGrid from "../components/NFT/bwycg";
+import NFTGrid from "../components/NFT/NFTGrid";
 import { NFT_COLLECTION_ADDRESS2 } from "../const/contractAddresses";
 import ProfilePage from "./profile/[address]";
 import styles from "../styles/Profile.module.css";
@@ -11,14 +11,19 @@ import { NFT as NFTType } from "@thirdweb-dev/sdk";
 import SaleInfo from "../components/SaleInfo/SaleInfo";
 import React, { useState } from "react";
 import TokenPage from "./token/[contractAddress]/[tokenId]";
+import { color } from "web3uikit";
+import {Twitter, Discord, UserTeam, ArrowDown, Dapps, Checkmark } from '@web3uikit/icons'
 import Data from "./collections/data1"
+import Skeleton from "../components/Skeleton/Skeleton";
+
 
 export default function Buy1() {
   // Load all of the NFTs from the NFT Collection
+  const verfied = true
   const { contract } = useContract(NFT_COLLECTION_ADDRESS2);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 0,
-    count: 20,
+    start: 1000,
+    count: 1016,
   });
 
    const address = useAddress();
@@ -28,16 +33,9 @@ export default function Buy1() {
 
   if (isLoading) {
     return (
-      <div
-        style={{
-          width: "100%",
-          alignItems: "center",
-          textAlign: "center",
-          marginBottom: "50%"
-        }}
-      >
-        <h3> <Spinner size='lg' /></h3>
-      </div>
+<Container maxWidth="xl">
+LOADING...<Spinner size="md" />
+</Container>
     );
   }
 
@@ -45,7 +43,16 @@ export default function Buy1() {
     <Container maxWidth="lg">
       {!selectedNft ? (
         <>
-          <h1 style={{color: "white", textAlign: "center", border: "solid 1px gray", width: "50%", padding: "10px", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px"}}>BWYC II</h1>
+        <div  style={{color: "white", height: "80px", width: "100%", padding: "1%", backdropFilter: "blur(100px)", borderRadius: "8px", fontSize: "20px", background: "rbg(0, 0, 0, 0.7)", display: "flex", flexDirection: "row", gap: "10px" }}>
+        <Data />
+        <p className={styles.verify}  style={{color: "white", width: "100%",  padding: "2%", borderRadius: "8px", display: "flex"}}>
+        BWYC II
+       {verfied ? ( <>
+        <Checkmark fontSize={20} style={{background: "green", padding: "1px", border: "dashed 1px", borderRadius: "100%"}} />
+       </>)
+          : (<></>)}</p>
+          <Link href={`/collections/${"0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2"}`} style={{textAlign: "center", padding: "2%", border: "solid 1px gray", background: "rgba(0, 0, 50, 0.3)", fontSize: "14px", borderRadius: "8px", width: "30%", height: "60px"}}><p>VIEW ITEMS</p></Link>
+        </div>
         <NFTGrid
               data={data}
               isLoading={isLoading}
@@ -53,7 +60,7 @@ export default function Buy1() {
                 setSelectedNft(nft);
               }}
               emptyText={
-                "Looks like you don't own any NFT in your Wallet. Head to the buy page to buy some!"
+                "Looks like you don't own any BWYC in your Wallet. Buy some From DEX"
               }
             />
         </>
