@@ -417,10 +417,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(
-              90deg,
-              rgb(0, 0, 0, 0.9),
-              rgba(0, 50, 150, 0.406),
-              rgba(0, 0, 0, 0.906)
+              120deg,
+              rgb(0, 0, 0, 0.3),
+              rgba(0, 50, 200, 0.806),
+              rgba(0, 0, 0, 0.306)
             );
           }
           .home-container01 {
@@ -474,7 +474,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             border-bottom-width: 1px;
           }
           .home-container04:hover {
-            background: rgba(100, 100, 100, 0.69);
+            background: rgba(100, 100, 100, 0.39);
+            backdrop-filter: blur(10px);
           }
           .home-icon {
             fill: #008aff;
@@ -1345,7 +1346,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
               180deg,
               rgb(255, 255, 255) 0%,
               rgb(45, 45, 45) 49%,
-              rgb(255, 0, 0) 98%
+              rgb(0, 0, 220) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

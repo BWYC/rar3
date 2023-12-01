@@ -32,9 +32,10 @@ const Banner = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            margin-top: 5%;
+            margin-top: 1%;
             padding: 10px
             cursor: pointer;
+            color: orange;
           }
           .footer-container1 {
             width: auto;

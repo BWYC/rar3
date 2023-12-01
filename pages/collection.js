@@ -32,7 +32,7 @@ body{
 }
 `;
 
-const Pools= (props) => {
+const Rare= (props) => {
 
   const address = useAddress()
   const { connect, connectors } = useConnect();
@@ -390,14 +390,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             </div>
             
             <div className="home-container35">
-            <div className="home-container37">
-                  <Link className="home-link12" href="/dex">
-                      <h1 className="home-heading1">POOLS</h1>
-                  </Link>
-                </div>
               <Collection />
             </div>
-            <div style={{height: "50px"}}></div>
           
           </div>
         </div>
@@ -416,10 +410,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             flex-direction: column;
             justify-content: center;
             background: linear-gradient(
-              90deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 50, 150, 0.206),
-              rgba(0, 0, 0, 0.506)
+              120deg,
+              rgb(0, 0, 0, 0.3),
+              rgba(0, 50, 250, 0.906),
+              rgba(0, 0, 0, 0.306)
             );
           }
           .home-container01 {
@@ -2180,4 +2174,4 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   );
 };
 
-export default Pools;
+export default Rare;
