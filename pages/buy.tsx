@@ -21,8 +21,8 @@ export default function Buy() {
   const verfied = true
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 3000,
-    count: 3050,
+    start: 0,
+    count: 20,
   });
 
    const address = useAddress();

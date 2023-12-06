@@ -15,17 +15,10 @@ import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
+import Container from "../components/Container/Container"
 
 
-const light = { background: "white" };
-const dark = { background: "black" };
 
-const GlobalStyle = createGlobalStyle`
-body{
-  background: black;
-  transition: background 0.4s;
-}
-`;
 
 const Home = (props) => {
 
@@ -45,353 +38,14 @@ const Home = (props) => {
   }, [address]);
 
 
-
-const { themes, setTheme } = useTheme()
-const [ isDark, setDark ] = useState(false)
-
-const theme = isDark ? dark : light;
-const themez = isDark ? setTheme("dark") : setTheme("light");
-
   return (
     <>
-    <ThemeProvider theme={theme}>
+ 
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX</title>
+          <title>RareBay | HOME OF RAR3</title>
           <meta property="og:title" content="RareBay | DEX1" />
         </Head>
-        <div className="home-container01">
-          <div className="home-container02">
-            <div className="home-container03">
-              <div className="home-container04">
-                <svg viewBox="0 0 1024 1024" className="home-icon">
-                  <path d="M725.333 896v-85.333c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464h-298.667c-58.88 0-112.299 23.936-150.869 62.464s-62.464 91.989-62.464 150.869v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-85.333c0-35.371 14.293-67.285 37.504-90.496s55.125-37.504 90.496-37.504h298.667c35.371 0 67.285 14.293 90.496 37.504s37.504 55.125 37.504 90.496v85.333c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667zM576 298.667c0-58.88-23.936-112.299-62.464-150.869s-91.989-62.464-150.869-62.464-112.299 23.936-150.869 62.464-62.464 91.989-62.464 150.869 23.936 112.299 62.464 150.869 91.989 62.464 150.869 62.464 112.299-23.936 150.869-62.464 62.464-91.989 62.464-150.869zM490.667 298.667c0 35.371-14.293 67.285-37.504 90.496s-55.125 37.504-90.496 37.504-67.285-14.293-90.496-37.504-37.504-55.125-37.504-90.496 14.293-67.285 37.504-90.496 55.125-37.504 90.496-37.504 67.285 14.293 90.496 37.504 37.504 55.125 37.504 90.496zM695.168 499.499l85.333 85.333c16.683 16.683 43.691 16.683 60.331 0l170.667-170.667c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-140.501 140.501-55.168-55.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path>
-                </svg>
-                <Link
-                  href="/portfolio"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="home-text"
-                >
-                   <div  className="home-link01">
-                  OWNED
-                  </div>
-                </Link>
-                <svg
-                  viewBox="0 0 950.8571428571428 1024"
-                  className="home-icon02"
-                >
-                  <path d="M920.571 475.429c0 19.429-8 38.286-21.143 51.429l-372 372.571c-13.714 13.143-32.571 21.143-52 21.143s-38.286-8-51.429-21.143l-372-372.571c-13.714-13.143-21.714-32-21.714-51.429s8-38.286 21.714-52l42.286-42.857c13.714-13.143 32.571-21.143 52-21.143s38.286 8 51.429 21.143l168 168v-402.286c0-40 33.143-73.143 73.143-73.143h73.143c40 0 73.143 33.143 73.143 73.143v402.286l168-168c13.143-13.143 32-21.143 51.429-21.143s38.286 8 52 21.143l42.857 42.857c13.143 13.714 21.143 32.571 21.143 52z"></path>
-                </svg>
-                <Link
-                  href="/sell"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="home-link"
-                >
-                   <div  className="home-link01">
-                   SELL
-                  </div>
-              
-                </Link>
-                <svg viewBox="0 0 1024 1024" className="home-icon04">
-                  <path d="M1024 576v-384h-192v-64c0-35.2-28.8-64-64-64h-704c-35.2 0-64 28.8-64 64v192c0 35.2 28.8 64 64 64h704c35.2 0 64-28.8 64-64v-64h128v256h-576v128h-32c-17.674 0-32 14.326-32 32v320c0 17.674 14.326 32 32 32h128c17.674 0 32-14.326 32-32v-320c0-17.674-14.326-32-32-32h-32v-64h576zM768 192h-704v-64h704v64z"></path>
-                </svg>
-                <Link
-                  href="/create"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                 
-                >
-
-                  <div  className="home-link01">
-                  CREATE
-                  </div>
-                
-                </Link>
-              </div>
-              <header data-thq="thq-navbar" className="home-navbar-interactive">
-                <div data-thq="thq-navbar-nav" className="home-desktop-menu">
-                  <div className="home-container05">
-                    <Search rootClassName="search-root-class-name15"></Search>
-                  </div>
-                  <div className="home-buttons">
-                  <div style={{display: "flex", gap: "20px", padding: "10px", borderRadius: "8px", backdropFilter: "blur(100px)", filter: "opacity(1)", background: "rgba(0, 0, 0, 0.281)", fontSize: "13px" }}>
-</div>  
-
-                  
-                  </div>
-                </div>
-                <div data-thq="thq-burger-menu" className="home-burger-menu">
-                  <svg viewBox="0 0 1024 1024" className="home-icon06">
-                    <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
-                  </svg>
-                </div>
-                <Link legacyBehavior href="#">
-                  <a className="home-link02">
-                    <Image
-                    style={{borderRadius: "100%"}}
-                    width={30}
-                    height={30}
-                      alt="logo"
-                      src="/fav-200h.ico"
-                      className="home-image"
-                    />
-                  </a>
-                </Link>
-                <Search rootClassName="search-root-class-name14"></Search>
-                <div data-thq="thq-mobile-menu" className="home-mobile-menu">
-                  <div className="home-nav">
-                    <div className="home-top">
-                      <div
-                        data-thq="thq-close-menu"
-                        className="home-close-menu"
-                      >
-                        <svg viewBox="0 0 1024 1024" className="home-icon08">
-                          <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="home-container06">
-                      <div className="home-container07">
-                        <Image
-                        style={{borderRadius: "100%"}}
-                        width={30}
-                        height={30}
-                          alt="image"
-                          src="/fav-200h.ico"
-                          className="home-image1"
-                        />
-                        <Link legacyBehavior href="#">
-                          <a className="home-link03">
-                            <h1 className="home-heading">RAR3BAY</h1>
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="home-container08"></div>
-                      <div className="home-container09">
-                        <div className="home-container10">
-                          <span className="home-text01">EXPLORE RAR3</span>
-                        </div>
-                        <Link legacyBehavior href="/dex">
-                          <a className="home-link04">
-                            <div className="home-container11">
-                              <div className="home-container12">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon10"
-                                >
-                                  <path d="M768 554q70 0 120 51t50 121-50 120-120 50-120-50-50-120 50-121 120-51zM768 640q-34 0-60 26t-26 60 26 59 60 25 60-25 26-59-26-60-60-26zM512 128q70 0 120 50t50 120-50 121-120 51-120-51-50-121 50-120 120-50zM512 214q-34 0-60 25t-26 59 26 60 60 26 60-26 26-60-26-59-60-25zM256 554q70 0 120 51t50 121-50 120-120 50-120-50-50-120 50-121 120-51zM256 640q-34 0-60 26t-26 60 26 59 60 25 60-25 26-59-26-60-60-26z"></path>
-                                </svg>
-                                <span className="home-text02">DEX</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <div className="home-container13">
-                          <div className="home-container14">
-                            <svg
-                              viewBox="0 0 1024 1024"
-                              className="home-icon12"
-                            >
-                              <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-                            </svg>
-                            <span className="home-text03">POOLS</span>
-                          </div>
-                        </div>
-                        <Link legacyBehavior href="/portfolio">
-                          <a className="home-link05">
-                            <div className="home-container15">
-                              <div className="home-container16">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon14"
-                                >
-                                  <path d="M864 0h-768c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h768c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM832 896h-704v-768h704v768zM256 576h448v64h-448zM256 704h448v64h-448zM320 288c0-53.019 42.981-96 96-96s96 42.981 96 96c0 53.019-42.981 96-96 96s-96-42.981-96-96zM480 384h-128c-52.8 0-96 28.8-96 64v64h320v-64c0-35.2-43.2-64-96-64z"></path>
-                                </svg>
-                                <span className="home-text04">portfolio</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <Link legacyBehavior href="/sats">
-                          <a className="home-link06">
-                            <div className="home-container17">
-                              <div className="home-container18">
-                                <svg
-                                  viewBox="0 0 760.0274285714286 1024"
-                                  className="home-icon16"
-                                >
-                                  <path d="M666.857 365.714c7.429 76-24.571 121.714-74.857 147.429 83.429 20 136 69.714 125.714 181.143-13.143 138.857-116 176-263.429 184v145.714h-88v-143.429c-22.286 0-45.714 0-69.714-0.571v144h-88v-145.714c-20.571 0-41.143-0.571-62.286-0.571h-114.286l17.714-104.571c64.571 1.143 63.429 0 63.429 0 24.571 0 31.429-17.714 33.143-29.143v-229.714h9.143c-3.429-0.571-6.857-0.571-9.143-0.571v-164c-3.429-18.286-14.857-38.857-50.857-38.857 0 0 1.143-1.143-63.429 0v-93.714l121.143 0.571c17.714 0 36.571 0 55.429-0.571v-144h88v141.143c23.429-0.571 46.857-1.143 69.714-1.143v-140h88v144c113.143 9.714 202.857 44.571 212.571 148.571zM544 677.143c0-113.143-186.286-96.571-245.714-96.571v193.143c59.429 0 245.714 12.571 245.714-96.571zM503.429 405.143c0-103.429-155.429-88-205.143-88v175.429c49.714 0 205.143 11.429 205.143-87.429z"></path>
-                                </svg>
-                                <span className="home-text05">SATS</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="home-container19">
-                        <div className="home-container20">
-                          <span className="home-text06">EXPLORE RAR3</span>
-                        </div>
-                        <Link legacyBehavior href="/dex">
-                          <a className="home-link07">
-                            <div className="home-container21">
-                              <div className="home-container22">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon18"
-                                >
-                                  <path d="M768 554q70 0 120 51t50 121-50 120-120 50-120-50-50-120 50-121 120-51zM768 640q-34 0-60 26t-26 60 26 59 60 25 60-25 26-59-26-60-60-26zM512 128q70 0 120 50t50 120-50 121-120 51-120-51-50-121 50-120 120-50zM512 214q-34 0-60 25t-26 59 26 60 60 26 60-26 26-60-26-59-60-25zM256 554q70 0 120 51t50 121-50 120-120 50-120-50-50-120 50-121 120-51zM256 640q-34 0-60 26t-26 60 26 59 60 25 60-25 26-59-26-60-60-26z"></path>
-                                </svg>
-                                <span className="home-text07">DEX</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <Link legacyBehavior href="/pools">
-                          <a className="home-link08">
-                            <div className="home-container23">
-                              <div className="home-container24">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon20"
-                                >
-                                  <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-                                </svg>
-                                <span className="home-text08">POOLS</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <Link legacyBehavior href="/portfolio">
-                          <a className="home-link09">
-                            <div className="home-container25">
-                              <div className="home-container26">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon22"
-                                >
-                                  <path d="M864 0h-768c-52.8 0-96 43.2-96 96v832c0 52.8 43.2 96 96 96h768c52.8 0 96-43.2 96-96v-832c0-52.8-43.2-96-96-96zM832 896h-704v-768h704v768zM256 576h448v64h-448zM256 704h448v64h-448zM320 288c0-53.019 42.981-96 96-96s96 42.981 96 96c0 53.019-42.981 96-96 96s-96-42.981-96-96zM480 384h-128c-52.8 0-96 28.8-96 64v64h320v-64c0-35.2-43.2-64-96-64z"></path>
-                                </svg>
-                                <span className="home-text09">portfolio</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <Link legacyBehavior href="/sats">
-                          <a className="home-link10">
-                            <div className="home-container27">
-                              <div className="home-container28">
-                                <svg
-                                  viewBox="0 0 760.0274285714286 1024"
-                                  className="home-icon24"
-                                >
-                                  <path d="M666.857 365.714c7.429 76-24.571 121.714-74.857 147.429 83.429 20 136 69.714 125.714 181.143-13.143 138.857-116 176-263.429 184v145.714h-88v-143.429c-22.286 0-45.714 0-69.714-0.571v144h-88v-145.714c-20.571 0-41.143-0.571-62.286-0.571h-114.286l17.714-104.571c64.571 1.143 63.429 0 63.429 0 24.571 0 31.429-17.714 33.143-29.143v-229.714h9.143c-3.429-0.571-6.857-0.571-9.143-0.571v-164c-3.429-18.286-14.857-38.857-50.857-38.857 0 0 1.143-1.143-63.429 0v-93.714l121.143 0.571c17.714 0 36.571 0 55.429-0.571v-144h88v141.143c23.429-0.571 46.857-1.143 69.714-1.143v-140h88v144c113.143 9.714 202.857 44.571 212.571 148.571zM544 677.143c0-113.143-186.286-96.571-245.714-96.571v193.143c59.429 0 245.714 12.571 245.714-96.571zM503.429 405.143c0-103.429-155.429-88-205.143-88v175.429c49.714 0 205.143 11.429 205.143-87.429z"></path>
-                                </svg>
-                                <span className="home-text10">SATS</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                        <Link legacyBehavior href="/sats">
-                          <a className="home-link11">
-                            <div className="home-container29">
-                              <div className="home-container30">
-                                <svg
-                                  viewBox="0 0 1024 1024"
-                                  className="home-icon26"
-                                >
-                                  <path d="M1011.328 134.496c-110.752-83.928-281.184-134.034-455.91-134.034-216.12 0-392.226 75.456-483.16 207.020-42.708 61.79-66.33 134.958-70.208 217.474-3.454 73.474 8.884 154.726 36.684 242.146 94.874-284.384 359.82-507.102 665.266-507.102 0 0-285.826 75.232-465.524 308.192-0.112 0.138-2.494 3.090-6.614 8.698-36.080 48.278-67.538 103.162-91.078 165.328-39.87 94.83-76.784 224.948-76.784 381.782h128c0 0-19.43-122.222 14.36-262.79 55.89 7.556 105.858 11.306 150.852 11.306 117.678 0 201.37-25.46 263.388-80.124 55.568-48.978 86.198-114.786 118.624-184.456 49.524-106.408 105.654-227.010 268.654-320.152 9.33-5.332 15.362-14.992 16.056-25.716s-4.040-21.080-12.606-27.572z"></path>
-                                </svg>
-                                <span className="home-text11">MINTS</span>
-                              </div>
-                            </div>
-                          </a>
-                        </Link>
-                      </div>
-                      <div className="home-container31"></div>
-                      <div id="connecting" className="home-container32">
-                      <ReactThemeToggleButton
-        isDark={isDark}
-        invertedIconLogic
-        onChange={() => setDark((prev) => !prev)}
-        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div id="connect" className="home-container33">
-                <ReactThemeToggleButton
-        isDark={isDark}
-        invertedIconLogic
-        onChange={() => setDark((prev) => !prev)}
-        />
-                  <div id="connecting" className="home-container34">
-
-                  </div>
-                  {isLoggedIn ? (
-          <section>
-            {connectors.map((connector) => (
-              <>
- <ConnectWallet
-
- style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
- modalSize={"compact"}
- theme={({
-   colors: {
-     modalBg: " rgba(0, 0, 50, 0.638)",
-     dropdownBg: "initial",
-     accentText: "white",
-     accentButtonBg: "#0064fa",
-     borderColor: "initial",
-     primaryText: "white"
-   },
- })}
- btnTitle={"CONNECT"}
- modalTitle={"RAREBAY"}
- switchToActiveChain={true}
- welcomeScreen={{
-   title: "WELCOME TO THE HOME OF RAR3",
-   Image: {
-     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
-     width: 150,
-     height: 150,
-   },
-   subtitle:
-     "Connect wallet to get started.",
- }}
- modalTitleIconUrl={
-   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
- }
-/>
-</>
-            ))}
-          </section>
-        ) : (
-          <section className={styles.loggedIn_section}>
-<ConnectWallet 
-   theme={({
-   colors: {
-     modalBg: " rgba(0, 0, 50, 0.638)",
-     dropdownBg: "black",
-     accentText: "initial",
-     accentButtonBg: "#0064fa",
-     borderColor: "initial",
-     primaryText: "white",
-     background: "black",
-     backdropFilter: "blur(10px)"
-   },
-  })}
-   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} /></div>
-          </section>
-        )}
-                </div>
-              </header>
-            
-            </div>
-            <Banner />
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
@@ -522,22 +176,19 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <Container maxWidth="lg">
         <div className="home-container69">
           <div className="home-feature-card">
             <h2 className="home-text28">HOME OF RARE</h2>
-            <svg viewBox="0 0 1024 1024" className="home-icon32">
-              <path d="M810 554v-106l-256 256-170-170-170 170v106l170-170 170 170zM298 310v160h172v-64h-108v-32h108v-160h-172v64h108v32h-108zM512 214v256h64v-128l86 128h72l-86-128 86-128h-72l-86 128v-128h-64zM810 128q34 0 60 26t26 60v596q0 34-26 60t-60 26h-596q-34 0-60-26t-26-60v-596q0-34 26-60t60-26h596z"></path>
-            </svg>
             <span className="home-text28">discover, track, collect, OWN</span>
             <Link legacyBehavior href="/dex">
               <a className="home-link13">GET STARTED</a>
             </Link>
           </div>
         </div>
-      
-      </div>
+        </Container>
+          </div>
+     
       <style jsx>
         {`
           .home-container {
@@ -548,11 +199,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background: linear-gradient(
-              130deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 100, 200, 0.906),
-              rgba(0, 0, 0, 0.506)
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 25, 50) 100%
             );
           }
           .home-container01 {
@@ -2076,13 +1726,13 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 75%;
+            width: 100%;
             font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: lightgray;
+            color: inital;
           }
           .home-feature-card {
             width: 100%;
@@ -2095,7 +1745,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            background-color: rgba(217, 217, 217, 0.49);
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 50, 60) 60%
+            );
           }
           .home-feature-card:hover {
             font-size: larger;
@@ -2308,7 +1962,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
         `}
       </style>
-      </ThemeProvider>
+    
     </>
   );
 };

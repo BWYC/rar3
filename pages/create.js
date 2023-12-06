@@ -1,7 +1,7 @@
 import {
     useContract,
-    useNetwork,
-    useNetworkMismatch,
+    useChain,
+    useSwitchChain,
     useAddress,
     useSDK,
     useCreateDirectListing,
@@ -23,21 +23,21 @@ import {
     useColorModeValue,
     useToast,
     Input,
-    Container
   } from '@chakra-ui/react';import React, { useState } from "react";
   import { NFT_COLLECTION_ADDRESS, MARKETPLACE_ADDRESS } from "../const/contractAddresses";
   import { useRouter } from "next/router";
   import { useContext, useRef } from "react";
   import styles from "../styles/Theme.module.css";
   import { ConnectWallet } from "@thirdweb-dev/react";
+  import Container from "../components/Container/Container"
   
   const activeChainId = parseInt(`${process.env.NEXT_PUBLIC_CHAIN_ID}`)
   const OpenseaName = process.env.NEXT_PUBLIC_OPENSEA_NAME
   
   const Upload = () => {
     const address = useAddress();
-    const networkMismatch = useNetworkMismatch();
-    const [, switchNetwork] = useNetwork();
+    const networkMismatch = useSwitchChain();
+    const [, switchNetwork] = useChain();
     const sdk = useSDK();
   
     const alert = useToast()
@@ -216,11 +216,13 @@ import {
     };
   
     return (
+      <Container maxWidth="lg">
+        <div style={{height: "100px"}}></div>
       <form onSubmit={(e) => handleCreateListing(e)}>
-      <Container pt={20} style={{marginTop: "50px"}}>
+      <Container maxWidth="md">
       <Center py={6}>
         <Stack className={styles.styleStack}
-          borderWidth="1px"
+          borderWidth="0px"
           borderRadius="lg"
           w={{ sm: '100%', md: '540px' }}
           height={{ sm: '476px', md: '20rem' }}
@@ -328,9 +330,10 @@ import {
               padding={2}
               justifyContent={'space-between'}
               alignItems={'center'}>
+              
   
           {address ? (
-              <button
+              <button className="button"
                 type="submit"
                 flex={1}
                 fontSize={'sm'}
@@ -368,6 +371,7 @@ import {
       </Center>
       </Container>
       </form>
+      </Container>
     );
   };
   

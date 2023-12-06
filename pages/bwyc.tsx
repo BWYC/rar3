@@ -22,8 +22,8 @@ export default function Buy1() {
   const verfied = true
   const { contract } = useContract(NFT_COLLECTION_ADDRESS2);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
-    start: 1000,
-    count: 1016,
+    start: 0,
+    count: 20,
   });
 
    const address = useAddress();
@@ -34,7 +34,6 @@ export default function Buy1() {
   if (isLoading) {
     return (
 <Container maxWidth="xl">
-LOADING...<Spinner size="md" />
 </Container>
     );
   }
