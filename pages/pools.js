@@ -155,7 +155,7 @@ const Pools = (props) => {
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
-        <div><Stake2take2 />
+        <div><Stake2 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal1}>EXIT</button>
         </div>
