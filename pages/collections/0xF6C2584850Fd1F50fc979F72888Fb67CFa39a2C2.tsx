@@ -57,7 +57,7 @@ export default function Collection() {
 
   const { data: Nfts, isLoading: isLoading } = useNFTs(nftCollection, {
     start: 0,
-    count: 100,
+    count: 1000,
   });
 
   const { data: directListings, isLoading: loadingDirects } =
