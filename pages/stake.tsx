@@ -11,7 +11,7 @@ import {
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
 import NFTGrid from "../components/NFT/NFTGrid.jsx";
-  import { NFT_COLLECTION_ADDRESS, tokenContractAddress, stakingContractAddress } from "../const/contractAddresses"
+  import { NFT_COLLECTION_ADDRESS1, tokenContractAddress, stakingContractAddress3 } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
 import Container from "../components/Container/Container";
 import NFTCard from "../components/NFTCard"
@@ -19,14 +19,14 @@ import NFTCard from "../components/NFTCard"
   const Stake = () => {
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
-      NFT_COLLECTION_ADDRESS,
+      NFT_COLLECTION_ADDRESS1,
       "nft-drop",
     );
     const { contract: tokenContract } = useContract(
       tokenContractAddress,
       "token",
     );
-    const { contract, isLoading } = useContract(stakingContractAddress);
+    const { contract, isLoading } = useContract(stakingContractAddress3);
     const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
@@ -50,10 +50,10 @@ import NFTCard from "../components/NFTCard"
   
       const isApproved = await nftDropContract?.isApproved(
         address,
-        stakingContractAddress,
+        stakingContractAddress3,
       );
       if (!isApproved) {
-        await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
+        await nftDropContract?.setApprovalForAll(stakingContractAddress3, true);
       }
       await contract?.call("stake", [[id]]);
     }
@@ -138,7 +138,7 @@ import NFTCard from "../components/NFTCard"
                         color: "Orange",
                         alignItems: "center",
                       }}
-                      contractAddress={stakingContractAddress}
+                      contractAddress={stakingContractAddress3}
                       action={() => stakeNft(nft.metadata.id)}
                     >
                       Stake

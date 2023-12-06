@@ -11,7 +11,7 @@ import {
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
 import NFTGrid from "../components/NFT/NFTGrid.jsx";
-  import { NFT_COLLECTION_ADDRESS, tokenContractAddress, stakingContractAddress } from "../const/contractAddresses"
+  import { NFT_COLLECTION_ADDRESS1, tokenContractAddress, stakingContractAddress } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
 import Container from "../components/Container/Container";
 import NFTCard from "../components/NFTCard"
@@ -19,7 +19,7 @@ import NFTCard from "../components/NFTCard"
   const Stake = () => {
     const address = useAddress();
     const { contract: nftDropContract } = useContract(
-      NFT_COLLECTION_ADDRESS,
+      NFT_COLLECTION_ADDRESS1,
       "nft-drop",
     );
     const { contract: tokenContract } = useContract(
