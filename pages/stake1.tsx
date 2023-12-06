@@ -11,7 +11,7 @@ import {
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
 import NFTGrid from "../components/NFT/NFTGrid.jsx";
-  import { NFT_COLLECTION_ADDRESS2, tokenContractAddress, stakingContractAddress } from "../const/contractAddresses"
+  import { NFT_COLLECTION_ADDRESS2, tokenContractAddress, stakingContractAddress2 } from "../const/contractAddresses"
   import styles from "../styles/stake.module.css";
 import Container from "../components/Container/Container";
 import NFTCard from "../components/NFTCardb"
@@ -26,7 +26,7 @@ import NFTCard from "../components/NFTCardb"
       tokenContractAddress,
       "token",
     );
-    const { contract, isLoading } = useContract(stakingContractAddress);
+    const { contract, isLoading } = useContract(stakingContractAddress2);
     const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
@@ -50,10 +50,10 @@ import NFTCard from "../components/NFTCardb"
   
       const isApproved = await nftDropContract?.isApproved(
         address,
-        stakingContractAddress,
+        stakingContractAddress2,
       );
       if (!isApproved) {
-        await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
+        await nftDropContract?.setApprovalForAll(stakingContractAddress2, true);
       }
       await contract?.call("stake", [[id]]);
     }
@@ -138,7 +138,7 @@ import NFTCard from "../components/NFTCardb"
                         color: "Orange",
                         alignItems: "center",
                       }}
-                      contractAddress={stakingContractAddress}
+                      contractAddress={stakingContractAddress2}
                       action={() => stakeNft(nft.metadata.id)}
                     >
                       Stake

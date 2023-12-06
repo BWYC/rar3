@@ -144,8 +144,8 @@ const Mints = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
-        <div><Stake />
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>WHALECARD STAKING POOL</h2>
+        <div><Stake2 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal1}>EXIT</button>
         </div>
@@ -178,7 +178,7 @@ const Mints = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>RAR3 STAKING POOL</h2>
         <div><Stake />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal}>EXIT</button>
@@ -212,8 +212,8 @@ const Mints = (props) => {
         style={customStyles}
         contentLabel="STAKE"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
-        <div><Stake />
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>BWYC ii STAKING POOL</h2>
+        <div><Stake2 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal2}>EXIT</button>
         </div>
