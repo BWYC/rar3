@@ -31,12 +31,6 @@ export default function Buy1() {
  
    const [selectedNft, setSelectedNft] = useState<NFTType>();
 
-  if (isLoading) {
-    return (
-<Container maxWidth="xl">
-</Container>
-    );
-  }
 
   return (
     <Container maxWidth="lg">

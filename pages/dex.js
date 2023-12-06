@@ -62,7 +62,7 @@ const Dex = (props) => {
             <Buy/>
             <Buy1/>
           </div>
-      <div style={{height: "400px"}}></div>
+    
       <style jsx>
         {`
           .home-container {
