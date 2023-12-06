@@ -146,7 +146,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <button className="pools-button button" onClick={openModal1}>STAKE</button>
               <Modal
         isOpen={modalIsOpen1}
         onAfterOpen={afterOpenModal}
@@ -190,7 +190,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <button className="pools-button button" onClick={openModal2}>STAKE</button>
               <Modal
         isOpen={modalIsOpen2}
         onAfterOpen={afterOpenModal}
