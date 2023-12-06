@@ -179,7 +179,7 @@ const Mints = (props) => {
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>RAR3 STAKING POOL</h2>
-        <div><Stake1 />
+        <div><Stake />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal}>EXIT</button>
         </div>
@@ -208,7 +208,7 @@ const Mints = (props) => {
               <Modal
         isOpen={modalIsOpen2}
         onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
+        onRequestClose={closeModal2}
         style={customStyles}
         contentLabel="STAKE"
       >
