@@ -43,7 +43,7 @@ import {
   
     return (
       <>
-       <Tooltip content={"Price"} position="bottom">
+       <Tooltip content={"Buy"} position="bottom">
         <ThirdwebNftMedia metadata={nft.metadata} style={{width: "100%", height: "100%", borderRadius: "16px", overflow: "hidden"}} />
   
         <p className={styles.nftName}>

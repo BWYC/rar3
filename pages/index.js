@@ -18,15 +18,7 @@ import Banner from "../components/banner";
 import Container from "../components/Container/Container"
 
 
-const light = { background: "white" };
-const dark = { background: "black" };
 
-const GlobalStyle = createGlobalStyle`
-body{
-  background: black;
-  transition: background 0.4s;
-}
-`;
 
 const Home = (props) => {
 
@@ -46,23 +38,14 @@ const Home = (props) => {
   }, [address]);
 
 
-
-const { themes, setTheme } = useTheme()
-const [ isDark, setDark ] = useState(false)
-
-const theme = isDark ? dark : light;
-const themez = isDark ? setTheme("dark") : setTheme("light");
-
   return (
     <>
-    <ThemeProvider theme={theme}>
+ 
       <div className="home-container">
         <Head>
           <title>RareBay | HOME OF RAR3</title>
           <meta property="og:title" content="RareBay | DEX1" />
         </Head>
-       
-            <Banner />
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
@@ -193,8 +176,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </div>
               </div>
             </div>
-          </div>
-      <Container maxWidth="xl">
+            <Container maxWidth="lg">
         <div className="home-container69">
           <div className="home-feature-card">
             <h2 className="home-text28">HOME OF RARE</h2>
@@ -205,6 +187,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           </div>
         </div>
         </Container>
+          </div>
      
       <style jsx>
         {`
@@ -216,11 +199,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background: linear-gradient(
-              130deg,
-              rgb(0, 0, 0, 0.5),
-              rgba(0, 100, 200, 0.906),
-              rgba(0, 0, 0, 0.506)
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 25, 50) 100%
             );
           }
           .home-container01 {
@@ -1744,13 +1726,13 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             backdrop-filter: blur(50px);
           }
           .home-container69 {
-            width: 75%;
+            width: 100%;
             font-family: Pixel NES;
             height: 375px;
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: lightgray;
+            color: inital;
           }
           .home-feature-card {
             width: 100%;
@@ -1763,7 +1745,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             border-width: 1px;
             border-radius: var(--dl-radius-radius-radius8);
             flex-direction: column;
-            background-color: rgba(217, 217, 217, 0.49);
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 50, 60) 60%
+            );
           }
           .home-feature-card:hover {
             font-size: larger;
@@ -1976,7 +1962,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
         `}
       </style>
-      </ThemeProvider>
+    
     </>
   );
 };

@@ -22,9 +22,10 @@ const light = { background: "white" };
 const dark = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
-body{
+.body{
   background: black;
   transition: background 0.4s;
+  color: white;
 }
 `;
 
@@ -102,9 +103,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                 </svg>
                 <Link
                   href="/create"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                 
                 >
 
                   <div  className="home-link01">
@@ -156,6 +154,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                       </div>
                     </div>
                     <div className="home-container06">
+               
                       <div className="home-container07">
                         <Image
                         style={{borderRadius: "100%"}}
@@ -174,7 +173,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                       <div className="home-container08"></div>
                       <div className="home-container09">
                         <div className="home-container10">
-                          <span className="home-text01">EXPLORE RAR3</span>
+                        <Banner />
                         </div>
                         <Link legacyBehavior href="/dex">
                           <a className="home-link04">
@@ -235,7 +234,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                       </div>
                       <div className="home-container19">
                         <div className="home-container20">
-                          <span className="home-text06">EXPLORE RAR3</span>
+                         <Banner />
                         </div>
                         <Link legacyBehavior href="/dex">
                           <a className="home-link07">
@@ -297,7 +296,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
                             </div>
                           </a>
                         </Link>
-                        <Link legacyBehavior href="/sats">
+                        <Link legacyBehavior href="/mints">
                           <a className="home-link11">
                             <div className="home-container29">
                               <div className="home-container30">
@@ -320,7 +319,10 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         invertedIconLogic
         onChange={() => setDark((prev) => !prev)}
         />
+        <hr />
+     
                       </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -387,7 +389,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
      backdropFilter: "blur(10px)"
    },
   })}
-   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} /></div>
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
+   </div>
           </section>
         )}
                 </div>
@@ -785,8 +788,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
           .home-text01 {
             color: #ffffff;
-            font-size: 13px;
+            font-size: 12px;
             font-family: "Pixel NES";
+            margin-bottom: 5%;
           }
           .home-link04 {
             display: contents;

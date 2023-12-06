@@ -1,16 +1,66 @@
 import React from 'react'
 import Head from 'next/head'
-import { Modal, Input } from 'web3uikit'
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import Stake from "./stake"
+import Stake1 from "./stake1"
 
+
+const customStyles = {
+  content: {
+    top: '55%',
+    left: '50%',
+    right: 'auto',
+    paddingBottom: '10%',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: "80%",
+    overflow: "scroll",
+    borderRadius: "16px",
+    background: "rgba(0, 0, 0, 0.54)",
+    border: "solid 2px",
+    backdropFilter: "blur(10px)",
+    color:  "white",
+    overflowX: "hidden",
+    textAlign: "center"
+  },
+};
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement();
 
 const Pools = (props) => {
   
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen1, setIsOpen1] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+  function openModal1() {
+    setIsOpen1(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = 'orange';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  function closeModal1() {
+    setIsOpen1(false);
+  }
+
+
   return (
     <>
       <div className="pools-container">
         <Head>
-          <title>Pools - RareBay | POOLS</title>
-          <meta property="og:title" content="Pools - RareBay | DEX1" />
+          <title>Stake - RareBay | POOLS</title>
+          <meta property="og:title" content="Pools - RareBay | DEX" />
         </Head>
         <div className="pools-container01"></div>
         <div className="pools-container02"></div>
@@ -34,7 +84,21 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button">STAKE</button>
+              <button className="pools-button button" onClick={openModal1}>STAKE</button>
+              <Modal
+        isOpen={modalIsOpen1}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="STAKE"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <div><Stake />
+        <div style={{height: "10px"}}></div>
+        <button className='button' onClick={closeModal1}>EXIT</button>
+        </div>
+       
+      </Modal>
             </div>
             <div className="pools-pricing-card1">
               <svg viewBox="0 0 1024 1024" className="pools-icon2">
@@ -54,7 +118,8 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button1 button">STAKE</button>
+              <a href='#' className="pools-button button" disabled>STAKE</a>
+   
             </div>
             <div className="pools-pricing-card2">
               <svg viewBox="0 0 1024 1024" className="pools-icon4">
@@ -74,7 +139,21 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button2 button">STAKE</button>
+              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="STAKE"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
+        <div><Stake1 />
+        <div style={{height: "10px"}}></div>
+        <button className='button' onClick={closeModal}>EXIT</button>
+        </div>
+       
+      </Modal>
             </div>
             <div
   style={{
@@ -83,26 +162,7 @@ const Pools = (props) => {
   }}
 >
   <div>
-    <Modal
-      cancelText="Discard Changes"
-      id="regular"
-      okText="Save Changes"
-      onCancel={function noRefCheck(){}}
-      onCloseButtonPressed={function noRefCheck(){}}
-      onOk={function noRefCheck(){}}
-      title={<div style={{display: 'flex', gap: 10}}></div>}
-    >
-      <div
-        style={{
-          padding: '20px 0 20px 0'
-        }}
-      >
-        <Input
-          label="Nickname"
-          width="100%"
-        />
-      </div>
-    </Modal>
+   
   </div>
 </div>
             <div className="pools-pricing-card3">
@@ -142,7 +202,7 @@ const Pools = (props) => {
             background-image: linear-gradient(
               45deg,
               rgba(0, 0, 0, 0.55) 0%,
-              rgb(0, 25, 49) 100%
+              rgb(0, 25, 50) 100%
             );
           }
           .pools-container01 {

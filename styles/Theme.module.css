@@ -46,6 +46,7 @@
     color: grey;
     cursor: pointer;
     height: 100%;
+    padding: 10%;
   }
   
   .previewImage {

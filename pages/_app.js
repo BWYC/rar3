@@ -55,7 +55,8 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
      
       <NextThemesProvider attribute="class" defaultTheme="dark">
         <Grid />
-      <Component {...pageProps} />
+        
+      <Component className="body" {...pageProps} />
       <Footer />
       </NextThemesProvider>
     

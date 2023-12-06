@@ -8,6 +8,7 @@ import X from "../public/x.png"
 import C from "../public/core.png"
 import { NetworkInput } from '@thirdweb-dev/sdk'
 import { NetworkSelector } from '@thirdweb-dev/react'
+import Link from 'next/link'
 
 
 const Banner = (props) => {
@@ -16,7 +17,8 @@ const Banner = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-        <Image width="40" height="40" src={C} alt="twitterx--v1"/>mainnet
+          <Link href="/">  <Image width="20" height="20" src={C} alt="core"/></Link><p style={{marginLeft: "-15%"}}>mainnet</p>
+      
         </div>
       </div>
       <style jsx>
@@ -26,16 +28,17 @@ const Banner = (props) => {
             height: auto;
             display: flex;
             z-index: 100;
-            position: fixed;
+            position: absolute;
             align-items: center;
             font-family: 'pixel NES';
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            margin-top: 1%;
-            padding: 10px
+            margin-top: -30%;
+            margin-left: -5%;
             cursor: pointer;
-            color: orange;
+            color: initial;
+            font-size: 10px;
           }
           .footer-container1 {
             width: auto;
@@ -47,7 +50,7 @@ const Banner = (props) => {
             marginRight: 0.5%;
             cursor: pointer;
             gap: 20px;
-            color: initial;
+            color: white;
           }
           .footer-container2 {
             width: 100%;

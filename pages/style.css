@@ -42,7 +42,7 @@
   --dl-space-space-oneandhalfunits: 24px;
 }
 .button {
-  color: var(--dl-color-gray-black);
+  color: var(--dl-color-danger-300);
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -55,10 +55,10 @@
   border-color: var(--dl-color-gray-black);
   border-width: 1px;
   padding-left: var(--dl-space-space-oneandhalfunits);
-  border-radius: 0px;
+  border-radius: 8px;
   padding-right: var(--dl-space-space-oneandhalfunits);
   padding-bottom: var(--dl-space-space-unit);
-  background-color: rgb(255, 207, 119);
+  background-color: rgb(39, 39, 39);
 }
 .button:hover {
   opacity: 0.5;

@@ -18,19 +18,7 @@ import Buy from "./buy"
 import Listings from "./listing";
 import Buy1 from "./bwyc"
 
-const light = { background: "white" };
-const dark = { background: "black" };
 
-const GlobalStyle = createGlobalStyle`
-body{
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0, 0.9),
-    rgba(0, 50, 150, 0.506)
-  );
-  transition: background 0.4s;
-}
-`;
 
 const Dex = (props) => {
 
@@ -51,15 +39,10 @@ const Dex = (props) => {
 
 
 
-const { themes, setTheme } = useTheme()
-const [ isDark, setDark ] = useState(false)
-
-const theme = isDark ? dark : light;
-const themez = isDark ? setTheme("dark") : setTheme("light");
 
   return (
     <>
-    <ThemeProvider theme={theme}>
+  
       <div className="home-container">
         <Head>
           <title>RareBay | DEX</title>
@@ -91,13 +74,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            background: linear-gradient(
-              120deg,
-              rgb(0, 0, 0, 0.3),
-              rgba(0, 50, 200, 0.806),
-              rgba(0, 0, 0, 0.306)
+            background-image: linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.55) 0%,
+              rgb(0, 25, 49) 100%
             );
-            background-size: cover;
           }
           .home-container01 {
             flex: 0 0 auto;
@@ -1853,7 +1834,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
           }
         `}
       </style>
-      </ThemeProvider>
     </>
   );
 };
