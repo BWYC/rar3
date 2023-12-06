@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import Stake from "./stake"
 import Stake1 from "./stake1"
-import stake2 from "./stake2"
+import Stake2 from "./stake2"
 
 
 const customStyles = {
@@ -148,16 +148,16 @@ const Pools = (props) => {
               </div>
               <button className="pools-button button" onClick={openModal}>STAKE</button>
               <Modal
-        isOpen={modalIsOpen2}
+        isOpen={modalIsOpen1}
         onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal2}
+        onRequestClose={closeModal1}
         style={customStyles}
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
-        <div><stake2 />
+        <div><Stake2take2 />
         <div style={{height: "10px"}}></div>
-        <button className='button' onClick={closeModal2}>EXIT</button>
+        <button className='button' onClick={closeModal1}>EXIT</button>
         </div>
        
       </Modal>
@@ -192,16 +192,16 @@ const Pools = (props) => {
               </div>
               <button className="pools-button button" onClick={openModal}>STAKE</button>
               <Modal
-        isOpen={modalIsOpen}
+        isOpen={modalIsOpen2}
         onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
+        onRequestClose={closeModal2}
         style={customStyles}
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
-        <div><stake1 />
+        <div><Stake1 />
         <div style={{height: "10px"}}></div>
-        <button className='button' onClick={closeModal}>EXIT</button>
+        <button className='button' onClick={closeModal2}>EXIT</button>
         </div>
        
       </Modal>
