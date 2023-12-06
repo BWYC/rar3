@@ -125,7 +125,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <a href='#' className="pools-button button" disabled>STAKE</a>
+              <a href='https://app.youngparrotnft.com/core/pools/nfts/bwyc-whls' className="pools-button button" disabled>STAKE</a>
    
             </div>
             <div className="pools-pricing-card2">
