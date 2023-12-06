@@ -36,8 +36,7 @@ import {
   
   const Upload = () => {
     const address = useAddress();
-    const networkMismatch = useSwitchChain();
-    const [, switchNetwork] = useChain();
+    const networkMismatch = useChain();
     const sdk = useSDK();
   
     const alert = useToast()
@@ -82,10 +81,7 @@ import {
         });
   
         // Ensure user is on the correct network
-        if (networkMismatch) {
-          switchNetwork?.(activeChainId);
-          return;
-        }
+
   
         // Upload image using storage SDK
         const img = await sdk.storage.upload(file);
@@ -170,7 +166,7 @@ import {
         console.error(error)
         alert({
             title: 'Error.',
-            description: "NFT gagal di upload.",
+            description: "",
             status: 'error',
             duration: 7000,
             isClosable: true,
@@ -351,7 +347,7 @@ import {
                   bg: 'blue.500',
                 }}
                 disabled={creatingListing}>
-  {networkMismatch ? (
+  {!networkMismatch ? (
   <>
   Switch Network
   </>
