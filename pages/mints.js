@@ -179,7 +179,7 @@ const Mints = (props) => {
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>RAR3 STAKING POOL</h2>
-        <div><Stake />
+        <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal}>EXIT</button>
         </div>
@@ -213,7 +213,7 @@ const Mints = (props) => {
         contentLabel="STAKE"
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>BWYC ii STAKING POOL</h2>
-        <div><Stake2 />
+        <div><Stake1 />
         <div style={{height: "10px"}}></div>
         <button className='button' onClick={closeModal2}>EXIT</button>
         </div>

@@ -22,8 +22,7 @@ export const NFT_COLLECTION_ADDRESS1 =
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
 export const ETHERSCAN_URL = "https://scan.coredao.org/";
 
-export const nftDropContractAddress =
-  "0x0C9d4b90771ACa4B3E541924545E36104751dADA";
+
 
 export const stakingContractAddress =
   "0x0EbB423810e8ac4785466f42EfD0BA3486C25376";
