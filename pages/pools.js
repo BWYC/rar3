@@ -125,7 +125,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <a href='#' className="pools-button button" disabled>STAKE</a>
+              <a href='https://app.youngparrotnft.com/core/pools/nfts/bwyc-whls' className="pools-button button" disabled>STAKE</a>
    
             </div>
             <div className="pools-pricing-card2">
@@ -146,7 +146,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <button className="pools-button button" onClick={openModal1}>STAKE</button>
               <Modal
         isOpen={modalIsOpen1}
         onAfterOpen={afterOpenModal}
@@ -190,7 +190,7 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button" onClick={openModal}>STAKE</button>
+              <button className="pools-button button" onClick={openModal2}>STAKE</button>
               <Modal
         isOpen={modalIsOpen2}
         onAfterOpen={afterOpenModal}
