@@ -22,7 +22,7 @@ import {
           <div style={{alignItems: "center"}}>
             {nft.metadata && (
               <ThirdwebNftMedia
-                style={{ borderRadius: "32px", width: "100%", height: "250px"  }}
+                style={{ borderRadius: "32px", width: "100%", height: "200px"  }}
                 metadata={nft.metadata}
                 className={styles.nftMedia}
               />
@@ -32,7 +32,6 @@ import {
             <h5 style={{ textAlign: "center" }}>{nft.metadata.name}</h5>
       
             <Web3Button
-              isDisabled
               style={{
                 backgroundColor: "black",
                 borderStyle: "solid",
@@ -46,9 +45,8 @@ import {
               }
               contractAddress={stakingContractAddress}
             >
-              LOCKED
+            UNLOCK🔒
             </Web3Button>
-            <hr />
           </div>
         )}
       </>

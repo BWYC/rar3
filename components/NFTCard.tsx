@@ -19,10 +19,10 @@ import {
     return (
       <>
         {nft && (
-          <div style={{alignItems: "center"}}>
+          <div style={{alignItems: "center", gap: "20px"}}>
             {nft.metadata && (
               <ThirdwebNftMedia
-                style={{ borderRadius: "32px", width: "100%", height: "250px"  }}
+                style={{ borderRadius: "8px", width: "100%", height: "250px"  }}
                 metadata={nft.metadata}
                 className={styles.nftMedia}
               />
@@ -46,9 +46,9 @@ import {
               }
               contractAddress={stakingContractAddress}
             >
-              LOCKED
+              LOCKED⛔
             </Web3Button>
-            <hr />
+          
           </div>
         )}
       </>
