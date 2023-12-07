@@ -104,8 +104,8 @@ const Mints = (props) => {
     <>
       <div className="mints-container">
         <Head>
-          <title>mints - RareBay | DEX1</title>
-          <meta property="og:title" content="mints - RareBay | DEX1" />
+          <title>mints - RareBay | DEX</title>
+          <meta property="og:title" content="mints - RareBay | DEX" />
         </Head>
       <Container maxWidth="xl">
             <div className="mints-container35">

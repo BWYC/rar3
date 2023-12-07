@@ -5,7 +5,7 @@ import {
     Web3Button,
   } from "@thirdweb-dev/react";
   import type { FC } from "react";
-  import { NFT_COLLECTION_ADDRESS2, stakingContractAddress } from "../const/contractAddresses";
+  import { NFT_COLLECTION_ADDRESS2, stakingContractAddress2 } from "../const/contractAddresses";
   import styles from "../styles/Home.module.css";
   
   interface NFTCardProps {
@@ -43,7 +43,7 @@ import {
               action={(contract) =>
                 contract?.call("withdraw", [[nft.metadata.id]])
               }
-              contractAddress={stakingContractAddress}
+              contractAddress={stakingContractAddress2}
             >
             UNLOCK🔒
             </Web3Button>
