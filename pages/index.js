@@ -57,7 +57,7 @@ const Home = (props) => {
                 </div>
               </div>
               <div className="home-container38">
-     <video loop autoPlay autoFocus src="RARE.mp4" style={{border: "solid 2px white", borderRadius: "16px", width: "80%"}}/>           
+     <video loop autoPlay autoFocus src="RARE.mp4" style={{border: "solid 2px white", borderRadius: "16px", width: "70%"}}/>           
               </div>
               <div className="home-container39">
                 <div className="home-container40">
