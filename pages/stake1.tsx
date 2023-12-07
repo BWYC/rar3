@@ -105,7 +105,7 @@ import NFTCard from "../components/NFTCardb"
               </div>
 
               <div style={{height: "50px"}}></div>
-              <h1 style={{ textAlign: "center", color: "lightred" }}>Unstaked Tokens</h1>
+              <h1 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h1>
               <div className={styles.nftBoxGrid}>
                 {stakedTokens &&
                   stakedTokens[0]?.map((stakedToken: BigNumber) => (
