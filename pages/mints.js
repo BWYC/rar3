@@ -119,83 +119,13 @@ const Mints = (props) => {
                 </div>
                 <div className="mints-container38">
             <div className="mints-container39">
-              <div className="mints-container40">
-                <div className="mints-container41">
-                  <div className="mints-container42">
-                    <React.Fragment>
-                      <iframe
-                        src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0x98E8B58c44e3c7f08171bb57aeD010fDF71B351E&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="85%"
-                        height="100%"
-                        style={{
-                          border: "2px solid gray",
-                          borderRadius: "16px",
-                          backgroundColor: "gray",
-                          marginLeft: "10%"
-                        }}
-                      />
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div style={{height: "20px"}}></div>
-                <button className="pools-button button" onClick={openModal1}>STAKE</button>
-              <Modal
-        isOpen={modalIsOpen1}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="STAKE"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>WHALECARD STAKING POOL</h2>
-        <div><Stake2 />
-        <div style={{height: "10px"}}></div>
-        <button className='button' onClick={closeModal1}>EXIT</button>
-        </div>
-       
-      </Modal>
-              </div>
-              <div className="mints-container43">
-                <div className="mints-container44">
-                  <div className="mints-container45">
-                    <React.Fragment>
-                      <iframe
-                        src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0x9bA655328197b3fF54b9554294ef8017CdC09AC3&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="90%"
-                        height="100%"
-                        style={{
-                          border: "2px solid gray",
-                          borderRadius: "16px",
-                          backgroundColor: "gray",
-                          marginLeft: "5%"
-                        }}
-                      />
-                    </React.Fragment>
-                  </div>
-                </div>
-                <div style={{height: "20px"}}></div>
-                <button className="pools-button button" onClick={openModal}>STAKE</button>
-              <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="STAKE"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>RAR3 STAKING POOL</h2>
-        <div><Stake />
-        <div style={{height: "10px"}}></div>
-        <button className='button' onClick={closeModal}>EXIT</button>
-        </div>
-       
-      </Modal>
-              </div>
               <div className="mints-container46">
                 <div className="mints-container47">
                   <div className="mints-container48">
                     <React.Fragment>
-                      <iframe
-                        src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="90%"
+                    <iframe
+    src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xb8FD22b124680Cba52f850C006D8FFE59f291EC1&chain=%7B%22name%22%3A%22Core+Blockchain+Testnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain-testnet.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Testnet+Native+Token%22%2C%22symbol%22%3A%22tCORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22tcore%22%2C%22chainId%22%3A1115%2C%22testnet%22%3Atrue%2C%22slug%22%3A%22core-blockchain-testnet%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=orange"
+    width="90%"
                         height="100%"
                         style={{
                           border: "2px solid gray",
@@ -203,7 +133,7 @@ const Mints = (props) => {
                           backgroundColor: "gray",
                           marginLeft: "5%"
                         }}
-                      />
+></iframe>
                     </React.Fragment>
                   </div>
                 </div>

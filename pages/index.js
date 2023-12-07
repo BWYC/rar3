@@ -44,14 +44,14 @@ const Home = (props) => {
       <div className="home-container">
         <Head>
           <title>RareBay | HOME OF RAR3</title>
-          <meta property="og:title" content="RareBay | DEX1" />
+          <meta property="og:title" content="RareBay | DEX" />
         </Head>
             <div className="home-container35">
               <div className="home-container36">
                 <div className="home-container37">
                   <Link className="home-link12" href="#">
                     
-                      <h1 className="home-heading1">WELCOME TO RAR3BAY</h1>
+                      <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
                   
                   </Link>
                 </div>
@@ -1126,7 +1126,7 @@ const Home = (props) => {
               180deg,
               rgb(255, 255, 255) 0%,
               rgb(45, 45, 45) 49%,
-              rgb(0, 100, 250) 98%
+              rgb(200, 100, 250) 98%
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

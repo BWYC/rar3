@@ -2,21 +2,21 @@
 
 // 1. Set up the network your smart contracts are deployed to.
 // First, import the chain from the package, then set the NETWORK variable to the chain.
-import { CoreBlockchain } from "@thirdweb-dev/chains";
+import { CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 
-export const NETWORK = CoreBlockchain;
+export const NETWORK = CoreBlockchainTestnet;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
-export const MARKETPLACE_ADDRESS = "0x69d5dDE5aF1fa6Cf5b86EC9B907c9bA1879c717f";
+export const MARKETPLACE_ADDRESS = "0x67FA4514A669AD8746103A01b6d1D25Fd78F850d";
 
 // 3. The address of your NFT collection smart contract.
 export const NFT_COLLECTION_ADDRESS =
-  "0x9bA655328197b3fF54b9554294ef8017CdC09AC3";
+  "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
   export const NFT_COLLECTION_ADDRESS2 =
-  "0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2";
+  "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
 export const NFT_COLLECTION_ADDRESS1 =
-  "0x98E8B58c44e3c7f08171bb57aeD010fDF71B351E";
+  "0xb8FD22b124680Cba52f850C006D8FFE59f291EC1";
 
 // (Optional) Set up the URL of where users can view transactions on
 // For example, below, we use Mumbai.polygonscan to view transactions on the Mumbai testnet.
@@ -25,14 +25,14 @@ export const ETHERSCAN_URL = "https://scan.coredao.org/";
 
 
 export const stakingContractAddress =
-  "0x0EbB423810e8ac4785466f42EfD0BA3486C25376";
+  "0xe3dE8f96374C67B7cE896dfAb9EDcfA09B627C48";
   
 export const stakingContractAddress2 =
-"0x795a97699a235D3E4721B163CB4F7b5468455B95";
+"0xe3dE8f96374C67B7cE896dfAb9EDcfA09B627C48";
 
 export const stakingContractAddress3 =
-"0x7bf144E05168C30E711D6d00345372Bac28020Aa";
+"0xe3dE8f96374C67B7cE896dfAb9EDcfA09B627C48";
 
 export const tokenContractAddress =
-  "0x3A202eE3e212C2884e9eC7001488caF14119754e";
+  "0xf21e8B0acD8208ffE13bEC3C18B4E6b4dD9e4415";
 export const aLinks = "https://scan.coredao.org"

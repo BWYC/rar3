@@ -15,6 +15,8 @@ import { useAccount, useConnect } from "wagmi";
 import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
+import {Testnet} from '@web3uikit/icons'
+
 
 
 
@@ -59,8 +61,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
     <ThemeProvider theme={theme}>
       <div className="home-container">
         <Head>
-          <title>RareBay | DEX</title>
-          <meta property="og:title" content="RareBay | HOME OF RARE" />
+          <title>RareBay | TESTNET</title>
+          <meta property="og:title" content="RareBay |  TESTNET" />
         </Head>
         <div className="home-container01">
           <div className="home-container02">
@@ -318,8 +320,70 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         isDark={isDark}
         invertedIconLogic
         onChange={() => setDark((prev) => !prev)}
-        />
+        /><p style={{margin: "5%", fontFamily: "Pixel Nes"}}>DARK MODE</p>
         <hr />
+ 
+          {isLoggedIn ? (
+          <section>
+                   <div style={{margin: "100px"}}></div>
+            {connectors.map((connector) => (
+              <>
+ <ConnectWallet
+
+ style={{border: "solid", borderColor: "initial", borderWidth: "0.5px", fontFamily: "Pixel NES"}}
+ modalSize={"compact"}
+ theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "initial",
+     accentText: "white",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white"
+   },
+ })}
+ btnTitle={"CONNECT"}
+ modalTitle={"RAREBAY"}
+ switchToActiveChain={true}
+ welcomeScreen={{
+   title: "WELCOME TO THE HOME OF RAR3",
+   Image: {
+     src: "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png",
+     width: 150,
+     height: 150,
+   },
+   subtitle:
+     "Connect wallet to get started.",
+ }}
+ modalTitleIconUrl={
+   "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
+ }
+/>
+</>
+            ))}
+          </section>
+        ) : (
+          <section className={styles.loggedIn_section}>
+<ConnectWallet 
+   theme={({
+   colors: {
+     modalBg: " rgba(0, 0, 50, 0.638)",
+     dropdownBg: "black",
+     accentText: "initial",
+     accentButtonBg: "#0064fa",
+     borderColor: "initial",
+     primaryText: "white",
+     background: "black",
+     backdropFilter: "blur(10px)"
+   },
+  })}
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
+   </div>
+   <div style={{height: "30px", margin: "20px"}}>
+   <img src="https://cdn-icons-png.flaticon.com/128/484/484582.png"  width={"20px"}/>
+  </div>
+          </section>
+        )}
      
                       </div>
                       
@@ -333,6 +397,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         invertedIconLogic
         onChange={() => setDark((prev) => !prev)}
         />
+  <div style={{width: "40px", margin: "20px"}}>
+    <img src="https://cdn-icons-png.flaticon.com/128/484/484582.png" style={{background: "inital"}}  width={"20px"}/>
+  </div>
                   <div id="connecting" className="home-container34">
 
                   </div>
