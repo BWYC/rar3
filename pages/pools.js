@@ -91,9 +91,9 @@ const Pools = (props) => {
                   <br></br>
                 </span>
               </div>
-              <button className="pools-button button" onClick={openModal1}>STAKE</button>
+              <button className="pools-button button" onClick={openModal}>STAKE</button>
               <Modal
-        isOpen={modalIsOpen1}
+        isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
@@ -102,7 +102,7 @@ const Pools = (props) => {
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>STAKING POOL</h2>
         <div><Stake />
         <div style={{height: "10px"}}></div>
-        <button className='button' onClick={closeModal1}>EXIT</button>
+        <button className='button' onClick={closeModal}>EXIT</button>
         </div>
        
       </Modal>
