@@ -16,6 +16,7 @@ import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
 import { useAccount, useConnect } from "wagmi";
 import Modal from 'react-modal';
+import Container from "../components/Container/Container";
 
 
 
@@ -106,7 +107,7 @@ const Mints = (props) => {
           <title>mints - RareBay | DEX1</title>
           <meta property="og:title" content="mints - RareBay | DEX1" />
         </Head>
-      
+      <Container maxWidth="xl">
             <div className="mints-container35">
               <div className="mints-container36">
                 <div className="mints-container37">
@@ -124,12 +125,13 @@ const Mints = (props) => {
                     <React.Fragment>
                       <iframe
                         src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0x98E8B58c44e3c7f08171bb57aeD010fDF71B351E&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="100%"
+                        width="85%"
                         height="100%"
                         style={{
                           border: "2px solid gray",
                           borderRadius: "16px",
                           backgroundColor: "gray",
+                          marginLeft: "10%"
                         }}
                       />
                     </React.Fragment>
@@ -158,12 +160,13 @@ const Mints = (props) => {
                     <React.Fragment>
                       <iframe
                         src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0x9bA655328197b3fF54b9554294ef8017CdC09AC3&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="100%"
+                        width="90%"
                         height="100%"
                         style={{
                           border: "2px solid gray",
                           borderRadius: "16px",
                           backgroundColor: "gray",
+                          marginLeft: "5%"
                         }}
                       />
                     </React.Fragment>
@@ -192,12 +195,13 @@ const Mints = (props) => {
                     <React.Fragment>
                       <iframe
                         src="https://embed.ipfscdn.io/ipfs/bafybeicd3qfzelz4su7ng6n523virdsgobrc5pcbarhwqv3dj3drh645pi/?contract=0xF6C2584850Fd1F50fc979F72888Fb67CFa39a2C2&chain=%7B%22name%22%3A%22Core+Blockchain+Mainnet%22%2C%22chain%22%3A%22Core%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fcore-blockchain.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22Core+Blockchain+Native+Token%22%2C%22symbol%22%3A%22CORE%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22core%22%2C%22chainId%22%3A1116%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22core-blockchain%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmeTQaBCkpbsxNNWTpoNrMsnwnAEf1wYTcn7CiiZGfUXD2%22%2C%22width%22%3A200%2C%22height%22%3A217%2C%22format%22%3A%22png%22%7D%7D&clientId=678d5b0199cde588796872ea22804505&theme=dark&primaryColor=blue"
-                        width="100%"
+                        width="90%"
                         height="100%"
                         style={{
                           border: "2px solid gray",
                           borderRadius: "16px",
                           backgroundColor: "gray",
+                          marginLeft: "5%"
                         }}
                       />
                     </React.Fragment>
@@ -224,6 +228,7 @@ const Mints = (props) => {
           </div>
               </div>
             </div>
+            </Container>
           </div>
 
       <style jsx>
@@ -235,6 +240,7 @@ const Mints = (props) => {
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
+            
             background-image: linear-gradient(
               180deg,
               rgba(0, 0, 0, 0.55) 0%,
@@ -1301,6 +1307,9 @@ const Mints = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .mints-container{
+               min-height: 2800px;
+            }
             .mints-container01 {
               height: 1819px;
             }
