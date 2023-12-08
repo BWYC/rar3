@@ -55,7 +55,7 @@ const Home = (props) => {
                     
                       <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
                   </Link>
-                  <div style={{color: "lightgray", textAlign: "center", width: "70%", padding: "1%", justifyItems: "center", borderBottom: "solid 1px"}}><p>
+                  <div style={{color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}><p>
                   All Participants will be rewarded with RARE⚡ Coin, After KYC. Sign Your Wallet to proceed</p></div>
                 </div>
               </div>
