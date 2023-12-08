@@ -37,6 +37,10 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
  <ChakraProvider theme={{}}>
     <ThirdwebProvider
     clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+    authConfig={{
+      domain: "rarebay.xyz",
+      authUrl: "/api/auth",
+    }}
     activeChain={NETWORK}
     supportedWallets={[
       metamaskWallet({ recommended: true }),

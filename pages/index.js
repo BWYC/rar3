@@ -16,8 +16,11 @@ import { Blockie } from "web3uikit";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner";
 import Container from "../components/Container/Container"
-
-
+import { getUser } from "../auth.config";
+import toast, { Toaster } from "react-hot-toast";
+import toastStyle from "../util/toastConfig";
+import checkBalance from "../util/checkBalance";
+import { useLogout, useUser} from "@thirdweb-dev/react";
 
 
 const Home = (props) => {
@@ -26,7 +29,7 @@ const Home = (props) => {
   const { connect, connectors } = useConnect();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  
  
 
   useEffect(() => {
@@ -52,12 +55,11 @@ const Home = (props) => {
                   <Link className="home-link12" href="#">
                     
                       <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
-                  
+                  <p style={{color: "lightgray", textAlign: "center"}}>All Participants will be rewarded with RARE Coin, After KYC. So All Pioneers are real humans. Sign Your Wallet to proceed</p>
                   </Link>
                 </div>
               </div>
-              <div className="home-container38">
-     <video loop autoPlay autoFocus src="RARE.mp4" style={{border: "solid 2px white", borderRadius: "16px", width: "70%"}}/>           
+              <div className="home-container38">         
               </div>
               <div className="home-container39">
                 <div className="home-container40">
@@ -1968,3 +1970,57 @@ const Home = (props) => {
 };
 
 export default Home;
+
+
+export async function getServerSideProps(context) {
+  const user = await getUser(context.req);
+
+  if (!user) {
+    toast.success("WELCOME RAR31ONE", {
+      icon: "⚡",
+      style: toastStyle,
+      position: "bottom-center",
+    });
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("");
+  }
+
+  // Instantiate our SDK
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    CoreBlockchain,
+  );
+
+  // Check to see if the user has an NFT
+  const hasNft = await checkBalance(sdk, user.address);
+
+  // If they don't have an NFT, redirect them to the login page
+  if (!hasNft) {
+    toast.error("SORRY, YOU ARE NOT A RAR310NE, BUY ONE TO PROCEED", {
+      icon: "⚡",
+      style: toastStyle,
+      position: "bottom-center",
+    });
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  // Finally, return the props
+  return {
+    props: {},
+  };
+}

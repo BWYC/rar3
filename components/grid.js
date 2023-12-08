@@ -325,7 +325,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
  
           {isLoggedIn ? (
           <section>
-                   <div style={{margin: "100px"}}></div>
+                   <div style={{margin: "50px"}}></div>
             {connectors.map((connector) => (
               <>
  <ConnectWallet
@@ -377,11 +377,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
      backdropFilter: "blur(10px)"
    },
   })}
-   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
+   style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%",  color: "initial" }}><Blockie seed={address} />
    </div>
-   <div style={{height: "30px", margin: "20px"}}>
-   <img src="https://cdn-icons-png.flaticon.com/128/484/484582.png"  width={"20px"}/>
-  </div>
           </section>
         )}
      
@@ -397,8 +394,8 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
         invertedIconLogic
         onChange={() => setDark((prev) => !prev)}
         />
-  <div style={{width: "40px", margin: "20px"}}>
-    <img src="https://cdn-icons-png.flaticon.com/128/484/484582.png" style={{background: "inital"}}  width={"20px"}/>
+  <div style={{width: "100px", margin: "20px", cursor: "pointer"}}>
+    <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"30px"}/>
   </div>
                   <div id="connecting" className="home-container34">
 
@@ -448,11 +445,11 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    colors: {
      modalBg: " rgba(0, 0, 50, 0.638)",
      dropdownBg: "black",
-     accentText: "initial",
+     accentText: "gray",
      accentButtonBg: "#0064fa",
-     borderColor: "initial",
-     primaryText: "white",
-     background: "black",
+     borderColor: "gray",
+     primaryText: "gray",
+     background: "rgba(0, 0, 0, 0.638)",
      backdropFilter: "blur(10px)"
    },
   })}
