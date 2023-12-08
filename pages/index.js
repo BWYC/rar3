@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-
-import Search from "../components/search.tsx";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -78,13 +76,13 @@ const Home = (props) => {
                             className="home-image2"
                           />
                           <span className="home-text12">rar31oneS</span>
-                        </div>
-                        <div className="home-container45">
+                          <div className="home-container45">
                           <div className="home-container46">
                             <span className="home-text13">
                              3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
                             </span>
                           </div>
+                        </div>
                           <div className="home-container47">
                             <span className="home-text14">FLOOR: 0.0</span>
                             <a href={`/collection`} className="home-text15">VIEW ITEMS</a>

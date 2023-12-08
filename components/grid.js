@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import Search from "./search.tsx";
+import Search from "./search";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";

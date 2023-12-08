@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/buy.tsx", "services/APIConnector.tsx", "components/search.tx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/buy.tsx", "services/APIConnector.tsx", "components/search.tx", "components/search.js", "components/search.js"],
   "exclude": ["node_modules"]
 }
