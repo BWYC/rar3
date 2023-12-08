@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-import Search from "../components/search";
+import Search from "../components/search.tsx";
 import Footer from "../components/footer";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -21,7 +21,8 @@ import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../util/toastConfig";
 import checkBalance from "../util/checkBalance";
 import { useLogout, useUser} from "@thirdweb-dev/react";
-
+import { ThirdwebSDK } from "@thirdweb-dev/react";
+import { CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 
 const Home = (props) => {
 
@@ -55,8 +56,9 @@ const Home = (props) => {
                   <Link className="home-link12" href="#">
                     
                       <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
-                  <p style={{color: "lightgray", textAlign: "center"}}>All Participants will be rewarded with RARE Coin, After KYC. So All Pioneers are real humans. Sign Your Wallet to proceed</p>
                   </Link>
+                  <div style={{color: "lightgray", textAlign: "center", width: "70%", padding: "1%", justifyItems: "center", borderBottom: "solid 1px"}}><p>
+                  All Participants will be rewarded with RARE⚡ Coin, After KYC. Sign Your Wallet to proceed</p></div>
                 </div>
               </div>
               <div className="home-container38">         
@@ -100,7 +102,7 @@ const Home = (props) => {
                           width={30}
                           height={30}
                             alt="image"
-                            src="/sdzhksgdasha-200w.png"
+                            src="/bwyc1.png"
                             className="home-image3"
                           />
                           <span className="home-text16">BWYC II</span>
@@ -1734,7 +1736,7 @@ const Home = (props) => {
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: inital;
+            color: lightgray;
           }
           .home-feature-card {
             width: 100%;
@@ -1998,7 +2000,7 @@ export async function getServerSideProps(context) {
   // Instantiate our SDK
   const sdk = ThirdwebSDK.fromPrivateKey(
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
-    CoreBlockchain,
+    CoreBlockchainTestnet,
   );
 
   // Check to see if the user has an NFT

@@ -6,6 +6,8 @@ import { CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 
 export const NETWORK = CoreBlockchainTestnet;
 
+export const NETWORK_CHAIN_NAME = CoreBlockchainTestnet
+
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
 export const MARKETPLACE_ADDRESS = "0x67FA4514A669AD8746103A01b6d1D25Fd78F850d";
