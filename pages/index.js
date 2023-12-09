@@ -1982,7 +1982,7 @@ export async function getServerSideProps(context) {
       style: toastStyle,
       position: "bottom-center",
     });
-    return {
+      return {
       redirect: {
         destination: "/dex",
         permanent: false,
