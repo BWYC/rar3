@@ -368,10 +368,25 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    "https://bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a.ipfs.nftstorage.link/ipfs/bafybeid3fqzkm3eciwpla4tijoj3ifcxhcxskcnayohd4dvysfngp2w72a/xcxczxz.png"
  }
 />
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
+  <ReactLanguageSelect
+  style={{
+    backdropFilter: "blur(10px)",
+    background: "black"
+  }}
+  showSelectedLabel={false}
+  showOptionLabel={false}
+  placeholder=""
+    languages={["en", "ch"]} 
+    customLabels={{"en": "EN-US"}}
+    ></ReactLanguageSelect>
+     <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
+  </div>
 </>
             ))}
           </section>
         ) : (
+          <>
           <section className={styles.loggedIn_section}>
 <ConnectWallet 
    theme={({
@@ -387,7 +402,23 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    },
   })}
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
-          </section>
+
+</section>
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
+  <ReactLanguageSelect
+  style={{
+    backdropFilter: "blur(10px)",
+    background: "black"
+  }}
+  showSelectedLabel={false}
+  showOptionLabel={false}
+  placeholder=""
+    languages={["en", "ch"]} 
+    customLabels={{"en": "EN-US"}}
+    ></ReactLanguageSelect>
+     <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
+  </div>
+</>
         )}
      
                       </div>
@@ -476,6 +507,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   })}
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} /><div style={{width: "45px", height: "45px", padding: "3.8px", border: "solid", marginTop: "5px", borderRadius: "100%", marginLeft: "5px", color: "initial" }}><Blockie seed={address} />
    </div>
+   
           </section>
         )}
                 </div>

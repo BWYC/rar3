@@ -76,15 +76,16 @@ const Home = (props) => {
                             className="home-image2"
                           />
                           <span className="home-text12">rar31oneS</span>
-                          <div className="home-container45">
-                          <div className="home-container46">
-                            <span className="home-text13">
+                          </div>
+                        <div className="home-container52">
+                          <div className="home-container53">
+                            <span className="home-text17">
                              3100 RAR3 COLLECTIBLES PIONEERING THE DECENTRALIZATION OF NFTS ON RAREBAY DEX
+
                             </span>
                           </div>
-                        </div>
-                          <div className="home-container47">
-                            <span className="home-text14">FLOOR: 0.0</span>
+                          <div className="home-container54">
+                            <span className="home-text18">FLOOR: 0.0</span>
                             <a href={`/collection`} className="home-text15">VIEW ITEMS</a>
                           </div>
                         </div>
