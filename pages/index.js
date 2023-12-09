@@ -1984,7 +1984,7 @@ export async function getServerSideProps(context) {
     });
     return {
       redirect: {
-        destination: "/mints",
+        destination: "/index",
         permanent: false,
       },
     };
