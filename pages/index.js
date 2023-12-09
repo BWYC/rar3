@@ -2014,7 +2014,7 @@ export async function getServerSideProps(context) {
     });
     return {
       redirect: {
-        destination: "/",
+        destination: "/dex",
         permanent: false,
       },
     };
