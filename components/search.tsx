@@ -1,12 +1,25 @@
+'use client';
 import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { Suspense } from 'react';
+import Skeleton from './Skeleton/Skeleton';
 
 const Search = ({ placeholder }: { placeholder: string }) => {
   const [isVisible, setIsVisible] = useState('newState')
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
   function handleSearch(term: string) {
-    console.log(term);
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set('query', term);
+    } else {
+      params.delete('query');
+    }
+    replace(`${pathname}?${params.toString()}`);
   }
   return (
     <>
@@ -20,6 +33,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
           placeholder="Search"
           backdrop-filter="blur(50px)"
           className="search-textinput input"
+          defaultValue={searchParams.get('query')?.toString()}
         />
         <svg
         

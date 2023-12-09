@@ -17,10 +17,22 @@ import styles from "../styles/Home.module.css";
 import Buy from "./buy"
 import Listings from "./listing";
 import Buy1 from "./bwyc"
+import { Suspense } from 'react';
+import Table from "../components/table";
+import Skeleton from "../components/Skeleton/Skeleton";
 
 
 
-const Dex = (props) => {
+const Dex = ({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+  };
+}) => {
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
 
   const address = useAddress()
   const { connect, connectors } = useConnect();
@@ -48,7 +60,9 @@ const Dex = (props) => {
           <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
-       
+        <Suspense key={query + currentPage} fallback={<Skeleton />}>
+        <Table query={query} currentPage={currentPage} />
+      </Suspense>
             
             <div className="home-container35">
             <div className="home-container37">
