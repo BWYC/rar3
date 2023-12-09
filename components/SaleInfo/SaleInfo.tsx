@@ -93,7 +93,7 @@ export default function SaleInfo({ nft }: Props) {
 
       if (txResult) {
         toast.success("Marketplace approval granted", {
-          icon: "👍",
+          icon: "⚡",
           style: toastStyle,
           position: "bottom-center",
         });
