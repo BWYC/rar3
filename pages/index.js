@@ -1984,7 +1984,7 @@ export async function getServerSideProps(context) {
     });
     return {
       redirect: {
-        destination: "/mints",
+        destination: "/dex",
         permanent: false,
       },
     };
@@ -2014,7 +2014,7 @@ export async function getServerSideProps(context) {
     });
     return {
       redirect: {
-        destination: "/dex",
+        destination: "/mints",
         permanent: false,
       },
     };
