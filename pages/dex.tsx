@@ -18,8 +18,9 @@ import Buy from "./buy"
 import Listings from "./listing";
 import Buy1 from "./bwyc"
 import { Suspense } from 'react';
-import Table from "../components/table";
+
 import Skeleton from "../components/Skeleton/Skeleton";
+
 
 
 
@@ -34,6 +35,10 @@ const Dex = ({
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
 
+
+  <Suspense key={query + currentPage} fallback={<Skeleton />}>
+ 
+</Suspense>
   const address = useAddress()
   const { connect, connectors } = useConnect();
 
@@ -60,9 +65,7 @@ const Dex = ({
           <title>RareBay | DEX</title>
           <meta property="og:title" content="RareBay | DEX" />
         </Head>
-        <Suspense key={query + currentPage} fallback={<Skeleton />}>
-        <Table query={query} currentPage={currentPage} />
-      </Suspense>
+   
             
             <div className="home-container35">
             <div className="home-container37">
