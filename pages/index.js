@@ -1975,6 +1975,24 @@ export default Home;
 
 
 export async function getServerSideProps(context) {
+
+  // Ensure we are able to generate an auth token using our private key instantiated SDK
+  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
+  if (!PRIVATE_KEY) {
+    throw new Error("");
+  }
+
+
+  const sdk = ThirdwebSDK.fromPrivateKey(
+    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+    CoreBlockchainTestnet,
+  );
+
+  // Check to see if the user has an NFT
+  // If they don't have an NFT, redirect them to the login page
+ 
+
+  // Finally, return the props
   return {
     props: {},
   };

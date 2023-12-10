@@ -18,6 +18,7 @@ import Grid from "../components/grid"
 import { ChakraProvider } from '@chakra-ui/react'
 import Footer from "../components/footer";
 import Banner from "../components/banner"
+import Patner from "../components/partners";
 
 const { publicClient, webSocketPublicClient } = configureChains(
   [mainnet],
@@ -61,6 +62,7 @@ export default function MyApp({ Component: Component, pageProps: pageProps }) {
         <Grid />
         
       <Component className="body" {...pageProps} />
+      <Patner />
       <Footer />
       </NextThemesProvider>
     
