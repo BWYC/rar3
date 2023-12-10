@@ -7,10 +7,11 @@ export default function Login() {
         <Container maxWidth="xl">
         <Container maxWidth="lg">
 
-<div style={{height: "100px"}}></div>
+<div style={{height: "250px"}}></div>
                <ConnectWallet 
-   style={{background: "black", color: "white", border: "solid", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
-   <hr  style={{margin: "5%"}}/>
+   style={{background: "black", color: "white", border: "solid", textShadow: "currentColor 2px 2px 8px", borderWidth: "0.5px"}} />
+   <p style={{color: "inital", margin: "5%", textShadow: "currentColor 2px 2px 8px"}}>Connect and sign your wallet</p>
+   <hr style={{boxShadow: "white 3px 3px 10px"}} />
           
             
 
