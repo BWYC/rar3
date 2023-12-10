@@ -17,7 +17,15 @@ const Patner = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <Link href="https://rarebay.xyz">  <Image width="20" height="20" src={C} alt="core"/></Link><p style={{marginLeft: "-15%"}}>TESTNET</p>
+          <Link href="https://coredao.org">  <Image width="40" height="40" src={C} alt="CORE"/></Link>
+      
+        </div>
+        <div className="footer-container1">
+          <Link href="https://rarebay.xyz">  <Image width="40" height="40" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
+      
+        </div>
+        <div className="footer-container1">
+          <Link href="https://thirdweb.com">  <Image width="100" height="80" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "80x", border: "solid 1px gray"}} /></Link>
       
         </div>
       </div>
@@ -25,7 +33,7 @@ const Patner = (props) => {
         {`
           .footer-container {
             width: 2000px;
-            height: auto;
+            height: 60px;
             display: flex;
             z-index: 100;
             position: absolute;
@@ -34,12 +42,14 @@ const Patner = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            margin-top: -30%;
+            margin-top: -5%;
+            border: solid 1px gray;
             margin-left: -5%;
             cursor: pointer;
             color: initial;
             font-size: 10px;
-            background: black;
+            background: initial;
+            backdrop-filter: blur(50px);
           }
           .footer-container1 {
             width: auto;
@@ -48,7 +58,7 @@ const Patner = (props) => {
             align-items: center;
             justify-content: center;
             background: rbga(0, 0, 0, 0.7);
-            marginRight: 0.5%;
+            margin: 3%;
             cursor: pointer;
             gap: 20px;
             color: white;

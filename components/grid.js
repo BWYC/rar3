@@ -28,7 +28,7 @@ import { Token } from "web3uikit";
 
 
 
-const light = { background: "white" };
+const light = { background: "#d3d3d3" };
 const dark = { background: "black" };
 
 const GlobalStyle = createGlobalStyle`
