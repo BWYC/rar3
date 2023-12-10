@@ -107,7 +107,6 @@ import NFTCard from "../components/NFTCard"
                   </p>
                 </div>
               </div>
-              <h2 style={{ textAlign: "center", color: "lightgreen", marginTop: "5%" }}>Locked: {event}</h2>
               <Web3Button
               isDisabled
             style={{
