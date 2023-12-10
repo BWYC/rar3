@@ -17,25 +17,37 @@ const Patner = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <Link href="https://coredao.org">  <Image width="40" height="40" src={C} alt="CORE"/></Link>
+          <Link href="https://coredao.org">  <Image width="50" height="50" src={C} alt="CORE"/></Link>
       
         </div>
         <div className="footer-container1">
-          <Link href="https://rarebay.xyz">  <Image width="40" height="40" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
+          <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
       
         </div>
         <div className="footer-container1">
-          <Link href="https://thirdweb.com">  <Image width="100" height="80" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "80x", border: "solid 1px gray"}} /></Link>
+          <Link href="https://thirdweb.com">  <Image width="100" height="80" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray"}} /></Link>
+      
+        </div>
+        <div className="footer-container1">
+          <Link href="https://metamask.io">  <Image width="48" height="48" src="/mt.png" alt="MetaMask" /></Link>
+      
+        </div>
+        <div className="footer-container1">
+          <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc.png" alt="Bitcoin" /></Link>
+      
+        </div>
+        <div className="footer-container1">
+          <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="NextJS" /></Link>
       
         </div>
       </div>
       <style jsx>
         {`
           .footer-container {
-            width: 2000px;
+            width: 100%;
             height: 60px;
             display: flex;
-            z-index: 100;
+            z-index: auto;
             position: absolute;
             align-items: center;
             font-family: 'pixel NES';
@@ -43,13 +55,14 @@ const Patner = (props) => {
             padding-bottom: 6px;
             justify-content: center;
             margin-top: -5%;
-            border: solid 1px gray;
+            padding: 2%;
             margin-left: -5%;
             cursor: pointer;
             color: initial;
             font-size: 10px;
             background: initial;
             backdrop-filter: blur(50px);
+            justify-self: center;
           }
           .footer-container1 {
             width: auto;

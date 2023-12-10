@@ -1,14 +1,19 @@
 import React from 'react'
 
 import PropTypes from 'prop-types'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = (props) => {
   return (
     <>
       <div className={`footer-container ${props.rootClassName} `}>
+      <Link href="#">  <Image  width="30" height="30" src="/dis.png" alt="d"/></Link>
+      <Link href="https://x.com/rarebay">  <Image  width="30" height="30" src="/x.png" alt="d"/></Link>
         <div className="footer-container1">
-          <span className="footer-text">{props.text11}</span>
+          <span className="footer-text">{props.text11}</span> 
         </div>
+        
       </div>
       <style jsx>
         {`
@@ -25,11 +30,13 @@ const Footer = (props) => {
             flex-direction: row;
             padding-bottom: 6px;
             justify-content: center;
-            background-color: #121212;
+            background: rgba(200, 200, 200, 0.298);
             border-top-width: 1px;
             border-left-width: 0px;
             border-right-width: 0px;
             border-bottom-width: 0px;
+            gap: 20px;
+            overflow: hidden;
           }
           .footer-container1 {
             width: auto;
@@ -39,7 +46,7 @@ const Footer = (props) => {
             justify-content: center;
           }
           .footer-text {
-            color: #969696;
+            color: initial;
             width: auto;
             text-align: center;
           }
@@ -94,11 +101,11 @@ const Footer = (props) => {
           }
           @media (max-width: 479px) {
             .footer-container1 {
-              gap: 10;
-              width: auto;
+              gap: 1;
+              width: 100%;
             }
             .footer-text {
-              font-size: 10px;
+              font-size: 9px;
             }
           }
         `}

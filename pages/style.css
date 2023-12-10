@@ -64,7 +64,7 @@
   opacity: 0.5;
 }
 body{
-  background: initial;
+  background: rgba(0, 0, 0, 0.498);
   font-family: Pixel NES;
   color: initial;
   height: 100%;
