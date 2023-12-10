@@ -56,7 +56,7 @@ const Home = (props) => {
                     
                       <h1 className="home-heading1">WELCOME TO RAR3BAY TESTNET</h1>
                   </Link>
-                  <div style={{color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}><p>
+                  <div style={{fontFamily: "Arial", color: "lightgray", textAlign: "center", width: "70%", padding: "3%", fontStyle: "italic", justifyItems: "center", borderBottom: "solid 1px"}}><p>
                   All Participants will be rewarded with RARE⚡ Coin, After KYC. Sign Your Wallet to proceed</p></div>
                 </div>
               </div>
@@ -2002,7 +2002,7 @@ export async function getServerSideProps(context) {
 
   // If they don't have an NFT, redirect them to the login page
   if (!hasNft) {
-    toast.error("SORRY, YOU ARE NOT A RAR310NE, BUY ONE TO PROCEED", {
+    toast.success("SORRY, YOU ARE NOT A RAR310NE, BUY ONE TO PROCEED", {
       icon: "⚡",
       style: toastStyle,
       position: "bottom-center",

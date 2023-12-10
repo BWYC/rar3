@@ -86,7 +86,6 @@ const Pools = (props) => {
                   <br></br>
                 </span>
                 <span className="pools-text02">
-                  <span>LOCKED: {}</span>
                   <br></br>
                 </span>
                 <span className="pools-text05">
