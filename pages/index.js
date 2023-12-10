@@ -1975,20 +1975,6 @@ export default Home;
 
 
 export async function getServerSideProps(context) {
-
-
-  // Ensure we are able to generate an auth token using our private key instantiated SDK
-  const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
-  if (!PRIVATE_KEY) {
-    throw new Error("");
-  }
-
-  // Instantiate our SDK
-  const sdk = ThirdwebSDK.fromPrivateKey(
-    process.env.THIRDWEB_AUTH_PRIVATE_KEY,
-    CoreBlockchainTestnet,
-  );
-  // Finally, return the props
   return {
     props: {},
   };
