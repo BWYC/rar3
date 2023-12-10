@@ -17,7 +17,7 @@ const Banner = (props) => {
     <>
       <div className={`footer-container ${props.rootClassName} `}>
         <div className="footer-container1">
-          <Link href="/">  <Image width="20" height="20" src={C} alt="core"/></Link><p style={{marginLeft: "-15%"}}>TESTNET</p>
+          <Link href="https://rarebay.xyz">  <Image width="20" height="20" src={C} alt="core"/></Link><p style={{marginLeft: "-15%"}}>TESTNET</p>
       
         </div>
       </div>

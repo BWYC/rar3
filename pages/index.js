@@ -22,6 +22,7 @@ import { useLogout, useUser} from "@thirdweb-dev/react";
 import { ThirdwebSDK } from "@thirdweb-dev/react";
 import { CoreBlockchainTestnet } from "@thirdweb-dev/chains";
 
+
 const Home = (props) => {
 
   const address = useAddress()
@@ -2006,12 +2007,6 @@ export async function getServerSideProps(context) {
       style: toastStyle,
       position: "bottom-center",
     });
-    return {
-      redirect: {
-        destination: "/dex",
-        permanent: false,
-      },
-    };
   }
 
   // Finally, return the props
