@@ -1975,15 +1975,7 @@ export default Home;
 
 
 export async function getServerSideProps(context) {
-  const user = await getUser(context.req);
 
-  if (!user) {
-    toast.success("WELCOME RAR31ONE", {
-      icon: "⚡",
-      style: toastStyle,
-      position: "bottom-center",
-    });
-  }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK
   const PRIVATE_KEY = process.env.THIRDWEB_AUTH_PRIVATE_KEY;
@@ -1996,19 +1988,6 @@ export async function getServerSideProps(context) {
     process.env.THIRDWEB_AUTH_PRIVATE_KEY,
     CoreBlockchainTestnet,
   );
-
-  // Check to see if the user has an NFT
-  const hasNft = await checkBalance(sdk, user.address);
-
-  // If they don't have an NFT, redirect them to the login page
-  if (!hasNft) {
-    toast.success("SORRY, YOU ARE NOT A RAR310NE, BUY ONE TO PROCEED", {
-      icon: "⚡",
-      style: toastStyle,
-      position: "bottom-center",
-    });
-  }
-
   // Finally, return the props
   return {
     props: {},
