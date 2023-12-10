@@ -7,6 +7,7 @@ import {
     useOwnedNFTs,
     useTokenBalance,
     Web3Button,
+    useContractEvents
   } from "@thirdweb-dev/react";
   import { BigNumber, ethers } from "ethers";
   import { useEffect, useState } from "react";
@@ -33,6 +34,7 @@ import NFTCard from "../components/NFTCard"
     const { data: stakedTokens } = useContractRead(contract, "getStakeInfo", [
       address,
     ]);
+    const { data: event } = useContractEvents(contract, "TokensStaked")
   
     useEffect(() => {
       if (!contract || !address) return;
@@ -84,7 +86,9 @@ import NFTCard from "../components/NFTCard"
             <ConnectWallet />
           ) : (
             <>
+
               <div className={styles.tokenGrid}>
+           
                 <div className={styles.tokenItem}>
                   <h3 className={styles.tokenLabel}>Rewards Earned</h3>
                   <p className={styles.tokenValue}>
@@ -103,8 +107,22 @@ import NFTCard from "../components/NFTCard"
                   </p>
                 </div>
               </div>
-
-              <h2 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h2>
+              <h2 style={{ textAlign: "center", color: "lightgreen", marginTop: "5%" }}>Locked: {event}</h2>
+              <Web3Button
+              isDisabled
+            style={{
+              backgroundColor: "black",
+              borderStyle: "solid",
+              borderColor: "Orange",
+              color: "blue",
+              border: "0.5px"
+            }}
+            action={(contract) => contract.call("claimRewards")}
+            contractAddress={stakingContractAddress}
+          >
+         UNCLAIMABLE
+          </Web3Button>
+              <h2 style={{ textAlign: "center", color: "lightgreen", marginTop: "5%" }}>Staked Tokens</h2>
               <div className={styles.nftBoxGrid}>
                 {stakedTokens &&
                   stakedTokens[0]?.map((stakedToken: BigNumber) => (

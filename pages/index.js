@@ -1982,12 +1982,6 @@ export async function getServerSideProps(context) {
       style: toastStyle,
       position: "bottom-center",
     });
-      return {
-      redirect: {
-        destination: "/mints",
-        permanent: false,
-      },
-    };
   }
 
   // Ensure we are able to generate an auth token using our private key instantiated SDK

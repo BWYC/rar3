@@ -103,7 +103,20 @@ import NFTCard from "../components/NFTCardb"
                   </p>
                 </div>
               </div>
-
+              <Web3Button
+              isDisabled
+            style={{
+              backgroundColor: "black",
+              borderStyle: "solid",
+              borderColor: "Orange",
+              color: "blue",
+              border: "0.5px"
+            }}
+            action={(contract) => contract.call("claimRewards")}
+            contractAddress={stakingContractAddress2}
+          >
+            UNCLAIMABLE
+          </Web3Button>
               <div style={{height: "50px"}}></div>
               <h1 style={{ textAlign: "center", color: "lightgreen" }}>Staked Tokens</h1>
               <div className={styles.nftBoxGrid}>

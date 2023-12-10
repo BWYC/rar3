@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import Stake from "./stake"
 import Stake1 from "./stake1"
 import Stake2 from "./stake2"
+import Image from 'next/image';
 
 
 const customStyles = {
@@ -74,16 +75,18 @@ const Pools = (props) => {
         <div className="pools-container03">
           <div className="pools-pricing">
             <div className="pools-pricing-card">
-              <svg viewBox="0 0 1024 1024" className="pools-icon">
-                <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-              </svg>
+            <Image src="/gfdgfhyu1-200h.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text">RAR310NES POOL</span>
               <div className="pools-container04">
-                <span className="pools-text01">0.5 WHLS</span>
+                <span className="pools-text01">0.5 WHLS/DAY</span>
               </div>
               <div className="pools-container05">
                 <span className="pools-text02">
-                  <span>LOCK PERIOD: 46 WEEKS </span>
+                  <span>LOCK: 46 WEEKS </span>
+                  <br></br>
+                </span>
+                <span className="pools-text02">
+                  <span>LOCKED: {}</span>
                   <br></br>
                 </span>
                 <span className="pools-text05">
@@ -108,12 +111,10 @@ const Pools = (props) => {
       </Modal>
             </div>
             <div className="pools-pricing-card1">
-              <svg viewBox="0 0 1024 1024" className="pools-icon2">
-                <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-              </svg>
+            <Image src="/bwyc.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text08">BWYC POOL</span>
               <div className="pools-container06">
-                <span className="pools-text09">1 WHLS</span>
+                <span className="pools-text09">1 WHLS/DAY</span>
               </div>
               <div className="pools-container07">
                 <span className="pools-text10">
@@ -129,16 +130,14 @@ const Pools = (props) => {
    
             </div>
             <div className="pools-pricing-card2">
-              <svg viewBox="0 0 1024 1024" className="pools-icon4">
-                <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-              </svg>
+            <Image src="/bwyc1.png" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text16">BWYC II POOL</span>
               <div className="pools-container08">
-                <span className="pools-text17">0.5 WHLS</span>
+                <span className="pools-text17">0.5 WHLS/DAY</span>
               </div>
               <div className="pools-container09">
                 <span className="pools-text18">
-                  <span>LOCK PERIOD: 1 MONTH</span>
+                  <span>LOCK: 1 MONTH</span>
                   <br></br>
                 </span>
                 <span className="pools-text21">
@@ -173,16 +172,14 @@ const Pools = (props) => {
   </div>
 </div>
             <div className="pools-pricing-card3">
-              <svg viewBox="0 0 1024 1024" className="pools-icon6">
-                <path d="M598 234q0-44 31-75t75-31 75 31 31 75-31 76-75 32-75-32-31-76zM370 512q-24 0-50-16-8-6-32-16l138-138-42-44q-64-64-170-64v-106q82 0 134 19t100 67l274 272q-12 8-18 10-26 16-50 16-22 0-48-16-44-26-94-26t-94 26q-26 16-48 16zM938 704q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14v86zM938 896q-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28-46 0-92-28-22-14-50-14-26 0-48 14-46 28-94 28t-94-28q-22-14-48-14-28 0-50 14-46 28-92 28v-86q26 0 48-14 46-28 94-28 46 0 92 28 22 14 50 14 26 0 48-14 46-28 94-28t94 28q22 14 48 14 28 0 50-14 46-28 92-28 48 0 94 28 22 14 48 14v86z"></path>
-              </svg>
+            <Image src="/whls (1)-200h.jpg" alt="" width={40} height={40} style={{borderRadius: "100%"}}/>
               <span className="pools-text24">WHALECARD POOL</span>
               <div className="pools-container10">
-                <span className="pools-text25">2 WHLS</span>
+                <span className="pools-text25">2 WHLS/DAY</span>
               </div>
               <div className="pools-container11">
                 <span className="pools-text26">
-                  <span>LOCK PERIOD: 1 MONTH</span>
+                  <span>LOCK: 1 MONTH</span>
                   <br></br>
                 </span>
                 <span className="pools-text29">
