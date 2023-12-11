@@ -22,7 +22,7 @@ export default function Buy() {
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data: data, isLoading: isLoading } = useNFTs(contract, {
     start: 0,
-    count: 10,
+    count: 50,
   });
 
    const address = useAddress();

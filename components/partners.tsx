@@ -35,12 +35,12 @@ const Patner = (props) => {
     <>
       <div  ref={sliderRef} className="keen-slider" >
         <div className="keen-slider__slide number-slide1" >
-          <Link href="https://coredao.org">  <Image width="50" height="50" src={C} alt="CORE"/></Link>
+          <Link href="https://coredao.org">  <Image width="70" height="70" src={C} alt="CORE"/></Link>
  
       <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
      
-      <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "white 5px 5px 10px"}} /></Link>
-      <Link href="https://metamask.io">  <Image width="48" height="48" src="/mt.png" alt="MetaMask" /></Link>
+      <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "white 3px 3px 6px"}} /></Link>
+      <Link href="https://metamask.io">  <Image width="68" height="68" src="/mt.png" alt="MetaMask" /></Link>
       <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="Bitcoin" /></Link>
           <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="NextJS" /></Link>
           <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>

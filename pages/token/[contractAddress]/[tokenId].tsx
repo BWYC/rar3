@@ -135,9 +135,9 @@ import {
                   {Object.entries(nft?.metadata?.attributes || {}).map(
                     ([key, value]) => (
                       <div className={styles.traitContainer} key={key}>
-                        <p className={styles.traitName}>{key}</p>
+                        <p className={styles.traitName}>{value?.trait_type}</p>
                         <p className={styles.traitValue}>
-                          {value?.toString() || ""}
+                          {value?.value || ""}
                         </p>
                       </div>
                     )
