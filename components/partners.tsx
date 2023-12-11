@@ -9,36 +9,47 @@ import C from "../public/core.png"
 import { NetworkInput } from '@thirdweb-dev/sdk'
 import { NetworkSelector } from '@thirdweb-dev/react'
 import Link from 'next/link'
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
+
+
+const animation = { duration: 40000, easing: (t) => t }
 
 
 const Patner = (props) => {
-
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    created(s) {
+      s.moveToIdx(5, true, animation)
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation)
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation)
+    },
+  })
   return (
     <>
-      <div className={`footer-container ${props.rootClassName} `}>
-        <div className="footer-container1">
+      <div  ref={sliderRef} className="keen-slider" >
+        <div className="keen-slider__slide number-slide1" >
           <Link href="https://coredao.org">  <Image width="50" height="50" src={C} alt="CORE"/></Link>
-      
-        </div>
-        <div className="footer-container1">
-          <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
-      
-        </div>
-        <div className="footer-container1">
-          <Link href="https://thirdweb.com">  <Image width="100" height="80" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray"}} /></Link>
-      
-        </div>
-        <div className="footer-container1">
-          <Link href="https://metamask.io">  <Image width="48" height="48" src="/mt.png" alt="MetaMask" /></Link>
-      
-        </div>
-        <div className="footer-container1">
-          <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc.png" alt="Bitcoin" /></Link>
-      
-        </div>
-        <div className="footer-container1">
+ 
+      <Link href="https://rarebay.xyz">  <Image width="60" height="60" src="/fav-200h.ico" alt="RARE" style={{borderRadius: "100%"}}/></Link>
+     
+      <Link href="https://thirdweb.com">  <Image width="100" height="30" src="/3rd.png" alt="ThirdWeb" style={{borderRadius: "8px", border: "solid 0px gray", boxShadow: "white 5px 5px 10px"}} /></Link>
+      <Link href="https://metamask.io">  <Image width="48" height="48" src="/mt.png" alt="MetaMask" /></Link>
+      <Link href="https://bitcoin.org">  <Image width="50" height="50" src="/btc2.png" alt="Bitcoin" /></Link>
           <Link href="https://nextjs.org">  <Image width="50" height="50" src="/px.png" alt="NextJS" /></Link>
-      
+          <Link href="https://boredwhalesyachtclub,org">  <Image width="70" height="60" style={{borderRadius: "100%"}} src="/favicon.png" alt="BWYC" /></Link>
+        </div>
+        <div className="keen-slider__slide number-slide1">
+         HOME OF RARE
+        </div>
+        <div className="keen-slider__slide number-slide1">
+        <p style={{fontFamily: "arial", fontStyle: "italics"}}></p> RAR3BAY.xyz
         </div>
       </div>
       <style jsx>
@@ -55,7 +66,6 @@ const Patner = (props) => {
             padding-bottom: 6px;
             justify-content: center;
             margin-top: -5%;
-            padding: 2%;
             margin-left: -5%;
             cursor: pointer;
             color: initial;
@@ -71,7 +81,7 @@ const Patner = (props) => {
             align-items: center;
             justify-content: center;
             background: rbga(0, 0, 0, 0.7);
-            margin: 3%;
+            margin: 2%;
             cursor: pointer;
             gap: 20px;
             color: white;
@@ -144,13 +154,47 @@ const Patner = (props) => {
               display: none;
             }
             .footer-container1 {
-              gap: 10;
+              gap: 5;
               width: auto;
             }
             .footer-text {
               font-size: 10px;
             }
           }
+          body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          [class^="number-slide"],
+          [class*=" number-slide"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: 900;
+            text-shadow: lightblue 1px 2px 5px;
+            height: 70px;
+            max-height: 100vh;
+            color: white;
+            gap: 100px;
+          }
+          
+          .number-slide1 {
+            background: rgba(0, 0, 0, 0.498);
+            backdropfilter: blur(50px);
+            width: 20px;
+            padding: 1%;
+          }  
+            .number-slide12{
+            background: rgba(0, 0, 0, 0.498);
+            backdropfilter: blur(50px);
+            width: 20px;
+            padding: 1%;
+            fontStyle: arial italics;
+
+          }  
         `}
       </style>
     </>

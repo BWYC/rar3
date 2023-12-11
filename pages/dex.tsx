@@ -77,7 +77,6 @@ const Dex = ({
             </div>
             <div style={{height: "50px"}}></div>
             <Buy/>
-            <Buy1/>
           </div>
     
       <style jsx>
