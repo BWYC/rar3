@@ -24,6 +24,8 @@ import 'react-languages-select/css/react-languages-select.css';
 //OR import sass module
 import 'react-languages-select/scss/react-languages-select.scss';
 import { Token } from "web3uikit";
+import { Ref } from "react";
+
 
 
 
@@ -370,6 +372,7 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
 />
 <div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
   <ReactLanguageSelect
+  searchable={true}
   style={{
     backdropFilter: "blur(10px)",
     background: "black"
@@ -377,8 +380,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   showSelectedLabel={false}
   showOptionLabel={false}
   placeholder=""
-    languages={["en", "ch"]} 
-    customLabels={{"en": "EN-US"}}
     ></ReactLanguageSelect>
      <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
   </div>
@@ -404,8 +405,9 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
    style={{background: "black", color: "white", border: "solid", color: "white", textShadow: "currentColor 5px 5px 16px", borderWidth: "0.5px"}} />
 
 </section>
-<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px"}}>
-  <ReactLanguageSelect
+<div style={{height: "100px", margin: "20px", cursor: "pointer", fontSize: "20px", background: "black"}}>
+<ReactLanguageSelect
+  searchable={true}
   style={{
     backdropFilter: "blur(10px)",
     background: "black"
@@ -413,8 +415,6 @@ const themez = isDark ? setTheme("dark") : setTheme("light");
   showSelectedLabel={false}
   showOptionLabel={false}
   placeholder=""
-    languages={["en", "ch"]} 
-    customLabels={{"en": "EN-US"}}
     ></ReactLanguageSelect>
      <img src="https://img.icons8.com/?size=48&id=31016&format=png"  width={"25px"} style={{marginTop: "-15px"}}/>
   </div>
